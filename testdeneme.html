@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grafik Tasarım Quiz</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Roboto', sans-serif;
+      background-color: #1b3132;
+      padding: 3.23em 3.13em;
+      position: relative;
+    }
+
+    .quiz-header-area {
+      display: flex;
+    }
+
+    .quiz-header-area-left>h1 {
+      font-size: 40px;
+      margin: 0;
+      font-weight: bold;
+      color: #dff0d8;
+    }
+
+    .quiz-header-area-middle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .quiz-header-area-middle>article {
+      display: flex;
+      padding: 0.63em 1.3em;
+      justify-content: center;
+      align-items: center;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #fff;
+      border-radius: 100vw;
+      font-weight: 600;
+      color: #fff;
+      gap: 8px;
+      font-size: 18px;
+    }
+
+    .quiz-main {
+      margin-top: 200px;
+      position: relative;
+    }
+
+    .shapes {
+      position: absolute;
+      left: 0%;
+      top: 0%;
+      right: 0%;
+      bottom: 0%;
+      z-index:-1;
+      width: 100%;
+      height: 100%;
+    }
+
+    .shapes-circle {
+      position: absolute;
+      left: 0%;
+      top: 0%;
+      right: auto;
+      bottom: auto;
+      width: 35em;
+      height: 35em;
+      margin-top: -8.3em;
+      margin-left: 30em;
+      border-radius: 100vw;
+      opacity: 0.86;
+      -webkit-filter: blur(4em);
+      filter: blur(4em);
+    }
+
+    .shapes-circle.is--2 {
+      width: 30em;
+      height: 30em;
+      margin-top: 9.3em;
+      margin-left: 45.5em;
+    }
+
+    .quiz-main-area {
+      display: flex;
+    }
+
+    .quiz-main-left>h3 {
+      font-size: 40px;
+      font-weight: bold;
+      color: #dff0d8;
+      margin-bottom: 90px;
+      margin-top: 0px;
+      min-height: 90px;
+    }
+
+    .quiz-main-left>article {
+      display: grid;
+      grid-auto-columns: 1fr;
+      grid-column-gap: 1.25em;
+      grid-row-gap: 1.5em;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+    }
+
+    .quiz-main-left>article>button {
+      padding: 0.97em 1.68em;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #fff;
+      border-radius: 100vw;
+      font-weight: 700;
+      text-align: right;
+      font-size: 1.1em;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .quiz-main-left>article>button:hover {
+      background-color: rgba(26, 26, 26, 0.3);
+    }
+
+    .quiz-main-right {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      will-change: transform;
+      transform: rotateZ(-1.28084deg);
+      transform-style: preserve-3d;
+    }
+
+    .frame-art-img {
+      width: 100%;
+      filter: blur(25px);
+      transition: filter 0.6s ease;
+    }
+
+    .frame-art {
+      position: absolute;
+      z-index: 1;
+      margin-left: -20px;
+      text-align: center;
+    }
+
+    .frame-img {
+      position: absolute;
+      z-index: 2;
+      width: 80%;
+    }
+
+    .ada {
+      position: absolute;
+      left: auto;
+      top: 0%;
+      right: 0%;
+      bottom: 0%;
+      z-index: 2;
+      width: 40%;
+      height: 100%;
+      border-left: 2px solid hsla(0, 0%, 100%, 0.13);
+      background-color: rgba(209, 215, 221, 0.09);
+      background-image: radial-gradient(circle farthest-side at 0% 0%, hsla(0, 0%, 100%, 0.32), hsla(0, 0%, 100%, 0) 56%);
+      backdrop-filter: blur(4em);
+      transition: transform 0.8s ease-in-out;
+      transform: translateX(0);
+    }
+
+    .ada.hidden-slide {
+      transform: translateX(100%);
+    }
+
+    .glass-texture {
+      width: 100%;
+      height: 100%;
+      opacity: 0.23;
+      mix-blend-mode: screen;
+      object-fit: cover;
+    }
+
+    .hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .correct {
+      background-color: #91C915 !important;
+      border-color: #91C915 !important;
+    }
+
+    .wrong {
+      background-color: #FF5757 !important;
+      border-color: #FF5757 !important;
+    }
+
+    .next-btn {
+      padding: 2.5em 2em;
+      border: 1px solid #fff;
+      background: #fff;
+      border-radius: 1000%;
+      color: #333;
+      font-weight: 700;
+      font-size: 36px;
+      cursor: pointer;
+      z-index: 2;
+      transition: 0.3s ease;
+      right: 0;
+      position: absolute;
+      box-shadow: 0 0 0 0 rgba(210, 233, 236, 1);
+      animation: pulsing-outline 1.5s infinite;
+    }
+
+    @keyframes pulsing-outline {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+      }
+    }
+
+    /* ✅ Quiz bitince ortada görünen sonuç ekranı */
+    .result-screen {
+      position: absolute;
+      top: 50%;
+      height: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #dff0d8;
+      font-size: 48px;
+      width: 100%;
+      display: flex;
+      background-color: #1b3132d6;
+      font-weight: bold;
+      align-items: center;
+      animation: fadeIn 1s ease forwards;
+      justify-content: center;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+      }
+
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="global-area">
+    <div class="quiz-header-area">
+      <div class="col-5 quiz-header-area-left">
+        <h1>GTTQ</h1>
+      </div>
+      <div class="col-2 quiz-header-area-middle">
+        <article>
+          <img
+            src="https://cdn.prod.website-files.com/618344780acfccac60d1f2df/618442febf072bfcf11ee3fa_points-icon.svg"
+            loading="lazy" alt="Trophy Icon" class="points-icon">
+          <span id="scoreDisplay">0</span>
+          <abbr>puan</abbr>
+        </article>
+      </div>
+    </div>
+
+    <div class="quiz-main">
+      <div class="shapes">
+        <div style="background-color:#3c989b" class="shapes-circle"></div>
+        <div style="background-color:#fcb232" class="shapes-circle is--2"></div>
+        <div style="background-color:#3c989b" class="shapes-circle is--3"></div>
+      </div>
+      <div class="quiz-main-area">
+        <div class="col-6 quiz-main-left">
+          <h3 id="questionText"></h3>
+          <article id="options"></article>
+
+        </div>
+
+        <div class="col-6 quiz-main-right">
+          <div class="frame-art"><img id="quizImage"
+              src="https://cdn.prod.website-files.com/61848a25f822e1d08a208e51/61848a83e45d1a37d47afa35_art1.jpg"
+              class="frame-art-img"></div>
+          <img
+            src="https://cdn.prod.website-files.com/618344780acfccac60d1f2df/6184856f5dcb30a309adff56_picture-frame.png"
+            class="frame-img">
+          <button id="nextBtn" class="next-btn">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ada" id="ada">
+      <img src="https://cdn.prod.website-files.com/618344780acfccac60d1f2df/618487de9301e40b017a5c85_texture.jpg"
+        class="glass-texture">
+    </div>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        q: "Sümerler tarafından gerçekleştirilen ilk yazı sistemi hangisidir?",
+        options: ["Çin Yazı Sistemi", "Çivi Yazısı", "Hiyeroglif", "Capitalis Quadrata"],
+        answer: 1,
+        img: "./images/quiz/civi-yazısı.png"
+      },
+      {
+        q: "Bilinen en eski el yazması hikaye kitabı hangisidir?",
+        options: ["Diamond Sutra", "The Egyptian Books of the Dead", "Ortaçağ El Yazması Kitaplar", "Papirüs"],
+        answer: 2,
+        img: "./images/quiz/diamond-sutra.png"
+      },
+      {
+        q: "Eski Mısır’da yazı işlevi gören ve resim özelliği taşıyan simgeler hangisidir?",
+        options: ["Hiyeroglif", "Çin Yazı Sistemi", "Çivi Yazısı", "Capitalis Quadrata"],
+        answer: 0,
+        img: "./images/quiz/hiyeroglif.png"
+      },
+      {
+        q: "İlk alfabetik yazıyı bulan toplum hangisidir?",
+        options: ["Yunanlar ", "Mısırlar ", "Fenikeler ", "Çinler"],
+        answer: 2,
+        img: "./images/quiz/fenikeler.png"
+      },
+      {
+        q: "Hangisi günümüz amblem ve simge tasarımına önemli katkılar sağlamaktadır?",
+        options: ["Ortaçağ El Yazması Kitaplar", "Mağara Resimlemeleri", "Papirüs", "Capitalis Quadrata"],
+        answer: 1,
+        img: "./images/quiz/magara-resimleri.png"
+      }
+    ];
+
+    let current = 0;
+    let score = 0;
+
+    const questionText = document.getElementById("questionText");
+    const optionsArea = document.getElementById("options");
+    const nextBtn = document.getElementById("nextBtn");
+    const scoreDisplay = document.getElementById("scoreDisplay");
+    const ada = document.getElementById("ada");
+    const quizImage = document.getElementById("quizImage");
+
+    function showNext(show) {
+      nextBtn.style.display = show ? 'inline-block' : 'none';
+    }
+
+    function loadQuestion() {
+      const q = questions[current];
+      questionText.textContent = q.q;
+
+      quizImage.style.transition = 'none';
+      quizImage.style.filter = 'blur(25px)';
+      quizImage.getBoundingClientRect();
+      quizImage.src = q.img;
+      setTimeout(() => {
+        quizImage.style.transition = 'filter 600ms ease';
+      }, 30);
+
+      optionsArea.innerHTML = "";
+      q.options.forEach((opt, i) => {
+        const btn = document.createElement("button");
+        btn.textContent = opt;
+        btn.type = "button";
+        btn.onclick = () => checkAnswer(i);
+        optionsArea.appendChild(btn);
+      });
+
+      showNext(false);
+      ada.classList.remove('hidden-slide');
+    }
+
+    function checkAnswer(selected) {
+      const q = questions[current];
+      const buttons = optionsArea.querySelectorAll("button");
+
+      buttons.forEach((btn, i) => {
+        btn.disabled = true;
+        if (i === q.answer) btn.classList.add("correct");
+        if (i === selected && selected !== q.answer) btn.classList.add("wrong");
+      });
+
+      if (selected === q.answer) {
+        score += 10;
+        scoreDisplay.textContent = score;
+      }
+
+      quizImage.style.transition = 'filter 600ms ease';
+      quizImage.style.filter = 'blur(0px)';
+      ada.classList.add('hidden-slide');
+      showNext(true);
+    }
+
+    nextBtn.addEventListener('click', () => {
+      current++;
+      if (current < questions.length) {
+        loadQuestion();
+      } else {
+        // ✅ Quiz bittiğinde sonuç ekranı
+        const percent = Math.round((score / (questions.length * 10)) * 100);
+        document.body.innerHTML += `
+          <div class="result-screen">
+            Başarı Oranın: ${percent}%
+          </div>`;
+      }
+    });
+
+    loadQuestion();
+  </script>
+</body>
+
+</html>

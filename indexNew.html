@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Wrapper First, Horizontal Scroll Later</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=TikTok+Sans:opsz,wght@12..36,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Pinyon+Script&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css">
+
+
+</head>
+
+<body>
+    <div class="cursor">
+        <svg width="60" height="60">
+            <circle cx="30" cy="30" r="20" stroke="black" stroke-width="1" fill="white"></circle>
+        </svg>
+    </div>
+
+    <div class="scroll-container" data-scroll-container>
+        <!-- 1. Wrapper Bölümü -->
+        <div class="wrapper">
+            <div class="wrapper__content">
+                <section class="section section--hero"></section>
+                <!-- <section class="section section--purple"></section> -->
+                <!-- <section class="section section--blue"></section> -->
+            </div>
+            <div class="wrapper__image-container">
+                <img class="wrapper__image" src="./images/2-05-2.png" alt="cover">
+            </div>
+
+        </div>
+
+        <div class="welcome-area">
+            <h1>Grafik Tasarım Tarihi</h1>
+            <span>Bu web sitesindeki içerikler, Grafik Tasarım Tarihi dersine yönelik olarak,
+                tarih öncesi dönemden başlayıp modern sanatın grafik tasarım alan yansımalarına kadar
+                olan süreçle sınırlı tutulmuştur.</span>
+        </div>
+
+
+
+        <div class="subject-sections-area">
+            <div class="col-3 subject-sections-items">
+                <a href="#" class="period">
+                    <div class="period-capter"></div>
+                    <div class="period-text"></div>
+                    <div class="period-img"></div>
+                </a>
+            </div>
+            <div class="col-3 subject-sections-items">
+                <a href="#" class="period">
+                    <div class="period-capter"></div>
+                    <div class="period-text"></div>
+                    <div class="period-img"></div>
+                </a>
+            </div>
+            <div class="col-3 subject-sections-items">
+                <a href="#" class="period">
+                    <div class="period-capter"></div>
+                    <div class="period-text"></div>
+                    <div class="period-img"></div>
+                </a>
+            </div>
+            <div class="col-3 subject-sections-items">
+                <a href="#" class="period">
+                    <div class="period-capter"></div>
+                    <div class="period-text"></div>
+                    <div class="period-img"></div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 2. Horizontal Scroll Bölümü -->
+        <section class="section">
+            <h1 class="title">Horizontal Scroll Demo</h1>
+        </section>
+
+        <section id="sectionPin" class="section section--pin">
+            <div class="pin-wrap">
+
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Vertical scroll continues...</h2>
+        </section>
+
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="./global.js"></script>
+    <script>
+        const circle = document.querySelector('.cursor');
+        const links = document.querySelectorAll('a');
+
+        window.addEventListener("mousemove", moveCircle);
+
+        gsap.set(circle, {
+            xPercent: -50,
+            yPercent: -50
+        });
+
+        function moveCircle(e) {
+
+            gsap.to(circle, {
+                duration: 0.00001,
+                x: e.clientX,
+                y: e.clientY
+            });
+        }
+
+        function linkAnimIn() {
+            gsap.to(circle, {
+                duration: 0.3,
+                scale: 2
+            })
+        }
+
+        function linkAnimOut() {
+            gsap.to(circle, {
+                duration: 0.3,
+                scale: 1
+            })
+        }
+
+        links.forEach(link => {
+            link.addEventListener('mouseover', e => {
+                linkAnimIn();
+            });
+            link.addEventListener('mouseout', e => {
+                linkAnimOut();
+            });
+        });
+    </script>
+</body>
+
+</html>

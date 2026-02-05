@@ -1,0 +1,799 @@
+<!-- <!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll Animation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .spacer {
+      height: 100vh;
+      background: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+
+    .demo-text-container {
+      position: relative;
+      height: 200px; /* text alanı */
+      overflow: hidden;
+      background: #222;
+    }
+
+    .demo-text {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      white-space: nowrap;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .demo-text:nth-child(1) {
+      color: #C54357;
+    }
+
+    .demo-text:nth-child(2) {
+      color: #4CAF50;
+    }
+
+    .wrappera {
+      display: inline-block;
+      padding: 0 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="spacer">Scroll Başlıyor ↓</div>
+
+  <div class="demo-text-container">
+    <div class="demo-text">
+      <div class="wrappera">Roma İmparatorluğu — Sağdan sola kayıyor 🚀</div>
+    </div>
+    <div class="demo-text">
+      <div class="wrappera">Yunan Alfabesi — Soldan sağa kayıyor 🌿</div>
+    </div>
+  </div>
+
+  <div class="spacer">Scroll Bitti ↑</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    function asdad() {
+      const texts = gsap.utils.toArray('.demo-text');
+      if (texts.length >= 2) {
+        const container = document.querySelector('.demo-text-container');
+        if (!container) return;
+
+        const text1Width = texts[0].querySelector('.wrappera').scrollWidth;
+        const text2Width = texts[1].querySelector('.wrappera').scrollWidth;
+
+        const scrollLength = Math.max(text1Width, text2Width);
+
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: container,
+            scrub: 1,
+            pin: true,
+            start: "top top",
+            end: () => `+=${scrollLength}`
+          }
+        })
+        .fromTo(
+          texts[0].querySelector('.wrappera'),
+          { x: `${texts[0].offsetWidth}px` },
+          { x: `-${text1Width}px`, ease: "none" }
+        )
+        .fromTo(
+          texts[1].querySelector('.wrappera'),
+          { x: `-${text2Width}px` },
+          { x: `${texts[1].offsetWidth}px`, ease: "none" },
+          0
+        );
+      }
+    }
+
+    asdad();
+  </script>
+</body>
+</html> -->
+
+
+
+
+<!------------------------------------------------------------------->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grafik Tasarım Tarihi Quiz</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #C54357, #F9E8D9);
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .quiz-container {
+      background: #fff;
+      width: 500px;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #C54357;
+    }
+
+    .question {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .answers {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .answers button {
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      background: #f0f0f0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .answers button:hover {
+      background: #C54357;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .feedback {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .next-btn {
+      margin-top: 20px;
+      background: #C54357;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      display: none;
+    }
+
+    .result {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="quiz-container">
+    <h1>Grafik Tasarım Tarihi Quiz</h1>
+    <div id="quiz">
+      <div class="question" id="question"></div>
+      <div class="answers" id="answers"></div>
+      <div class="feedback" id="feedback"></div>
+      <button class="next-btn" id="nextBtn">Sonraki Soru</button>
+    </div>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        question: "Grafik tasarımın kökeni hangi uygarlığa kadar uzanır?",
+        answers: ["Antik Mısır", "Rönesans", "Bauhaus", "Postmodernizm"],
+        correct: 0,
+        info: "Antik Mısır’da resimli el yazmaları grafik tasarımın en eski örneklerindendir."
+      },
+      {
+        question: "Helvetica yazı tipi hangi dönemde popülerleşti?",
+        answers: ["1920 Bauhaus", "1950 Modernizm", "1980 Postmodernizm"],
+        correct: 1,
+        info: "Helvetica, 1950’lerde Modernist dönemde ortaya çıkmış ve dünyada en çok kullanılan yazı tiplerinden biri olmuştur."
+      },
+      {
+        question: "Bauhaus’un en bilinen ilkesi nedir?",
+        answers: ["Sanat için sanat", "Biçim işlevi takip eder", "Duygular ön planda"],
+        correct: 1,
+        info: "Bauhaus’un tasarım felsefesi: 'Form follows function' yani 'Biçim işlevi takip eder'."
+      }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    const questionEl = document.getElementById("question");
+    const answersEl = document.getElementById("answers");
+    const feedbackEl = document.getElementById("feedback");
+    const nextBtn = document.getElementById("nextBtn");
+    const resultEl = document.getElementById("result");
+
+    function loadQuestion() {
+      const q = questions[currentQuestion];
+      questionEl.textContent = q.question;
+      answersEl.innerHTML = "";
+      feedbackEl.textContent = "";
+      nextBtn.style.display = "none";
+
+      q.answers.forEach((answer, index) => {
+        const btn = document.createElement("button");
+        btn.textContent = answer;
+        btn.addEventListener("click", () => checkAnswer(index));
+        answersEl.appendChild(btn);
+      });
+    }
+
+    function checkAnswer(index) {
+      const q = questions[currentQuestion];
+      if (index === q.correct) {
+        feedbackEl.style.color = "green";
+        feedbackEl.textContent = "✅ Doğru! " + q.info;
+        score += 10;
+      } else {
+        feedbackEl.style.color = "red";
+        feedbackEl.textContent = "❌ Yanlış! " + q.info;
+      }
+      nextBtn.style.display = "block";
+    }
+
+    nextBtn.addEventListener("click", () => {
+      currentQuestion++;
+      if (currentQuestion < questions.length) {
+        loadQuestion();
+      } else {
+        showResult();
+      }
+    });
+
+    function showResult() {
+      questionEl.style.display = "none";
+      answersEl.style.display = "none";
+      feedbackEl.style.display = "none";
+      nextBtn.style.display = "none";
+
+      let level = "";
+      if (score <= 20) level = "🎨 Tasarım Çırağı";
+      else if (score <= 25) level = "🖌️ Tasarımcı Adayı";
+      else level = "🏆 Grafik Tasarım Ustası";
+
+      resultEl.textContent = `Skorun: ${score} | Seviyen: ${level}`;
+    }
+
+    loadQuestion();
+  </script>
+</body>
+</html> -->
+
+
+
+<!------------------------------------------------------------------->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grafik Tasarım Tarihi Quiz</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #d9465b, #f9d7c0);
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .quiz-container {
+      background: #fff;
+      width: 600px;
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+      text-align: center;
+      position: relative;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .progress-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 8px;
+      background: #d9465b;
+      border-radius: 8px;
+      width: 0%;
+      transition: width 0.5s ease;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 26px;
+      color: #d9465b;
+      letter-spacing: 1px;
+    }
+
+    .question {
+      font-size: 20px;
+      margin: 20px 0;
+      animation: slideIn 0.6s ease;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .answers {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .answers button {
+      padding: 14px;
+      font-size: 16px;
+      border: none;
+      border-radius: 12px;
+      background: #f0f0f0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      transform: scale(1);
+    }
+
+    .answers button:hover {
+      background: #d9465b;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .feedback {
+      margin-top: 20px;
+      font-weight: bold;
+      min-height: 40px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .next-btn {
+      margin-top: 25px;
+      background: #d9465b;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 16px;
+      display: none;
+      transition: all 0.3s ease;
+    }
+
+    .next-btn:hover {
+      background: #b63446;
+      transform: scale(1.05);
+    }
+
+    .result {
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: #333;
+      animation: fadeIn 1s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="quiz-container">
+    <div class="progress-bar" id="progress"></div>
+    <h1>🎨 Grafik Tasarım Tarihi Quiz</h1>
+    <div id="quiz">
+      <div class="question" id="question"></div>
+      <div class="answers" id="answers"></div>
+      <div class="feedback" id="feedback"></div>
+      <button class="next-btn" id="nextBtn">Sonraki Soru ➡️</button>
+    </div>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        question: "Grafik tasarımın en eski örnekleri hangi uygarlığa dayanır?",
+        answers: ["Antik Mısır", "Bauhaus", "Rönesans"],
+        correct: 0,
+        info: "✅ Antik Mısır hiyeroglifleri ve resimli el yazmaları grafik tasarımın kökenlerindendir."
+      },
+      {
+        question: "Helvetica yazı tipi hangi dönemde ortaya çıkmıştır?",
+        answers: ["1950 Modernizm", "1920 Bauhaus", "1980 Postmodernizm"],
+        correct: 0,
+        info: "✅ Helvetica, 1950’lerde modernist dönemde geliştirildi."
+      },
+      {
+        question: "Bauhaus’un temel felsefesi nedir?",
+        answers: ["Form işlevi takip eder", "Sanat için sanat", "Duygular ön planda"],
+        correct: 0,
+        info: "✅ Bauhaus felsefesi: 'Form follows function' yani biçim işlevi takip eder."
+      }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    const questionEl = document.getElementById("question");
+    const answersEl = document.getElementById("answers");
+    const feedbackEl = document.getElementById("feedback");
+    const nextBtn = document.getElementById("nextBtn");
+    const resultEl = document.getElementById("result");
+    const progressEl = document.getElementById("progress");
+
+    function loadQuestion() {
+      const q = questions[currentQuestion];
+      questionEl.textContent = q.question;
+      answersEl.innerHTML = "";
+      feedbackEl.textContent = "";
+      feedbackEl.style.opacity = 0;
+      nextBtn.style.display = "none";
+
+      q.answers.forEach((answer, index) => {
+        const btn = document.createElement("button");
+        btn.textContent = answer;
+        btn.addEventListener("click", () => checkAnswer(index));
+        answersEl.appendChild(btn);
+      });
+
+      updateProgress();
+    }
+
+    function checkAnswer(index) {
+      const q = questions[currentQuestion];
+      if (index === q.correct) {
+        feedbackEl.style.color = "green";
+        feedbackEl.textContent = q.info;
+        score += 10;
+      } else {
+        feedbackEl.style.color = "red";
+        feedbackEl.textContent = "❌ Yanlış! " + q.info;
+      }
+      feedbackEl.style.opacity = 1;
+      nextBtn.style.display = "inline-block";
+    }
+
+    nextBtn.addEventListener("click", () => {
+      currentQuestion++;
+      if (currentQuestion < questions.length) {
+        loadQuestion();
+      } else {
+        showResult();
+      }
+    });
+
+    function updateProgress() {
+      const progress = ((currentQuestion) / questions.length) * 100;
+      progressEl.style.width = `${progress}%`;
+    }
+
+    function showResult() {
+      updateProgress();
+      questionEl.style.display = "none";
+      answersEl.style.display = "none";
+      feedbackEl.style.display = "none";
+      nextBtn.style.display = "none";
+
+      let level = "";
+      if (score <= 10) level = "🎨 Tasarım Çırağı";
+      else if (score <= 20) level = "🖌️ Tasarımcı Adayı";
+      else level = "🏆 Grafik Tasarım Ustası";
+
+      resultEl.textContent = `Skorun: ${score} | Seviyen: ${level}`;
+    }
+
+    loadQuestion();
+  </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grafik Tasarım Quiz</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #d9465b, #f9d7c0);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Başlangıç ekranı */
+    .start-screen {
+      text-align: center;
+      background: #fff;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      animation: fadeIn 1s ease;
+    }
+
+    .start-screen h1 {
+      font-size: 28px;
+      color: #d9465b;
+      margin-bottom: 20px;
+    }
+
+    .start-btn {
+      background: #d9465b;
+      color: #fff;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .start-btn:hover {
+      transform: scale(1.05);
+      background: #b63446;
+    }
+
+    /* Quiz ekranı */
+    .quiz-container {
+      display: none;
+      background: #fff;
+      width: 600px;
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+      text-align: center;
+      opacity: 0;
+      transform: translateY(100px);
+      transition: all 0.6s ease;
+      position: relative;
+    }
+
+    .quiz-container.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .progress-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 8px;
+      background: #d9465b;
+      border-radius: 8px;
+      width: 0%;
+      transition: width 0.5s ease;
+    }
+
+    .question {
+      font-size: 20px;
+      margin: 20px 0;
+    }
+
+    .answers button {
+      padding: 12px;
+      width: 100%;
+      border-radius: 10px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      background: #f2f2f2;
+      transition: all 0.3s;
+    }
+
+    .answers button:hover {
+      background: #d9465b;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .feedback {
+      margin-top: 15px;
+      min-height: 30px;
+    }
+
+    .next-btn {
+      margin-top: 20px;
+      background: #d9465b;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      display: none;
+    }
+
+    .result {
+      font-size: 22px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    @keyframes fadeIn {
+      from {opacity:0; transform: translateY(20px);}
+      to {opacity:1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Başlangıç ekranı -->
+  <div class="start-screen" id="startScreen">
+    <h1>🎨 Grafik Tasarım Tarihi Quiz</h1>
+    <p>Hazır mısın? Bilgilerini test et!</p>
+    <button class="start-btn" id="startBtn">Quiz Başlat 🚀</button>
+  </div>
+
+  <!-- Quiz alanı -->
+  <div class="quiz-container" id="quizContainer">
+    <div class="progress-bar" id="progress"></div>
+    <div id="question"></div>
+    <div class="answers" id="answers"></div>
+    <div class="feedback" id="feedback"></div>
+    <button class="next-btn" id="nextBtn">Sonraki ➡️</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        question: "Grafik tasarımın en eski örnekleri hangi uygarlığa dayanır?",
+        answers: ["Antik Mısır", "Bauhaus", "Rönesans"],
+        correct: 0,
+        info: "✅ Antik Mısır hiyeroglifleri grafik tasarımın kökenidir."
+      },
+      {
+        question: "Helvetica yazı tipi hangi dönemde ortaya çıkmıştır?",
+        answers: ["1950 Modernizm", "1920 Bauhaus", "1980 Postmodernizm"],
+        correct: 0,
+        info: "✅ Helvetica, 1950’lerde modernist dönemde geliştirildi."
+      }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    const startBtn = document.getElementById("startBtn");
+    const startScreen = document.getElementById("startScreen");
+    const quizContainer = document.getElementById("quizContainer");
+    const questionEl = document.getElementById("question");
+    const answersEl = document.getElementById("answers");
+    const feedbackEl = document.getElementById("feedback");
+    const nextBtn = document.getElementById("nextBtn");
+    const resultEl = document.getElementById("result");
+    const progressEl = document.getElementById("progress");
+
+    startBtn.addEventListener("click", () => {
+      startScreen.style.display = "none";
+      quizContainer.classList.add("active");
+      document.body.style.overflow = "hidden"; // scroll kapat
+      loadQuestion();
+    });
+
+    function loadQuestion() {
+      const q = questions[currentQuestion];
+      questionEl.textContent = q.question;
+      answersEl.innerHTML = "";
+      feedbackEl.textContent = "";
+      nextBtn.style.display = "none";
+
+      q.answers.forEach((answer, index) => {
+        const btn = document.createElement("button");
+        btn.textContent = answer;
+        btn.onclick = () => checkAnswer(index);
+        answersEl.appendChild(btn);
+      });
+
+      updateProgress();
+    }
+
+    function checkAnswer(index) {
+      const q = questions[currentQuestion];
+      if (index === q.correct) {
+        feedbackEl.textContent = q.info;
+        feedbackEl.style.color = "green";
+        score += 10;
+      } else {
+        feedbackEl.textContent = "❌ Yanlış! " + q.info;
+        feedbackEl.style.color = "red";
+      }
+      nextBtn.style.display = "inline-block";
+    }
+
+    nextBtn.addEventListener("click", () => {
+      currentQuestion++;
+      if (currentQuestion < questions.length) {
+        loadQuestion();
+      } else {
+        showResult();
+      }
+    });
+
+    function updateProgress() {
+      progressEl.style.width = `${(currentQuestion) / questions.length * 100}%`;
+    }
+
+    function showResult() {
+      questionEl.style.display = "none";
+      answersEl.style.display = "none";
+      feedbackEl.style.display = "none";
+      nextBtn.style.display = "none";
+      progressEl.style.width = "100%";
+      resultEl.textContent = `Skorun: ${score}`;
+    }
+  </script>
+
+</body>
+</html>

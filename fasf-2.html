@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grafik Tasarım Quiz</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Roboto', sans-serif;
+            background-color: #EEE9D7;
+        }
+
+        .quiz-area {
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Başlangıç ekranı */
+        .quiz-start-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            inset: 0;
+            background-color: #C54357;
+            transition: transform 1s ease, opacity 1s ease;
+            z-index: 2;
+        }
+
+        .quiz-start-area.loaded {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+
+        .quiz-start-area>img {
+            position: absolute;
+            width: 33%;
+            transform-origin: center center;
+            animation: spin 12s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .quiz-start-area>h2 {
+            font-size: 36px;
+            color: #272727;
+            z-index: 3;
+            letter-spacing: -2px;
+        }
+
+        .quiz-start-area>h3 {
+            font-size: 90px;
+            color: #EEE9D7;
+            z-index: 3;
+            margin-bottom: 25px;
+            margin-top: 0;
+            font-family: 'Fkscreamertrial', sans-serif;
+        }
+
+        .quiz-start-area>button {
+            font-size: 25px;
+            color: #ffcc00;
+            background-color: transparent;
+            border: none;
+            letter-spacing: -2px;
+            font-weight: 400;
+            animation: blinkText 1.8s ease-in-out infinite;
+            cursor: pointer;
+        }
+
+        @keyframes blinkText {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        /* Quiz ekranı */
+        .quiz-container-area {
+            position: absolute;
+            inset: 0;
+            background-color: #1b3132;
+            opacity: 0;
+            transition: opacity 1s ease;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .quiz-area-header {
+            width: 54%;
+            height: 110px;
+            color: white;
+            display: flex;
+            align-items: center;
+            margin-bottom: 100px;
+            justify-content: space-between;
+        }
+
+        .quiz-area-header>h4 {
+            font-size: 40px;
+            font-weight: bold;
+            color: #dff0d8;
+        }
+
+        .quiz-area-header>article {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            padding: 0.63em 1.3em;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #fff;
+            border-radius: 100vw;
+            font-weight: 600;
+            color: #fff;
+            display: flex;
+            gap: 8px;
+            font-size: 18px;
+        }
+
+
+
+        .quiz-container-area.visible {
+            opacity: 1;
+        }
+
+        .question-box {
+            /* background-color: #ffffff; */
+            width: 45%;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            flex-flow: column;
+            justify-content: space-around;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0px 1px 4px -3px #000;
+        }
+
+        .question {
+            font-size: 2.4em;
+            font-weight: bold;
+            text-align: center;
+            color: #dff0d8;
+            margin-bottom: 2.8em
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+
+        .option {
+            color: #f0f0f0;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 22px;
+            transition: transform 0.15s, background 0.2s, opacity 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 48%;
+            background-color: transparent;
+            border: 1px solid #fff;
+        }
+
+        .option:hover {
+            transform: translateY(-4px);
+        }
+
+        .option[disabled] {
+            cursor: default;
+            opacity: 0.7;
+            transform: none;
+        }
+
+        .option img {
+            width: 140px;
+            height: 90px;
+            object-fit: contain;
+            border-radius: 8px;
+            display: block;
+            margin: 0;
+            background: white;
+            padding: 6px;
+        }
+
+        .option.correct {
+            outline: 3px solid #28a745;
+            background-color: #dff0d8;
+            color: #153b12;
+        }
+
+        .option.wrong {
+            outline: 3px solid #dc3545;
+            background-color: #f8d7da;
+            color: #6b0f12;
+        }
+
+        /* Feedback ve next artık kutu dışında */
+        .quiz-bottom {
+            margin-top: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            position: absolute;
+            bottom: 108px;
+        }
+
+        .feedback {
+            min-height: 36px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .next-btn {
+            font-size: 18px;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #C54357;
+            color: white;
+            cursor: pointer;
+            display: none;
+        }
+
+        .result-screen {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .result-screen h2 {
+            font-size: 48px;
+            color: #C54357;
+        }
+
+        .result-screen button {
+            margin-top: 20px;
+            font-size: 20px;
+            padding: 10px 25px;
+            border: none;
+            background-color: #C54357;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+    <style>
+        /* .gttq-area {
+            height: 100vh;
+            background-color: #1b3132;
+            display: flex;
+            flex-flow: column;
+            padding: 3.23em 3.13em;
+        }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 50%;
+            height: 110px;
+        }
+
+        .page-header>abbr {
+            font-size: 40px;
+            font-weight: bold;
+            color: #dff0d8;
+        }
+
+
+        .page-header>article {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            padding: 0.63em 1.3em;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #fff;
+            border-radius: 100vw;
+            font-weight: 600;
+            color: #fff;
+            display: flex;
+            gap: 8px;
+            font-size: 18px;
+        }
+
+        .page-header>article>span {
+            margin-left: 10px;
+        }
+
+        .page-main {
+            display: flex;
+            justify-content: space-between;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="quiz-area">
+        <!-- Başlangıç ekranı -->
+        <div class="quiz-start-area" id="startScreen">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/mars_sunburst.png" alt="">
+            <h2>Grafik Tasarım Tarihi Quiz</h2>
+            <h3>GAME QUIZ</h3>
+            <button id="startBtn">OYNAMAK İÇİN TIKLAYIN</button>
+        </div>
+
+        <!-- <div class="gttq-area">
+            <div class="page-header">
+                <abbr>GTTQ</abbr>
+                <article>
+                    <img src="https://cdn.prod.website-files.com/618344780acfccac60d1f2df/618442febf072bfcf11ee3fa_points-icon.svg"
+                        loading="lazy" alt="Trophy Icon" class="points-icon">
+                    <span>0</span>
+                    <abbr>puan</abbr>
+                </article>
+            </div>
+            <div class="page-main">
+                <div class="col-8">
+                    <p>Sümerler tarafından gerçekleştirilen ilk yazı sistemi hangisidir?</p>
+
+                </div>
+                <div class="col-4">w</div>
+            </div>
+            <div class="page-footer"></div>
+        </div> -->
+
+
+        <!-- Quiz alanı -->
+        <div class="quiz-container-area" id="quizContainer" aria-live="polite">
+            <div class="quiz-area-header">
+                <h4>GTTQ</h4>
+                <article>
+                    <img src="https://cdn.prod.website-files.com/618344780acfccac60d1f2df/618442febf072bfcf11ee3fa_points-icon.svg"
+                        loading="lazy" alt="Trophy Icon" class="points-icon">
+                    <span id="scoreDisplay">0</span>
+                    <abbr>puan</abbr>
+                </article>
+            </div>
+            <div id="questionBox" class="question-box">
+                <div>
+                    <div class="question" id="questionText"></div>
+                    <div class="options" id="optionsBox"></div>
+                </div>
+                <div>
+                    <img src="https://assets.website-files.com/618344780acfccac60d1f2df/6184856f5dcb30a309adff56_picture-frame.png" alt="">
+                </div>
+            </div>
+
+            <div class="quiz-bottom">
+                <div class="feedback" id="feedback"></div>
+                <button class="next-btn" id="nextBtn">Sonraki Soru →</button>
+            </div>
+
+            <div class="result-screen" id="resultScreen">
+                <h2>Quiz Tamamlandı 🎉</h2>
+                <p id="scoreText"></p>
+                <button onclick="location.reload()">Tekrar Oyna</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const startBtn = document.getElementById("startBtn");
+        const startScreen = document.getElementById("startScreen");
+        const quizContainer = document.getElementById("quizContainer");
+
+        const questionText = document.getElementById("questionText");
+        const optionsBox = document.getElementById("optionsBox");
+        const feedback = document.getElementById("feedback");
+        const resultScreen = document.getElementById("resultScreen");
+        const scoreText = document.getElementById("scoreText");
+        const nextBtn = document.getElementById("nextBtn");
+
+        const quizData = [
+            {
+                question: "Sümerler tarafından gerçekleştirilen ilk yazı sistemi hangisidir?",
+                options: ["Çin Yazı Sistemi", "Çivi Yazısı", "Hiyeroglif", "Capitalis Quadrata"],
+                correct: 1
+            },
+            {
+                question: "Bilinen en eski el yazması hikaye kitabı hangisidir?",
+                options: [
+                    { img: "https://upload.wikimedia.org/wikipedia/commons/4/4a/IBM_logo.svg", label: "IBM" },
+                    { img: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Apple_gray_logo.png", label: "Apple" },
+                    { img: "https://upload.wikimedia.org/wikipedia/commons/a/a9/McDonald's_Golden_Arches.svg", label: "McDonald's" },
+                    { img: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Adidas_Logo.svg", label: "Adidas" }
+                ],
+                correct: 2
+            },
+            {
+                question: "Eski Mısır’da yazı işlevi gören ve resim özelliği taşıyan simgeler hangisidir?",
+                options: [
+                    { img: "https://upload.wikimedia.org/wikipedia/commons/4/4a/IBM_logo.svg", label: "IBM" },
+                    { img: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Apple_gray_logo.png", label: "Apple" },
+                    { img: "https://upload.wikimedia.org/wikipedia/commons/a/a9/McDonald's_Golden_Arches.svg", label: "McDonald's" },
+                    { img: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Adidas_Logo.svg", label: "Adidas" }
+                ],
+                correct: 0
+            },
+            {
+                question: "Hangisi ortaçağ el yazmalarındandır?",
+                options: [
+                    { img: "https://upload.wikimedia.org/wikipedia/commons/4/4a/IBM_logo.svg", label: "IBM" },
+                    { img: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Apple_gray_logo.png", label: "Apple" },
+                    { img: "https://upload.wikimedia.org/wikipedia/commons/a/a9/McDonald's_Golden_Arches.svg", label: "McDonald's" },
+                    { img: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Adidas_Logo.svg", label: "Adidas" }
+                ],
+                correct: 1
+            },
+            {
+                question: "Hangisi günümüz amblem ve simge tasarımına önemli katkılar sağlamaktadır? ",
+                options: [
+                    { img: "https://upload.wikimedia.org/wikipedia/commons/4/45/Constructivist_poster_1920s.jpg", label: "Konstrüktivist (1920ler)" },
+                    { img: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Swiss_Design_Poster.jpg", label: "Swiss / Modern (1950ler)" },
+                    { img: "https://upload.wikimedia.org/wikipedia/commons/2/25/Art_Nouveau_Poster.jpg", label: "Art Nouveau (1890lar-1900ler)" },
+                    { img: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Psychedelic_poster_1960s.jpg", label: "Psychedelic (1960lar)" }
+                ],
+                correct: 2
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let answered = false;
+
+        startBtn.addEventListener("click", () => {
+            startScreen.classList.add("loaded");
+            setTimeout(() => {
+                quizContainer.classList.add("visible");
+                showQuestion();
+            }, 800);
+        });
+
+        function showQuestion() {
+            answered = false;
+            feedback.textContent = "";
+            nextBtn.style.display = "none";
+            optionsBox.innerHTML = "";
+            document.getElementById("questionBox").style.display = "flex";
+            resultScreen.style.display = "none";
+
+            const q = quizData[currentQuestion];
+            questionText.textContent = q.question;
+
+            q.options.forEach((opt, index) => {
+                const btn = document.createElement("button");
+                btn.className = "option";
+                btn.type = "button";
+                btn.dataset.index = index;
+
+                if (typeof opt === "object" && opt.img) {
+                    const img = document.createElement("img");
+                    img.src = opt.img;
+                    img.alt = opt.label || `Seçenek ${index + 1}`;
+                    btn.appendChild(img);
+                } else {
+                    btn.textContent = opt;
+                }
+
+                btn.addEventListener("click", () => handleAnswer(index, btn));
+                optionsBox.appendChild(btn);
+            });
+        }
+
+        function handleAnswer(index, btn) {
+            if (answered) return;
+            answered = true;
+
+            const q = quizData[currentQuestion];
+            const buttons = Array.from(optionsBox.querySelectorAll(".option"));
+
+            buttons.forEach(b => b.disabled = true);
+            const correctBtn = buttons[q.correct];
+
+            if (index === q.correct) {
+                btn.classList.add("correct");
+                score++;
+                feedback.textContent = "Doğru! 🎉";
+                feedback.style.color = "green";
+            } else {
+                btn.classList.add("wrong");
+                correctBtn.classList.add("correct");
+
+                let correctLabel = "";
+                const correctOpt = q.options[q.correct];
+                if (typeof correctOpt === "string") correctLabel = correctOpt;
+                else if (typeof correctOpt === "object" && correctOpt.label) correctLabel = correctOpt.label;
+
+                feedback.textContent = "Yanlış ❌ Doğru cevap: " + correctLabel;
+                feedback.style.color = "#b40000";
+            }
+
+            nextBtn.style.display = "inline-block";
+            nextBtn.textContent = (currentQuestion < quizData.length - 1) ? "Sonraki Soru →" : "Sonucu Görüntüle";
+        }
+
+        nextBtn.addEventListener("click", () => {
+            currentQuestion++;
+            if (currentQuestion < quizData.length) {
+                showQuestion();
+            } else {
+                endQuiz();
+            }
+        });
+
+        function endQuiz() {
+            document.getElementById("questionBox").style.display = "none";
+            document.querySelector(".quiz-bottom").style.display = "none";
+            resultScreen.style.display = "flex";
+            scoreText.textContent = `Puanın: ${score} / ${quizData.length}`;
+        }
+    </script>
+</body>
+
+</html>

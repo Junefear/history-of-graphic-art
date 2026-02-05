@@ -1,0 +1,2988 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Wrapper First, Horizontal Scroll Later</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css">
+
+    <link rel="stylesheet" href="./deneme.css">
+    <link rel="stylesheet" href="./topic-2.css">
+    <link rel="stylesheet" href="./quiz.css">
+    <link rel="stylesheet" href="./industry.css">
+    <link rel="stylesheet" href="./modernArt.css">
+
+</head>
+
+<body>
+    <header class="fixed-header">
+        <div class="header-content">
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="side-menu" id="sideMenu">
+        <div class="menu-overlay" onclick="toggleMenu()"></div>
+        <div class="menu-content">
+            <div class="menu-header">
+                <h3>Grafik Tasarım Dönemleri</h3>
+                <button class="close-btn" onclick="toggleMenu()">×</button>
+            </div>
+            <nav class="menu-nav">
+                <a href="#" class="menu-item" data-period="prehistoric">
+                    <div class="menu-item-content">
+                        <div class="menu-item-icon">
+                            <img src="./images/subject/1.png" alt="Tarih Öncesi" class="menu-icon">
+                        </div>
+                        <div class="menu-item-text">
+                            <h4>Tarih Öncesi Dönemden Orta Çağa Kadar Grafik Tasarım</h4>
+                            <span>M.Ö. 40.000 - M.S. 500</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="menu-item" data-period="renaissance">
+                    <div class="menu-item-content">
+                        <div class="menu-item-icon">
+                            <img src="./images/subject/2.png" alt="Rönesans" class="menu-icon">
+                        </div>
+                        <div class="menu-item-text">
+                            <h4>Rönesans Döneminde Grafik Tasarım</h4>
+                            <span>15.YY - 19.YY</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="menu-item" data-period="industrial">
+                    <div class="menu-item-content">
+                        <div class="menu-item-icon">
+                            <img src="./images/subject/3.png" alt="Sanayi Devrimi" class="menu-icon">
+                        </div>
+                        <div class="menu-item-text">
+                            <h4>Grafik Tasarım ve Sanayi Devrimi</h4>
+                            <span>18YY - 20.YY</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="menu-item" data-period="modern">
+                    <div class="menu-item-content">
+                        <div class="menu-item-icon">
+                            <img src="./images/subject/4.png" alt="Modern Sanat" class="menu-icon">
+                        </div>
+                        <div class="menu-item-text">
+                            <h4>Modern Sanat ve Grafik Tasarım</h4>
+                            <span>20.YY</span>
+                        </div>
+                    </div>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="cursor">
+        <svg width="60" height="60" class="cursor-svg">
+            <circle cx="30" cy="30" r="20" stroke="black" stroke-width="1" fill="white"></circle>
+        </svg>
+        <i class="fa-solid fa-arrows-rotate cursor-icon" style="display:none; font-size:22px;"></i>
+    </div>
+
+
+
+
+    <div class="wrapperZoom">
+        <div class="wrapperZoom-content">
+            <section class="section hero">
+                <h1 class="hero-text">“Tarih, geçmişin geleceğe ışık tutmasıdır.”</h1>
+                <span class="hero-des">Cicero</span>
+            </section>
+        </div>
+        <div class="image-container">
+            <img src="./images/donem1-sayfa1.png" alt="image" class="front-image">
+        </div>
+    </div>
+
+    <div class="welcome-area">
+        <h1>Grafik Tasarım Tarihi</h1>
+        <span>Bu web sitesindeki içerikler, Grafik Tasarım Tarihi dersine yönelik olarak,
+            tarih öncesi dönemden başlayıp modern sanatın grafik tasarım alan yansımalarına kadar
+            olan süreçle sınırlı tutulmuştur.</span>
+    </div>
+
+
+
+
+    <div class="subject-sections-area">
+        <div class="col-3 subject-sections-items">
+            <a href="#" class="period">
+                <div class="period-capter">Tarih Öncesi Dönemden Orta Çağa Kadar
+                    Grafik Tasarım</div>
+                <div class="period-text">M.Ö. 40.000 - M.S. 500</div>
+                <div class="period-img-wrap">
+                    <img src="./images/subject/02-01.png" loading="lazy" alt="" class="hero-img up">
+                    <img src="./images/subject/Tarihoncesi-1.png" loading="lazy" alt="" class="hero-img">
+                    <img src="./images/subject/Tarihoncesi-2.png" loading="lazy" alt="" class="hero-img">
+                    <img src="./images/subject/Tarihoncesi-3.png" loading="lazy" alt="" class="hero-img">
+                    <img src="./images/subject/Tarihoncesi-4.png" loading="lazy" alt="" class="hero-img">
+                    <img src="./images/subject/Tarihoncesi-5.png" loading="lazy" alt="" class="hero-img">
+                    <img src="./images/subject/Tarihoncesi-6.png" loading="lazy" alt="" class="hero-img">
+                </div>
+            </a>
+        </div>
+        <div class="col-3 subject-sections-items">
+            <a href="#" class="period">
+                <div class="period-capter">Rönesans Döneminde
+                    Grafik Tasarım</div>
+                <div class="period-text">15.YY - 19.YY</div>
+                <div class="period-img-wrap">
+                    <img src="./images/subject/02-02.png" loading="lazy" alt="" class="hero-img up">
+                    <img src="./images/subject/Ronesansdonemi-1.png" loading="lazy" alt="" class="hero-img">
+                    <img src="./images/subject/Ronesansdonemi-2.png" loading="lazy" alt="" class="hero-img">
+                    <img src="./images/subject/Ronesansdonemi-3.png" loading="lazy" alt="" class="hero-img">
+                    <img src="./images/subject/Ronesansdonemi-4.png" loading="lazy" alt="" class="hero-img">
+                    <img src="./images/subject/Ronesansdonemi-5.png" loading="lazy" alt="" class="hero-img">
+                </div>
+            </a>
+        </div>
+        <div class="col-3 subject-sections-items">
+            <a href="#" class="period">
+                <div class="period-capter">Grafik Tasarım ve
+                    Sanayi Devrimi</div>
+                <div class="period-text">18YY - 20.YY</div>
+                <div class="period-img-wrap">
+                    <img src="./images/subject/02-03.png" loading="lazy" alt="" class="hero-img up">
+                    <img src="./images/subject/grafiktasarımvesanayi-1.png" loading="lazy" alt="" class="hero-img">
+                    <img src="./images/subject/grafiktasarımvesanayi-2.png" loading="lazy" alt="" class="hero-img">
+                    <img src="./images/subject/grafiktasarımvesanayi-3.png" loading="lazy" alt="" class="hero-img">
+                    <img src="./images/subject/grafiktasarımvesanayi-4.png" loading="lazy" alt="" class="hero-img">
+                    <img src="./images/subject/grafiktasarımvesanayi-5.png" loading="lazy" alt="" class="hero-img">
+                </div>
+            </a>
+        </div>
+        <div class="col-3 subject-sections-items">
+            <a href="#" class="period">
+                <div class="period-capter">Modern Sanat ve
+                    Grafik Tasarım</div>
+                <div class="period-text">20.YY</div>
+                <div class="period-img-wrap">
+                    <img src="./images/subject/02-04.png" loading="lazy" alt="" class="hero-img up">
+                    <img src="./images/subject/modernizmvegrafiktasarim1.png" loading="lazy" alt="" class="hero-img">
+                    <img src="./images/subject/modernizmvegrafiktasarim2.png" loading="lazy" alt="" class="hero-img">
+                    <img src="./images/subject/modernizmvegrafiktasarim3.png" loading="lazy" alt="" class="hero-img">
+                    <img src="./images/subject/modernizmvegrafiktasarim4.png" loading="lazy" alt="" class="hero-img">
+                    <img src="./images/subject/modernizmvegrafiktasarim5.png" loading="lazy" alt="" class="hero-img">
+                    <img src="./images/subject/modernizmvegrafiktasarim6.png" loading="lazy" alt="" class="hero-img">
+                    <img src="./images/subject/modernizmvegrafiktasarim7.png" loading="lazy" alt="" class="hero-img">
+                    <img src="./images/subject/modernizmvegrafiktasarim8.png" loading="lazy" alt="" class="hero-img">
+                    <img src="./images/subject/modernizmvegrafiktasarim9.png" loading="lazy" alt="" class="hero-img">
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
+
+    <div class="sectionPin">
+        <div class="time-line">
+            <ul>
+                <li><a href="#prehistoric-period">M.Ö. 40.000 <span>-</span> M.Ö. 3.200</a></li>
+                <li><a href="#mesopotamian-civilization">M.Ö. 3.500 <span>-</span> M.Ö. 500</a></li>
+                <li><a href="#ancient-egypt">M.Ö. 3.100 <span>-</span> M.S. 395</a></li>
+                <li><a href="#alphabets">M.Ö. 1.500 <span>-</span> M.Ö. 114</a></li>
+                <li><a href="#chines-graphic-desing">M.Ö. 1.800 <span>-</span> M.S. 860</a></li>
+                <li><a href="#manuscripts">M.S. 500 <span>-</span> M.S. 1.450</a></li>
+            </ul>
+        </div>
+        <div class="pin-wrap">
+            <div class="section-one">
+
+                <div class="section-period">
+
+                    <div class="sub-text">Dönem 1</div>
+                    <h2 class="main-text">
+                        Tarih Öncesi Dönemden Orta Çağa Kadar Grafik Tasarım
+                    </h2>
+                    <div class="sub-text">
+                        M.Ö. 40.000 - M.S. 500
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="prehistoric-period section-two " id="prehistoric-period">
+                <div class="col-9 prehistoric-period-left">
+                    <div class="bg-effect"></div>
+                    <abbr>M.Ö.40.000 - M.ö.3200</abbr>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                        loading="lazy" alt="" class="right-gif">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9ef2157b7ffb72d4d1_02.GIF"
+                        loading="lazy" alt="" class="left-gif">
+                    <span>Tarih Öncesi Dönem</span>
+
+                    <section>
+                        <p>Grafik tasarım, görsel bir iletişim sanatıdır (Becer, 2015, s.33). Tarihi binlerce yıl
+                            öncesine dayanan grafik tasarım, diğer sanat dalları gibi toplumla birlikte var olmuş,
+                            toplumla birlikte yaşamış, değişmiş ve gelişmiştir.</p>
+                        <p>Paleolitik dönemin en bilinen sanat yapıtı olarak <strong>Avusturya Willendorf’ta
+                                bulunan</strong> yaklaşık
+                            25-30.000 yıllık
+                            <strong>bir kadın heykelciği</strong> gösterilmektedir (Becer, 2015, s.83).
+                        </p>
+                    </section>
+                    <img class="reveal reveal--left"
+                        src="https://www.dailyartmagazine.com/wp-content/uploads/2018/02/venus-of-willendorf-pregnant.nocrop.w840.h1330.2x-845x1024.jpg">
+
+
+                </div>
+
+                <div class="col-3 prehistoric-period-right">
+                    <p>İnsanlık var olduğundan beri en
+                        temel ihtiyaçlardan biri hayatta kalma mücadelesidir. Hayatta kalma
+                        mücadelesi <strong class="rotating-word">ilk insanlar olarak bilinen
+                            Neandertaller</strong>’den beri devam etmiştir.
+                        Bu insan türü 1 milyon yıl önce taş ve
+                        tabakaları yontarak işe yarar hale getirmiş daha sonra da ateşten yararlanmayı öğrenmiştir. Bu
+                        tarihten çeyrek milyon yıl sonra ise bugünkü biçimlerine benzeyen çok az ulaşılmış el baltaları
+                        ortaya
+                        çıkmıştır. Kesin olmamakla birlikte bu
+                        sanatsal üretimin ilk basamağı sayılabilir. Yaklaşık İ.Ö. 40.000 yıllarında bu insan türü yok
+                        olmuş ve bizim de üyesi olduğumuz <strong class="rotating-word">“Homo Sapiens Sapiens”</strong>
+                        insan türü
+                        kalmıştır. Ağaç ve pişmiş kil gibi dayanıksız malzemelerden yapılan sanat ürünleri
+                        diyebileceğimiz nesneler hakkında
+                        doyurucu bir bilgiye ulaşılmamıştır. Ancak
+                        Paleolitik dönemin en bilinen sanat yapıtı olarak <abbr>Willendorf Venüsü</abbr>
+                        gösterilmektedir (Becer,
+                        2015, s.83).</p>
+                </div>
+
+            </div>
+
+            <div class="prehistoric-period-page-2 section-two2">
+                <div class="col-4 prehistoric-period-page-2-left">
+                    <p>İletişim grafik tasarımın ana unsurlarından biridir. İlkel çağlarda mağara duvarlarına yapılan
+                        çeşitli betimlemeler grafik tasarımın ilk örnekleri olarak kabul edilebilir. Yazı keşfedilmeden
+                        önce insanlar fikir ve düşüncelerini mağara duvarlarına çizdiği ve boyadığı imgelerle ifade
+                        etmiştir.
+                        İnsanoğlunun hayatta kalma
+                        mücadelesinden sonra bir diğer
+                        gereksinimin -iletişim kurma ihtiyacının- bu şekilde sağlandığı söylenebilir.</p>
+                    <section>
+                        <img src="./images/2-sekil-altamira-magrası.jpg">
+                        <div>
+                            <a target="_blank" href="https://www.youtube.com/watch?v=QRJs3HyXXQI"><i
+                                    class="fa-solid fa-play d-block"></i></a>
+                        </div>
+                        <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbf2f2d0083bd3f831432_IMG_1585.GIF"
+                            class="to-watch">
+                    </section>
+                    <p>
+                        Kuzey İspanya’nın Altamira mağarasında
+                        Paleolitik dönemden kalma resimler ve Güney Fransa’nın Lascaux mağarasında İ.Ö. 15.000’li
+                        yılarına ait resimlemeler, mağara devri sanatçısının figürlerini yalınlaştırarak kimliğini ve
+                        canlılığını başarılı bir şekilde stilize ettiğini gösterir. Bu üslup, günümüz amblem ve simge
+                        tasarımına önemli
+                        katkılar sağlamaktadır (Becer, 2015, s.84).
+                    </p>
+                </div>
+                <div class="col-8 prehistoric-period-page-2-right">
+                </div>
+            </div>
+
+
+            <div class="mesopotamian-civilization global-section-sm" id="mesopotamian-civilization">
+                <div class="col-12 mesopotamian-civilization-area">
+                    <div class="bg-effect"></div>
+                    <abbr>M.Ö. 3500 – M.Ö. 500</abbr>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                        loading="lazy" alt="" class="right-gif">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9ef2157b7ffb72d4d1_02.GIF"
+                        loading="lazy" alt="" class="left-gif">
+                    <span>Mezopotamya Uygarlığı</span>
+                    <section>
+                        <p><strong>Sümerler ilk yazı sistemini geliştiren toplum olarak bilinmektedir.</strong> Bu yazı
+                            sistemi IV. Uruk
+                            döneminde (şehrinde) bulunduğu sanılan <abbr> “Çivi Yazısı”</abbr>, insanlık tarihinin dönüm
+                            noktalarından
+                            biri olarak kabul edilir.
+                            Tapınak raporlarının tutulması amacıyla geliştirilen yazının bulunuşuyla daha sonra
+                            sözleşmeler, bilimsel ve edebi yapıtlar kil tabletler üzerine kaydedilmiş ve kütüphaneler
+                            kurulmuştur (Becer, 2015, s.84).</p>
+                    </section>
+                    <article>
+                        <img src="./images/mezopotamya-uygarlığı-2.png" class="mezopotamya-2">
+                        <img src="./images/mezopotamya-uygarlığı-3.png">
+
+                        <img src="./images/mezopotamya-uygarlığı-4.png" class="mezopotamya-4">
+
+                    </article>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="mesopotamian-civilization-2 global-section-xs">
+
+                <div class="top-area">
+                    <section>
+                        <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4f86a03dc36fac4a_IMG_1574.GIF"
+                            loading="lazy" alt="" class="mark-left ">
+                        <img src="./images/4-sekil-civi-yazısı.png" class="images-4 reveal reveal--bottom">
+                        <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672c82bd1beea2674b25d242_IMG_1575.GIF"
+                            loading="lazy" alt="" class="vs-1873">
+                        <img src="./images/4-sekil-civi-yazısı-2.png" class="images-4 reveal reveal--bottom">
+                        <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e855a33663cded854_IMG_1572.GIF"
+                            loading="lazy" alt="" class="mark-right">
+                    </section>
+                </div>
+                <div class="bottom-area">
+                    <article>
+                        <p>
+                            İnsanlar zaman içerisinde daha fazla mesaj iletme ihtiyacıyla birlikte mağara duvarlarına
+                            yapılan resimlemelerin soyutlamasıyla resimsel yazıları ve piktogramları kullanarak
+                            oluşturdukları yazı sayesinde daha kalıcı, okunabilir ve aktarılabilir bir iletişim türü
+                            ortaya koymuşlarıdır. Başlarda gündelik ihtiyacı karşılamak amacı ile ortaya çıkan
+                            piktogramlar, zamanla duygu ve düşünce gibi derin anlamlar taşıyan bir ifade şekli
+                            oluşturmuştur.<span> Farklı piktogramların bir araya getirilmesiyle oluşturulan yazıyla daha
+                                zengin bir iletişim dili ortaya çıkmıştır</span> (Bulak, 2019, s.20). Piktogram, bir
+                            eşyayı, bir
+                            objeyi, bir yeri, bir işleyişi, bir
+                            kavramı resmetme yoluyla temsil eden semboldür
+                            <small>(https://tr.wikipedia.org/wiki/Piktogram,
+                                t.y.).</small>
+                        </p>
+                    </article>
+
+                    <p>
+                        Mezopotamya, Dicle ve Fırat nehirleri arasında bir yaşam alanı olarak Sümerler tarafından
+                        kurulmuştur. Akadlar, Babilliler ve Asurlular için de bir yaşam alanı olan Mezopotamya’da sanat,
+                        halka hizmet amacı güden ve dinsel inançların yönlendirdiği anonim bir sanattır. Halk tanrıya
+                        ulaşma inancı doğrultusunda çalışıyor ve tüm ürettiklerini “Ziggurat” adı verilen tapınaklarda
+                        depo ediyordu. Yapılan araştırmalara göre bu tapınaklardaki yiyecek stoklarını kaydetme
+                        ihtiyacıyla Sümerler<span> ilk yazı sistemini</span> geliştiren toplum olarak bilinmektedir.
+                        <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e8bb407b3e089e05b_05.GIF"
+                            loading="lazy" alt="" class="mark m1826-3">
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="mesopotamian-civilization-3 global-section-xs">
+
+                <p>Ticari belgeleri ve sözleşmeleri onaylayan, dini ve kraliyet ilanlarının yetkisini kanıtlayan kil
+                    çivi yazısı tabletlerin yazarını tanımlayabilecek bir yönteme ihtiyaç vardı. Mezopotamya silindir
+                    mühürleri, belgeleri mühürlemek ve onların sahte olmadığını kanıtlamak için bir çözüm oldu
+                    <small> (Meggs & Purvis, 2016s, s.10-11).</small>
+                </p>
+                <p>Bu mühürler kişilerin hangi gruba mensup olduğunu gösteren ve toplumda tanınmalarını sağlayan
+                    semboller olarak kullanılmıştır. Günümüzde kullanılan logo tasarımı, dijital imza ve marka kimliği
+                    oluşturma süreçleriyle benzer işlevleri yerine getirdiği söylenebilir.
+                </p>
+                <div>
+                    <img src="./images/5-sekil-silindir-mühür-1.png" class="reveal reveal--right">
+                    <img src="./images/5-sekil-mezopotamya-mühür.png" class="reveal reveal--left">
+                </div>
+            </div>
+
+            <div class="mesopotamian-civilization-4">
+
+                <section>
+                    <p>Üretilen ürünlerin, mülkiyetin
+                        sahiplenilmesi ya da ticaretteki düzeni sağlamak amacıyla <abbr>çivi yazısı toplumda bir görsel
+                            kimlik oluşmasına zemin hazırlamıştır.</abbr> Bu mühürler kişilerin hangi gruba mensup
+                        olduğunu gösteren ve toplumda
+                        tanınmalarını sağlayan
+                        semboller olarak kullanılmıştır. Günümüzde sadece amblemlerinden tanığımız ünlü markalar gibi
+                        düşünülebilir. Ayrıca mühürlerler görsellerin tekrar üretilmesine olanak sağladığı için
+                        matbaanın öncüsü olarak görülebilir.
+                    </p>
+                </section>
+
+                <p>
+                    <span>Kişiye özgü imzalar olarak değerlendirilen silindir mühürlerin</span>
+                    boyunda ya da bilekte taşınabilmesi için üzerinde bir delik bulunuyordu. Daha
+                    sonraki Asur döneminde,
+                    Mezopotamya'nın kuzeyinde daha stilize ve simgesel bir tasarım yaklaşımı gelişti. Bu mühürlere
+                    tanrıların hikayeleri
+                    resmedildi ve hayvanların savaştaki halleri mühürlere işlendi (Meggs & Purvis, 2016s, s.10-11).
+                </p>
+            </div>
+
+
+            <div class="ancient-egypt" id="ancient-egypt">
+                <div class="col-12 ancient-egypt-area">
+                    <div class="bg-effect"></div>
+                    <abbr>M.Ö. 3100 – M.Ö. 395</abbr>
+                    <span>Eski Mısır Uygarlığı</span>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                        loading="lazy" alt="" class="right-gif">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9ef2157b7ffb72d4d1_02.GIF"
+                        loading="lazy" alt="" class="left-gif">
+                    <section>
+                        <p>
+                            Sümerler döneminde bulunan piktogramlar antik Mısır uygarlığında yerini
+                            <span>hiyerogliflere</span> bırakmıştır.
+                            Hiyeroglifler, belirli sesleri veya nesneleri temsil eden ve <span>resimsel özellik taşıyan
+                                yazı
+                                simgeleridir</span> (Bulak, 2019, s.22).
+                        </p>
+                    </section>
+                    <article>
+                        <img src="./images/eski-mısır-uygarlığı-1.png" class="reveal reveal--top">
+                    </article>
+
+                </div>
+            </div>
+
+            <div class="ancient-egypt-2">
+                <div class="bg-effect"></div>
+                <div class="ancient-egypt-2-area">
+                    <section>
+                        <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e855a33663cded854_IMG_1572.GIF"
+                            loading="lazy" alt="" class="mark-bottom">
+                        <img src="./images/6-sekil-hiyeroglif.png" class="left-img reveal reveal--right">
+                        <img src="./images/7-sekil-hiyeroglif.png" class="right-img reveal reveal--left">
+                    </section>
+
+                    <article>
+                        <p>Sadece Mısır’a özgü olan Hiyeroglif (Tanrı’nın Sözleri), Eski Mısır’da yazı işlevi gören ve
+                            resim
+                            özelliği taşıyan
+                            simgelerdir. Bu yazı türü çoğunlukla mezar ve tapınaklar duvarlarına (taşa) alçak ya da
+                            yüksek
+                            kabartma şeklinde oyularak yapılmıştır<small> (Becer, 2015, s.86)</small>.
+                        </p>
+                    </article>
+
+                    <p>
+                        Hiyeroglifler, belirli sesleri veya nesneleri temsil eden ve resimsel özellik taşıyan yazı
+                        simgeleridir. Sümer yazısından farkı, hem sesleri hem de anlamları ifade eden semboller
+                        içermesidir.
+                        Hiyeroglif yazıları genellikle sağdan sola okunur, ancak okuma yönü, yazının yönünü belirleyen
+                        insan
+                        veya kuş figürlerinin
+                        eğilimine göre değişebilir. Ayrıca, metinler bazen yukarıdan aşağıya ya da sırayla sağdan sola,
+                        ardından soldan sağa
+                        okunabilir (Bulak, 2019, s.22).
+                    </p>
+                </div>
+            </div>
+
+            <div class="ancient-egypt-3">
+
+                <div class="ancient-egypt-3-left col-8">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                        loading="lazy" alt="" class="right-gif">
+                    <img src="./images/8-sekil-rosetta-taşı.png" class="img-10 reveal reveal--top">
+                </div>
+                <div class="ancient-egypt-3-right col-4">
+                    <section>
+                        <img src="./images/8-sekil-rosetta-tasi-2.png" class="egypt-3-1">
+                        <img src="./images/8-sekil-rosetta-tası-1-3.png" class="egypt-3-2">
+                        <img src="./images/8-sekil-rosetta-tası-1-2.png" class="egypt-3-3">
+                        <img src="./images/8-sekil-rosetta-tası-1-1.png" class="egypt-3-4">
+                    </section>
+                    <p>
+                        Jean-François Champollion,
+                        hiyerogliflerin çözümünde önemli bir adım attı. Champollion, bazı işaretlerin harfleri
+                        (alfabetik), bazılarının heceleri (heceleme) ve bazılarının ise önceki
+                        hiyerogliflerin nasıl okunacağını belirten işaretler (belirleyiciler) olduğunu keşfetti.
+                        <strong> Hiyerogliflerin sadece resim yazıları
+                            (piktogramlar) değil, aynı
+                            zamanda sesleri temsil eden işaretler (fonogramlar) olarak da kullanıldığını fark
+                            etti.</strong> Bu
+                        keşif, Champollion’un antik Mısır’ın gizemli sırları olduğu düşünülen hiyeroglif yazı sistemi
+                        kullanılan Rosetta Taşı’ndaki Ptolemaios’un adını doğru bir şekilde
+                        okumasını sağladı <small>(Meggs & Purvis, 2016, s.13).</small>
+                    </p>
+                </div>
+            </div>
+
+            <div class="ancient-egypt-4">
+                <article>
+                    <p>Toplumların yaşadığı coğrafya
+                        koşullarına göre yazının gelişimi ve aktarımı gelişim göstermeye devam
+                        etmiştir. Nil nehri kenarında yaşamış olan Eski Mısır Uygarlığı da nehrin bataklık kısımlarında
+                        yetişen papirüs bitkisini
+                        kullanarak<strong> kağıdın ilk örneklerini
+                            vermiştir</strong>.
+
+                    </p>
+                </article>
+
+                <p><strong>Papirüs</strong>, eski çağlarda yazı yazmak için kullanılan kalın bir malzemedir ve sulak
+                    alanlarda yetişen
+                    papirüs bitkisinin
+                    (Cyperus papyrus) özünden üretilir. Ayrıca, bu malzemenin üzerine yazılmış, yan yana eklenerek
+                    birleştirilen ve erken dönem
+                    kitaplarının formu olan yuvarlanmış belgeleri de ifade eder
+                    <small>(https://tr.wikipedia.org/wiki/Papir%C3%BCs, t.y.).</small>
+                </p>
+
+
+                <img src="./images/9-sekil-papirüs-kağıdı-1.png" style="width: 100%;">
+            </div>
+
+            <div class="ancient-egypt-5">
+                <div class="left-layer">
+                    <article class="back">
+                        <span>2/2</span>
+                        <abbr>Mısırlılar, yazı ve resimlerin bilgi iletmek amacıyla birleştirildiği resimli el yazmaları
+                            üreten ilk insanlardı.</abbr>
+                        <p>
+                            İllüstrasyon, metin, başlık ya da slogan gibi sözel unsurları görsel olarak betimleyen ya da
+                            yorumlayan tüm unsurlara verilen genel bir addır (Becer, 2015, s.210). </p>
+                    </article>
+                    <article class="front active">
+                        <span>1/2</span>
+                        <p>
+                            MÖ. 1900’lü yıllarda “Ramessum Papyrus” ve <span>“The Egyptian Books of the Dead”</span>
+                            illüstrasyon
+                            ruloları, uzun bir papirüs üzerine yapılan, bilinen en eski el yazması hikaye kitaplarıdır
+                            (Gürdal Pamuklu, 2014, s.8). Rulo şeklindeki uzun bir papirüs kağıdı üzerine yapılan yazı ve
+                            yazılara eşlik eden resimlemeler aynı zamanda grafik tasarımın bir alanı olan
+                            illüstrasyonların ilk örneklerinden sayılabilir. </p>
+                    </article>
+                </div>
+                <div class="right-layer">
+                    <section>
+                        <a href="https://www.youtube.com/watch?v=raf-ENTEr2U" target="_blank">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </section>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4f86a03dc36fac4a_IMG_1574.GIF"
+                        loading="lazy" alt="" class="mark-top">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbf2f2d0083bd3f831432_IMG_1585.GIF"
+                        class="to-watch-mid">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e855a33663cded854_IMG_1572.GIF"
+                        loading="lazy" alt="" class="mark-bottom">
+                </div>
+            </div>
+
+            <div class="ancient-egypt-6">
+                <article>
+                    <p>
+                        <strong> The Egyptian Books of the Dead</strong> (Ölüler Kitabı) Mısırlılara ölümden sonraki
+                        yolculukla ilgili
+                        mitolojik bilgiler
+                        iletmektedir. Ölen kişinin bakış açısıyla yazılan ve resimlenen kitap, yeraltı dünyasının
+                        tehlikelerine karşı bilgi vermesi amacıyla mezarlara yerleştirilmiştir <small>(Meggs & Purvis,
+                            2016,s.17).</small> Ancak Papirüs kağıdı Mısır’da tamamen bugün kullandığımız kağıt haliyle
+                        kullanılmıyordu.
+                        Tıpkı yazı gibi kağıt da zaman içinde gelişim göstermiştir.
+
+                    </p>
+                </article>
+
+                <p>
+                    Antik Mısır kültürü, üç bin yılı aşkın bir süre boyunca etkisini sürdürmüştür.
+                    <strong>Hiyeroglifler, papirüsler ve resimli el yazmaları, Mısır'ın görsel iletişim mirasının temel
+                        taşlarıdır.</strong>
+                    Mezopotamya'dan gelen etkilerle birlikte bu yenilikler, Fenike ve Greko-Romen dünyasında<strong>
+                        alfabe ve
+                        grafik iletişim sistemlerinin gelişimini sağlamıştır</strong> <small>(Meggs & Purvis, 2016,
+                        s.16).</small>
+
+                </p>
+
+            </div>
+
+
+            <div class="alphabets" id="alphabets">
+                <div class="col-12 alphabets-area">
+                    <div class="bg-effect"></div>
+                    <abbr>M.Ö. 1500 – M.Ö. 114</abbr>
+                    <span>Alfabeler</span>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                        loading="lazy" alt="" class="right-gif">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9ef2157b7ffb72d4d1_02.GIF"
+                        loading="lazy" alt="" class="left-gif">
+
+                    <section>
+
+                        <p>
+                            Çivi yazısı, hiyeroglifler, Çince gibi erken dönem görsel iletişim sistemlerinin anlaşılması
+                            doğal olarak karmaşık ve zordu. Zaman içindeki uzun uğraşlar sonucunda <span>“alfabe”</span>
+                            icat
+                            edilmiştir.
+                        </p>
+                        <p>
+                            Alfabenin kökeni eski Girit piktogramlarına dayanmaktadır. Fakat yazılı iletişimde bir dönüm
+                            noktası olan
+                            <span>ilk alfabetik yazıyı Fenikeliler bulmuştur.</span> Dışa açık bir ticaret toplumu olan
+                            Fenikeliler,
+                            çivi yazısı ve hiyeroglifi çok iyi biliyordu. Tamamı soyut biçimlerden oluşan ve okuma yönü
+                            sağdan sola olan 22 harfli ilk alfabe M.Ö. 1500 yıllarında kullanılmaya başlanmıştır <small>
+                                (Becer,
+                                2015, s.90).</small>
+                        </p>
+                    </section>
+                    <article>
+                        <img src="./images/13-sekil-fenike-alfabesi-1.png" class="reveal reveal--top">
+                    </article>
+                </div>
+            </div>
+
+            <div class="alphabets-2">
+                <div class="bg-effect"></div>
+                <div class="col-4 left-alphabets-area">
+                    <img style="width: 100%;" src="./images/14-sekil-yunan-alfabesi-1.png">
+                    <p>Yunanlılar Fenike alfabesinde<br />
+                        bulunmayan sesli harfleri (a, e, i, o, u vb.) alfabeye ekleyerek yazıya
+                        geometrik bir uyum ve estetik bir kalite
+                        kazandırdılar. Aynı satır çizgisi üzerine
+                        yerleştirilen harflerle yazı yönü soldan sağa doğru (bugün kullandığımız gibi) çevrildi. Ayrıca
+                        Yunanlılar
+                        papirüse bir alternatif olarak hayvan
+                        derilerinden yapılan parşömen adı verilen yazı yüzeyini kullanmaya başladılar
+                        <small> (Becer, 2015,
+                            s.90).</small>
+                    </p>
+                </div>
+                <div class="col-4">
+                    <img src="./images/12-sekil-batı-dillerinin-evrimi.png" alt="">
+                </div>
+                <div class="col-4 right-alphabets-area">
+                    <article>
+                        <p>Alfabe, kelime olarak Yunanca’ın ilk
+                            iki harfi olan “alpha” ve “beta” dan
+                            türetilmiştir. Bir dilin, temel seslerini temsil eden görsel işaretler veya semboller dizisi
+                            olan alfabe, çivi yazısı ve hiyerogliflerde kullanılan karmaşık yüzlerce işaret ve sembole
+                            karşın, zaman içinde
+                            öğrenilmesi daha kolay yirmi veya otuz temel işaret olarak değişmiştir. Batı
+                            alfabelerinin (çivi yazısı, hiyeroglifler, tarih öncesi geometrik şekiller ve erken Girit
+                            piktogramları) zaman içindeki evrimi
+                            sol taraftaki görselde
+                            verilmiştir (Meggs & Purvis, 2016, s.21).
+                        </p>
+                    </article>
+
+                    <p>
+                        Bu görselde Mısır ve Mezopotamya
+                        uygarlıklarından sonra gelen Girit uygarlığı
+                        Piktogramları (Cretain pictographs), Girit kalıntılarından kalma Phaistos Diski
+                        (Phoenician) üzerindeki piktografik ve alfabe benzeri şekiller, Erken Dönem Yunan Alfabesi
+                        (Early Greek), Klasik Dönem Yunan Alfabesi (Classical Greek), Latin Alfabesi (Latin) ve Modern
+                        İngilizce (Modern English) olarak geçmişten günümüze kadar alfabenin geçirdiği
+                        evrimler gösterilmiştir.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="alphabets-3">
+
+                <div class="top-area">
+                    <div class="moon">
+                        <img src="./images/16-sekil-roma-kapital-yazısı.png" alt="">
+                    </div>
+                    <p>Roma, M.Ö. 750 yıllarında Tiber nehri
+                        kenarında küçük bir köy olarak bulunuyordu. Ancak, M.S. birinci yüzyılda, kuzeyde
+                        İngiltere'den güneyde Mısır'a, batıda
+                        İspanya'dan doğuda Basra Körfezi'ne kadar uzanan güçlü bir imparatorluk haline geldi.
+                        Yunanistan’ı
+                        işgal ettikten sonra bütün kitapları ve bilim adamlarını kendi ülkelerine götürdüler. </p>
+
+                </div>
+
+
+                <div class="bottom-area">
+                    <div class="moon">
+                    </div>
+                    <p>Yunan alfabesi antik Etrüksler aracılığıyla Roma'ya ulaşmış,
+                        Romalılar, zaferlerini
+                        ölümsüzleştirmek için anıtsal bir yazı stili
+                        geliştirmişlerdir. Günümüzde
+                        kullandığımız büyük
+                        harflerin temelini
+                        oluşturan bu stillerden en önemlisi, <strong>"Capitalis Quadrata"</strong> olarak bilinir.</p>
+
+                    <figure>
+                        <img src="./images/15-sekil-etrüsk-2.png">
+                    </figure>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4f86a03dc36fac4a_IMG_1574.GIF"
+                        loading="lazy" alt="" class="mark-left">
+                </div>
+
+            </div>
+
+
+
+            <div class="chines-graphic-desing" id="chines-graphic-desing">
+                <div class="col-12 chines-graphic-desing-area">
+                    <div class="bg-effect"></div>
+                    <abbr>M.Ö. 1800 – M.Ö. 860</abbr>
+                    <span>Çin'de Grafik İletişim</span>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                        loading="lazy" alt="" class="right-gif">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9ef2157b7ffb72d4d1_02.GIF"
+                        loading="lazy" alt="" class="left-gif">
+                    <section>
+
+                        <span>
+                            Çin, tarihte kağıt üreten ilk uygarlık olarak kabul edilir.
+                        </span>
+                        <p>
+                            Çinliler çeşitli malzemelerin karışımından elde edilen hamurları işleyip kurutarak kağıt
+                            elde etmeyi başarmışlardır. "M.Ö. 105 yılında, Tsi'ai Lun adlı bir kişi, ağaç kabuğu ve ipek
+                            parçalarını karıştırarak bir kağıt hamuru hazırlamış, ardından bu karışımı hasır üzerinde
+                            kurutarak kağıt üretmiştir <small>(Uçar, 2004, s.97)</small>.
+                        </p>
+                    </section>
+                    <article>
+                        <img src="./images/cinde-grafik-tasarım-1.png" class="reveal reveal--top">
+                    </article>
+
+                </div>
+
+            </div>
+
+            <div class="chines-graphic-desing-2">
+                <div class="bg-effect"></div>
+                <div class="col-12 chines-top-area">
+                    <div class="col-4 left-area">
+                        <figure>
+                            <img src="./images/17-sekil-anlamak-sözcüğü-evrimi.png" alt="">
+                            <p><strong>“Anlamak”</strong> kelimesinin Çin
+                                alfabesindeki evrimi solda gösterilmiştir.<strong> Başlangıçta
+                                    piktogram olan bu yazılar, zamanla soyut ve stilize edilmiş fırça darbelerine
+                                    dönüşmüştür.</strong></p>
+                        </figure>
+                        <p>Çin’de yazı sistemi alfabetik değildir. Mısır hiyeroglifleri ve Girit yazısı gibi görsel bir
+                            dil olarak geliştirilmiştir. M.Ö. 1800'lerde Cangjie tarafından oluşturulduğuna inanılan bu
+                            sistem, kuşların pençe izleri ve hayvanların ayak izlerinden ilham alınarak doğadaki
+                            nesnelerin basit piktogramlarıyla şekillenmiştir. Çizimler, zamanla stilize edilerek az
+                            sayıda çizgiden oluşan, anlaşılır ve soyut tasarımlara dönüşmüştür <small>(Meggs & Purvis,
+                                2016,
+                                s.35).</small> </p>
+
+                    </div>
+                    <div class="col-8 right-area">
+
+                        <article>
+                            <p>İnsanlık tarihi için yazıdan sonraki ikinci önemli buluş olan baskının icadı Çinliler’e
+                                aittir. Çin’in
+                                geleneksel sanatlarından biri olan mühür oymacılığı, baskı tekniklerinin gelişiminde
+                                büyük bir etkiye sahip olmuştur <small>(Becer, 2015, s.88)</small>.</p>
+                        </article>
+                        <p>Han Hanedanlığı döneminde, "chop" adı verilen mühürler yeşim taşı, gümüş, altın veya fildişi
+                            gibi düz yüzeylere kaligrafik karakterler oyularak hazırlanırdı. M.S. 500 (6. yüzyıl
+                            başlarında) civarında, insanlar "chop" mühürlerinin farklı bir versiyonunu kullanmaya
+                            başladılar. Bu yeni yöntemde,
+                            zanaatkârlar karakterlerin çevresindeki negatif alanı keserek, baskı yapıldığında
+                            karakterlerin kırmızı renkte ve beyaz bir zeminle çevrili olarak görünmesini sağladılar. Bu
+                            yenilik, blok baskı tekniğinin temelini oluşturdu. Zhao Meng-fu'nun 14. yüzyılda yaptığı
+                            keçi ve koyun resminde, bu iki farklı "chop" mühür türüne de rastlanabilir <small>(Meggs &
+                                Purvis,
+                                2016, s.40)</small>.</p>
+                    </div>
+                </div>
+                <div class="col-12 chines-bottom-area">
+                    <img src="./images/18-sekil-chop-1.png" alt="">
+                </div>
+            </div>
+
+            <div class="chines-graphic-desing-3">
+
+                <div class="demo-text-container">
+                    <div class="demo-text top">
+                        <div class="wrappera">DIAMOND SUTRA</div>
+                    </div>
+                    <div class="demo-text bottom">
+                        <div class="wrappera">DIAMOND SUTRA</div>
+                    </div>
+                </div>
+
+                <section>
+                    <div class="video-container" id="videoContainer">
+                        <img class="video-poster" src="./images/20-sekil-diamont-sutra.png" alt="Poster">
+                        <button class="play-button" id="playBtn"></button>
+
+                        <iframe id="my-video" width="560" height="315" src="" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen style="display:none; width:100%; border-radius:12px;"></iframe>
+                    </div>
+                    <!-- <img style="width: 100%;" src="./images/20-sekil-diamont-sutra.png" alt=""> -->
+                </section>
+
+                <p>Çin’de kağıdın ve baskının keşfinden sonra başlarda kumaş baskısı yapmak için oyulan ahşap baskı
+                    tekniği daha sonra dini metinlerin anlatımı için kullanılmaya başlanmıştır. Bu teknik kullanılarak
+                    basımı yapılan ilk el yazması kitap “Diamond Sutra”dır. </p>
+
+            </div>
+
+
+            <div class="manuscripts" id="manuscripts">
+                <div class="col-12 manuscripts-area">
+                    <div class="bg-effect"></div>
+                    <abbr>M.S 500 (6.YY) – M.S. 1450 (15.YY)</abbr>
+                    <span>Ortaçağ Elyazmaları</span>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                        loading="lazy" alt="" class="right-gif">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9ef2157b7ffb72d4d1_02.GIF"
+                        loading="lazy" alt="" class="left-gif">
+                    <section>
+                        <p>
+                            <abbr class="light"> Ortaçağ el yazması eserler</abbr> tipografi ve harf düzeni,
+                            illüstrasyon ve görsel ifade, sayfa
+                            tasarımı ve düzenleme ilkeleri, estetik anlayış ve kültürel kimliği yansıtma, bilgi
+                            paylaşımı ve iletişim kurma <abbr class="light">gibi özellikleriyle modern</abbr> grafik
+                            tasarım
+                            ögelerinin ilk
+                            örneklerini<abbr class="light"> barındırmaktadır diyebiliriz</abbr>.
+                        </p>
+                    </section>
+                    <article>
+                        <img src="./images/ortaçag-elyazmaları-1.png" class="manuscripts-img-1">
+                        <img src="./images/ortaçag-elyazmaları-2.png" class="manuscripts-img-2  ">
+                        <img src="./images/ortaçag-elyazmaları-3.png" class="manuscripts-img-3">
+                    </article>
+
+                </div>
+            </div>
+
+            <div class="manuscripts-2">
+                <div class="col-4 manuscripts-2-left">
+
+                    <img style="width: 70%;" src="./images/21-sekil-sarlman-minüskülü-1.png" alt="">
+
+                    <article>
+                        <p>Roma imparatorluğunun yıkılışı
+                            5.yy’dan 15.yy Rönesans’a kadar sürmüştür. Ortaçağ, toprak sahiplerinin egemenliği üzerine
+                            kurulu feodal
+                            toplumların çağıdır. Bu dönemde Hıristiyan manastırı eğitimi ve kültürü merkezine dayalı
+                            olarak bilgilerin saklanma ihtiyacı üzerine <strong>“manuscript” </strong>ı el yazma eserler
+                            ortaya
+                            çıkmıştır. İ.S. 4. ve 9. yüzyıllarda bu eserlerde kullanılan harfler sadeleşerek
+                            <strong>“uncial”</strong>
+                            (büyük harflerden oluşan yazı) ve <strong>“yarı uncial”</strong> (küçük harflere benzeyen
+                            kıvrımlardan oluşan
+                            yazı) adı verilen yazı stilleri geliştirilmiştir
+                        </p>
+                    </article>
+
+                    <p>
+                        İ.S. 800 yılında ise Roma’nın kutsal imparatoru olarak anılan Frenk Kralı Şarlman, tüm Avrupa’yı
+                        tek bir çatı altında toplamak amacıyla el yazma eserlerin sayfa düzeni, yazı ve
+                        süslemelerini tek bir kalıba sokmuştur. Yazı sitili artık bugün kullandığımız küçük harflerin
+                        öncüsü olan <strong>“Şarlman Minüskülü”</strong> olarak anılıyordu <small>(Becer, 2015,
+                            s.91)</small>.
+                    </p>
+                </div>
+                <div class="col-8 manuscripts-2-right">
+                    <p>Ortaçağda "aydınlatılmış el yazmaları" olarak bilinen süslemeli ve resimlendirilmiş el
+                        yazmaları, kutsal metinlere görsel zenginlik katmak amacıyla hazırlanırdı. Hristiyan, ahudi ve
+                        Müslümanlar için büyük bir öneme sahip olan bu eserlerin üretimi oldukça
+                        zahmetli ve maliyetliydi. Parşömen, değerli bir malzeme olduğu için dikkatle kullanılırdı.
+                        Yazıcı (scribe), hem editör hem de sanat yönetmeni olarak çalışır, metnin tasarım ve üretim
+                        sürecini yönetirdi. Aydınlatıcı (illüstratör) ise metne uygun süslemeleri ve görselleri
+                        hazırlardı. İllüstrasyonlar genellikle metin tamamlandıktan sonra eklenir ve illüstratör, ne
+                        çizeceğine dair yönlendirmeleri kenar boşluklarındaki notlardan alırdı. Bu süreç, her bir el
+                        yazmasının eşsiz bir sanat eseri olarak ortaya çıkmasını sağlardı <small>(Meggs & Purvis, 2016,
+                            s. 49)</small>.
+                    </p>
+
+                    <figure>
+                        <img src="./images/22-sekil-ortaçag-elyazmaları-1.png" alt="" class="reveal reveal--right">
+                        <img src="./images/23-sekil-gotik-üslupla-yazılan-elyazması-eser.png" alt=""
+                            class="reveal reveal--top">
+                        <img src="./images/22-sekil-ortaçag-elyazmaları-2.png" alt="" class="reveal reveal--left">
+                        <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbf4fd894b1506923aaae_IMG_1633.GIF"
+                            loading="lazy" alt="" class="mark-1977-3">
+                    </figure>
+
+                    <article>
+                        <p>12.yy ortalarına gelindiğinde feodalizm yerini güçlü soyluların olduğu monarşik bir yapı
+                            içinde
+                            sürekliliğe dayalı merkezi bir hükümete bırakmaya başladı. Uluslararası ticaretin
+                            yaygınlaştığı
+                            bu dışa açılım sürecinde 1200’lerde ilk üniversiteler kurulmaya başlanmış ve kitaba
+                            yoğunlaşan
+                            talep üzerine el yazması kitaplar artmıştır. Bu el yazması ürünlerde Romanesk sanat yerine
+                            Gotik
+                            üslup kullanılmıştır. Gotik yazı, 11. ve 15. yy arasında değişik üsluplarda kullanılarak
+                            varlığını sürdürmüştür <small>(Becer, 2015, s.92)</small></p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="manuscripts-3">
+                <div class="bg-effect"></div>
+                <p>El yazması kitaplar, İslam ve İbrani
+                    kültürlerinde büyük bir öneme
+                    sahiptir. İslam’ın kutsal kitabı
+                    Kur’an-ı Kerim’deki kaligrafi, İslam
+                    sanatının temel dallarından biri olan hat sanatının doğmasına öncülük etmiştir (Becer, 2015, s.92).
+                </p>
+
+                <img style="width: 100%;" src="./images/24-sekil-ismail-zühdi.png" alt="">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="quiz-game">
+
+        <div class="click-play" id="startScreen">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/mars_sunburst.png">
+            <h2>Grafik Tasarım Tarihi Quiz</h2>
+            <h3> GAME QUİZ</h3>
+            <button class="start-btn" id="startBtn">OYNAMAK İÇİN TIKLAYIN</button>
+        </div>
+
+
+        <div class="quiz-container" id="quizContainer">
+            <div class="shapes">
+                <div style="background-color:#3c989b" class="shapes-circle"></div>
+                <div style="background-color:#fcb232" class="shapes-circle is--2"></div>
+                <div style="background-color:#3c989b" class="shapes-circle is--3"></div>
+            </div>
+
+            <article>
+                <img src="https://cdn.prod.website-files.com/618344780acfccac60d1f2df/618442febf072bfcf11ee3fa_points-icon.svg"
+                    loading="lazy" alt="Trophy Icon" class="points-icon">
+                <span id="scoreDisplay">0</span>
+                <abbr>puan</abbr>
+            </article>
+
+            <div class="col-6 quiz-main-left">
+                <h3 id="questionText"></h3>
+                <article id="options"></article>
+
+            </div>
+            <div class="col-6 quiz-main-right">
+                <img id="quizImage"
+                    src="https://cdn.prod.website-files.com/61848a25f822e1d08a208e51/61848a83e45d1a37d47afa35_art1.jpg"
+                    class="frame-art-img">
+                <img src="https://cdn.prod.website-files.com/618344780acfccac60d1f2df/6184856f5dcb30a309adff56_picture-frame.png"
+                    class="frame-img">
+                <button id="nextBtn" class="next-btn">Next</button>
+            </div>
+            <div class="ada" id="ada">
+                <img src="https://cdn.prod.website-files.com/618344780acfccac60d1f2df/618487de9301e40b017a5c85_texture.jpg"
+                    class="glass-texture">
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <div class="sectionPin-2">
+        <div class="pin-wrap-2">
+
+            <div class="topic-two">
+                <div class="topic-period">
+                    <div class="sub-text">Dönem 2</div>
+                    <h2 class="main-text">
+                        Rönesans Dönemi Grafik Tasarım
+                    </h2>
+                    <div class="sub-text">15.YY - 19.YY</div>
+                </div>
+            </div>
+
+            <div class="learning-words">
+
+                <section>
+                    <h2>"YENİDEN DOĞUŞ"</h2>
+                    <p>
+                        İtalyanca’da yeniden doğuş anlamına gelen Rönesans, 15. ve 16. yüzyıl İtalya’sında başlayan,
+                        Orta Çağ ile Reform arasında yer alan köklü bir değişim dönemidir.
+                        Hümanizmin ön plana çıktığı bu çağda, insan merkezli düşünce gelişmiş, deneysel yaklaşım
+                        canlanmış ve matbaanın icadıyla bilgi daha geniş kitlelere ulaşmıştır (tr.wikipedia.org, t.y.).
+                    </p>
+                </section>
+
+                <section>
+                    <h2 style="text-align: end;">"HÜMANİZM"</h2>
+                    <p>
+                        Ortaçağ döneminde halk, sanatçı, bilim ve din adamı aynı kilise inancına sahipti. Fakat bu
+                        anlayış insan aklı terazisinde ölçülüp değerlendirildikten sonra dünya görüşüne uymayan bazı
+                        anlayışların olduğu fark edildi. İnsanın kendi yorum ve düşüncelerine dogmalardan daha fazla
+                        önem vermesi Ortaçağ’dan Rönesans’a geçişte önemli bir etken olmuştur. Bu yeni dünya görüşünün
+                        bir özelliği de insanın kendi dünyevi güçlerinin farkına varmasıdır. Sanat hareketleri de,
+                        toplumdaki gelişmelere paralel olarak ilerlemektedir (Turani, 2011, s.345).
+                    </p>
+                </section>
+
+
+                <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbf4f0dde901a07fd22a0_IMG_1635.GIF"
+                    loading="lazy" style="width: 99%; height: 96%; opacity: 1;" alt="" class="learnini-gif">
+            </div>
+
+
+
+            <div class="letterpress">
+                <div class="col-12 letterpress-area">
+                    <div class="bg-effect"></div>
+                    <abbr>15.YY</abbr>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                        loading="lazy" alt="" class="right-gif">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9ef2157b7ffb72d4d1_02.GIF"
+                        loading="lazy" alt="" class="left-gif">
+                    <span>Tipo Baskının Buluşu</span>
+                    <section>
+                        <p>Tipo baskı, <span>her biri bağımsız, hareketli ve tekrar kullanılabilir metal yada ahşap
+                                yüzeylerin
+                                oyulmasıyla kabartmalı
+                                harfler ile yapılan baskı yöntemidir.</span> Yazının icadından sonra insanlık
+                            tarihindeki en önemli
+                            gelişmelerden biri olan tipo baskı, bilgiyi ekonomik şekilde çoğaltmayı mümkün kılarak
+                            iletişimde devrim yaratmış, bilginin yayılmasını
+                            hızlandırmış ve okuryazarlık oranını artırmıştır <small>(Meggs & Purvis, 2016,
+                                s.73).</small> </p>
+                    </section>
+                    <article>
+                        <img src="./images/rönesans/harf-1.png" class="tipo-1 reveal reveal--bottom">
+                        <img src="./images/rönesans/harf-2.png" class="tipo-2 reveal reveal--top">
+                        <img src="./images/rönesans/harf-3.png" class="tipo-3 reveal reveal--left">
+                        <img src="./images/rönesans/harf-4.png" class="tipo-4 reveal reveal--right">
+                        <img src="./images/rönesans/harf-5.png" class="tipo-5 reveal reveal--top ">
+                    </article>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="letterpress-2">
+                <p>
+                    Grafik tasarım ve baskı teknolojisinde çığır açan tipo baskı, Mainz’li Johann Gensfleish zum
+                    Gutenberg tarafından bulundu. 1450 yıllarında tipografik bir kitabı basabilmek için gerekli olan
+                    karmaşık sistem ve donanımları ilk kez bir araya getiren kişidir. Guternberg, tipografi tekniğini
+                    geliştirirken
+                    “Xylotypography” adı verilen ve ilk kez Çin’de yüksek tahta kalıplara oyularak yapılan baskı
+                    tekniğinden esinlenmiştir. Gutenberg’in icadının anahtarı, her bir harfin dökümü için kullanılan
+                    harf kalıbı ve kullandığı ana
+                    malzemedir. Sistemli bir şekilde ilerleyen Gutenberg öncelikle yaşadığı dönemde Alman yazıcıları
+                    tarafından yaygın biçimde kullanılan “Textura” yazı stilini tercih etmiştir. Her harf, tüm yönlerden
+                    paralel olacak
+                    şekilde aynı yükseklikte yapılmış olan iki parçalı harf kalıbı, hem dar (T) hem geniş (M) harfler
+                    için farklı matrisleri kabul edebilecek şekilde ayarlanmıştır. Bu sayede oldukça hassas harflerin
+                    dökümünü yapmak mümkün olmuştur. Harfler için kullanılan metal malzeme ise, hem dökülebilecek kadar
+                    akışkan hem de binlerce baskıya dayanabilecek kadar sert bir alaşım
+                    geliştirilerek yapılmıştır<small> (Meggs & Purvis, 2016, s.77).</small>
+                </p>
+                <img style="width: 100%;" src="./images/rönesans/25-sekil-harf-dokum-sistemi1.png" alt=""
+                    class="reveal reveal--bottom">
+            </div>
+
+
+            <div class="letterpress-3">
+                <div class="col-12 letterpress-3-top row" style="display: flex;">
+                    <div class="col-6 letterpress-3-top-left">
+                        <p>Gutenberg, 1452 yılında ilk
+                            tipografik kitap olan İncil’i geliştirdiği baskı yöntemiyle basmaya karar verdi. Büyük
+                            çaba
+                            gerektiren bu proje,
+                            matbaacılığın ilk ve en güzel örneklerinden biri olan kırk iki satırlık
+                            İncil'in basımıyla sonuçlanmıştır. 30 x 40,5 cm boyutundaki sayfalarda iki sütun ve
+                            değişen
+                            satır sayılarıyla toplam 1.282 sayfa yer aldı. Satır sayısındaki artış sayesinde
+                            yaklaşık 60
+                            sayfalık tasarruf sağlandı (Meggs & Purvis, 2016, s.80).</p>
+
+
+                    </div>
+                    <div class="col-6 letterpress-3-top-right">
+                        <p>Johann Gutenberg’in hareketli harf sistemini icat ettiği dönemde ve Avrupa’nın aynı
+                            bölgesinde yaşayan ancak kimliği bilinmeyen “Oyun Kartları Ustası” olarak anılan bir
+                            sanatçı, tarihteki en eski bakır gravür baskı örneklerini üretmiştir. Gravür, bir
+                            tasarımın
+                            metal bir yüzeye kazınması ya da
+                            oyulmasıyla elde edilen bir baskı yöntemidir. Bazı araştırmacılar, Gutenberg’in sadece
+                            tipografiyi değil, bakır gravür baskı tekniğinin gelişiminde de etkili olduğunu
+                            düşünmektedir. Oyun Kartları Ustası’nın çizimleri, Gutenberg’in dönemindeki Mainz’lı
+                            sanatçılarla ilişkilendirilmiştir. Kuş, çiçek ve figür gibi ortak motifler, hem bu
+                            gravür
+                            kartlarda hem de 1450’lerde basılan
+                            süslemeli İncil’de yer almaktadır (Meggs & Purvis, 2016, s.83).
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-12 letterpress-3-bottom">
+                    <section>
+                        <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbf2f2d0083bd3f831432_IMG_1585.GIF"
+                            class="bottom-gif">
+                        <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbf4fd894b1506923aaae_IMG_1633.GIF"
+                            alt="" class="middle-gif">
+                        <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e855a33663cded854_IMG_1572.GIF"
+                            alt="" class="right-gif">
+                        <img style="width:293px;" src="./images/rönesans/26-sekil-Johann Gutenberg.png" alt=""
+                            class="letterpress-3-img-1 reveal reveal--right">
+                        <img style="width:387px" src="./images/rönesans/26-sekil-Johann Gutenberg1.png" alt=""
+                            class="letterpress-3-img-2 reveal reveal--bottom">
+                        <img style="width:162px" src="./images/rönesans/27-sekil-oyun kartları-ustas.png" alt=""
+                            class="letterpress-3-img-3 reveal reveal--left">
+                    </section>
+                </div>
+            </div>
+
+
+            <div class="germany-image-book">
+                <div class="col-12 germany-image-book-area">
+                    <div class="bg-effect"></div>
+                    <abbr>16.YY</abbr>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                        loading="lazy" alt="" class="right-gif">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9ef2157b7ffb72d4d1_02.GIF"
+                        loading="lazy" alt="" class="left-gif">
+                    <span>Alman Resimli Kitabı </span>
+                    <section>
+                        <p>Tipografik baskı tekniği ile ağaç baskı resim sanatının bir araya gelmesi, Almanya’da resimli
+                            kitap basımının yaygınlaşmasına zemin hazırlamıştır. Ağaç baskı ile resimlendirilmiş ilk
+                            kitap “Bohemyalı Çiftçi” adıyla bilinir. Almanya’da üretilen resimli kitapların en dikkat
+                            çekici örnekleri ise, ağaç baskı ustası ve grafik sanatçısı Albrecht Dürer tarafından ortaya
+                            konmuştur <small>(Becer, 2015, s.93). </small> </p>
+                    </section>
+                    <article>
+                        <img src="./images/rönesans/28-sekil-Albrecht-Durer.png" class="reveal reveal--left">
+
+                    </article>
+
+                </div>
+
+            </div>
+
+
+            <div class="germany-image-book-2 row">
+
+                <div class="col-3 germany-image-book-2-left">
+
+                    <article>
+                        <p>Ağaç baskı ve tipografik baskı tekniğinin bir arada kullanılarak yapıldığı diğer örnekler
+                            sağda
+                            verilmiştir. Bu örnekler
+                            alanında uzman usta illüstratörler
+                            tarafından yapılmış ve renkli ağaç baskı ve tipografik baskı tekniğiyle bir araya
+                            getirilmiştir. <strong>Grafik tasarımın bir dalı olan illüstrasyonun, kitaplardaki bilgilere
+                                eşlik eden
+                                yardımcı resimlemeler olarak, bu dönemde de ön plana çıktığını
+                                söyleyebiliriz.</strong> </p>
+                    </article>
+
+                    <img src="./images//rönesans/31 şekil.jpg">
+
+
+                    <p>Tipografi baskı tekniği Almanya’dan sonra 15. yüzyılda İtalya’da gelişme göstermiştir. 1467 ‘de
+                        İtalya’nın Subiaco kentinde Arnold Pannartz ve Conrad Sweynheym, Roma Kapital yazısı ile Şarlman
+                        minüskülünü birleştirerek <strong> günümüzde kullanılan çift kollu alfabeyi ortaya
+                            çıkardılar</strong>. Ayrıca
+                        Roma yazı karakterine farklı bir tasarım
+                        anlayışı getiren Nicholas Jenson, Venedik’te ikinci basımevini kurdu. Yine bu dönemde hümanist
+                        İtalyan bilim adamı olan Aldus Manutius, Venedik’te <strong>“Aldine” adında bir yayınevi
+                            kurarak</strong> Latin
+                        klasiklerini basmaya başlamıştır <small>(Becer, 2015, s.93)</small>.</p>
+                </div>
+                <div class="col-6 germany-image-book-2-middle">
+                    <img src="./images/rönesans/top-slide.png" class="strip st-1">
+                    <img src="./images/rönesans/bottom-slide.png" class="strip st-2">
+                </div>
+                <div class="col-3 germany-image-book-2-right">
+                    <p>Grafik tasarımın bir dalı olan
+                        <strong>illüstrasyonun </strong>,
+                        kitaplardaki bilgilere eşlik eden yardımcı
+                        resimlemeler olarak, bu dönemde de ön plana çıktığını
+                        söyleyebiliriz.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="font-design">
+                <div class="col-12 font-design-area">
+                    <div class="bg-effect"></div>
+                    <abbr>15.YY - 19.YY</abbr>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                        loading="lazy" alt="" class="right-gif">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9ef2157b7ffb72d4d1_02.GIF"
+                        loading="lazy" alt="" class="left-gif">
+                    <span>Yazı Tasarımı</span>
+                    <section>
+                        <p>Yazının icadından sonra gelişen en eski ve önemli sanat ve iletişim araçlarından biri
+                            tipografidir. </p>
+                        <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e8bb407b3e089e05b_05.GIF"
+                            loading="lazy" alt="" class="mark m1826-3">
+                    </section>
+                    <article>
+                        <img src="./images/rönesans/30-sekil-yazi-tasarimi.png" class="reveal reveal--bottom">
+                        <img src="./images/rönesans/30-sekil-yazi-tasarimi1.png" class="reveal reveal--top">
+
+                    </article>
+
+                </div>
+            </div>
+
+
+            <div class="font-design-2">
+
+                <p>Tipografi, basım tekniklerindeki
+                    ilerlemelerle birlikte bir sanat dalı olarak ortaya çıkmış, teknolojinin gelişmesiyle
+                    kullanım alanı genişlemiştir. Kitap
+                    basımından web tasarımına, afişten
+                    reklama kadar birçok alanda aktif olarak
+                    kullanılmakta ve deneysel çalışmalarla önemini sürdürmektedir. Harf tasarımı
+                    tarihine bakıldığında, bu alanda ilk bilimsel
+                    çalışmaların Rönesans döneminde yapıldığı görülür. Bu dönemde sanatçılar, antik Yunan ve Roma
+                    kültüründen
+                    esinlenerek harflerin yapısını matematiksel ve geometrik temellere oturtmaya çalışmışlardır
+                    (Kızılşafak, 2014, s.56).</p>
+
+                <p>Başlangıçta tipografi, her bir harfin metal kalıplarla oluşturulup metinlerin
+                    çoğaltılmasına yönelik bir teknik olarak tanımlanırken, zamanla bu kavram evrilerek yalnızca teknik
+                    bir işlem olmaktan çıkmış; hem el işçiliğini hem de tasarımı içeren kapsamlı ve özgün bir alan
+                    hâline gelmiştir. 15. Yüzyıldan itibaren Rönesans’ın
+                    hümanizm anlayışı, tipografi alanında yazı tasarımcılarının isimlerinin anılmasıyla ön plana
+                    çıkmıştır (Arı, 2006, s.37).
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e8bb407b3e089e05b_05.GIF"
+                        loading="lazy" alt="" class="mark m1826-3">
+                </p>
+            </div>
+
+            <div class="font-design-3">
+
+                <section>
+                    <h4>Yazı tasarımı</h4>
+                    <figure>
+                        <img src="./images/rönesans/31-bembo-yazı-karakteri.png" alt="" class="t-1">
+                        <img src="./images/rönesans/32-garamond-yazı-karakteri.png" alt="" class="b-1">
+                        <img src="./images/rönesans/33-adobecaslon-yazı-karakteri.png" alt="" class="t-2">
+                        <img src="./images/rönesans/34-baskerville-yazı-karakteri.png" alt="" class="b-2">
+                        <img src="./images/rönesans/35-bodoni-yazı-karakteri.png" alt="" class="t-3">
+                        <img src="./images/rönesans/36-giza-yazı-karakteri.png" alt="" class="b-3">
+                    </figure>
+                </section>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="quiz-game-2">
+
+        <div class="click-play" id="startScreen-2">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/mars_sunburst.png">
+            <h2>Grafik Tasarım Tarihi Quiz</h2>
+            <h3> GAME QUİZ</h3>
+            <button class="start-btn" id="startBtn-2">OYNAMAK İÇİN TIKLAYIN</button>
+        </div>
+
+
+        <div class="quiz-container-2" id="quizContainer-2">
+            <div class="shapes">
+                <div style="background-color:#77a2cd" class="shapes-circle"></div>
+                <div style="background-color:#c8be99" class="shapes-circle is--2"></div>
+                <div style="background-color:#77a2cd" class="shapes-circle is--3"></div>
+            </div>
+
+            <article>
+                <img src="https://cdn.prod.website-files.com/618344780acfccac60d1f2df/618442febf072bfcf11ee3fa_points-icon.svg"
+                    loading="lazy" alt="Trophy Icon" class="points-icon">
+                <span id="scoreDisplay-2">0</span>
+                <abbr>puan</abbr>
+            </article>
+
+            <div class="col-6 quiz-main-left-2">
+                <h3 id="questionText-2"></h3>
+                <article id="options-2"></article>
+
+            </div>
+            <div class="col-6 quiz-main-right-2">
+                <img id="quizImage-2"
+                    src="https://cdn.prod.website-files.com/61848a25f822e1d08a208e51/61848a83e45d1a37d47afa35_art1.jpg"
+                    class="frame-art-img">
+                <img src="https://cdn.prod.website-files.com/618344780acfccac60d1f2df/6184856f5dcb30a309adff56_picture-frame.png"
+                    class="frame-img">
+                <button id="nextBtn-2" class="next-btn">Next</button>
+            </div>
+            <div class="ada" id="ada-2">
+                <img src="https://cdn.prod.website-files.com/618344780acfccac60d1f2df/618487de9301e40b017a5c85_texture.jpg"
+                    class="glass-texture">
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <div class="sectionPin-3">
+        <div class="pin-wrap-3">
+
+            <div class="topic-three">
+                <div class="topic-period">
+                    <div class="sub-text">Dönem 3</div>
+                    <h2 class="main-text">
+                        Grafik Tasarım ve Sanayi Devrimi
+                    </h2>
+                    <div class="sub-text">18.YY - 20.YY</div>
+                </div>
+            </div>
+
+
+            <div class="learning-words-2">
+
+                <section>
+                    <h2>"SANAYİ DEVRİMİ"</h2>
+                    <p>
+                        18. yüzyılın son çeyreği, Fransız Devrimi ve Sanayi Devrimi ile birlikte Batı dünyasında köklü
+                        bir dönüşümün başlangıç noktası olarak kabul edilmektedir. Fransa ve Büyük Britanya merkezli
+                        olarak gelişen bu demokratik ve teknolojik gelişmeler, kısa sürede Avrupa’nın tamamına yayılmış
+                        ve toplumsal yapıda hem düşünsel hem de günlük yaşam pratiklerini köklü biçimde değiştiren
+                        etkiler yaratmıştır. Bu etkiler, “yeni bir uygarlığın doğuşu” olarak tanımlanacak kadar derin
+                        etkiler yaratmıştır. Batı’da
+                        ekonomik büyümeyi sağlayan bu süreçte, özellikle sömürgecilik başta olmak üzere çeşitli
+                        yayılmacı politikalar izlenmiştir. 18. yüzyılın ikinci yarısında teknolojik
+                        ilerlemelerin ivme kazanması, Batı’yı küresel ölçekte güçlendirmiş ve tüm bu gelişmeler
+                        beraberinde “Sanayi Devrimi olarak adlandırılan süreci başlatmıştır
+                        (Mcneill, 2002, s.645-648).
+                    </p>
+                </section>
+
+                <section>
+                    <h2 style="text-align: end;">"ENDÜSTRİ TOPLUMU"</h2>
+                    <p>
+                        Sanayi devrimiyle birlikte teknolojide yaşanan köklü değişimlerden birisi de tarım toplumundan
+                        endüstri toplumuna geçiş olmuştur.
+                        1780 yılında James Watt tarafından geliştirilen buhar makineleri mekanik üretim sürecini
+                        başlatmış ve endüstri toplumuna geçişte önemli bir etken olmuştur (Becer, 2015, s.95). Sanayi
+                        Devrimi’nin etkisiyle, kırsal alanlarda toprağa bağlı yaşam biçimi terk edilmiş; toplumun büyük
+                        bir kesimi sanayi merkezlerinde istihdam arayışına
+                        yönelmiştir. Bilimsel bilgi birikimi üretim süreçlerine entegre edilerek sanayi
+                        teknolojilerinin gelişimi hız kazanmıştır. Bireyin doğa üzerindeki hâkimiyeti belirgin biçimde
+                        artmış, dünya kaynaklarının sömürülmesine yönelik düşünsel alt yapı güç kazanmıştır. Sanayi
+                        Devrimi'nin enerji temelli dönüşümü, maliyeti düşük ve yüksek hacimli üretimi mümkün kılarak
+                        geniş tüketici pazarlarının oluşmasına ve talep
+                        artışına yol açmıştır. Bu durum, kapitalist üretimin sürekliliğini sağlayan temel
+                        dinamiklerden biri olmuştur (Şahin, 2024, s.282).
+
+                    </p>
+                </section>
+
+
+
+            </div>
+
+
+            <div class="printing">
+                <div class="col-12 printing-area">
+                    <div class="bg-effect"></div>
+                    <abbr>18.YY - 15.YY</abbr>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                        loading="lazy" alt="" class="right-gif">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9ef2157b7ffb72d4d1_02.GIF"
+                        loading="lazy" alt="" class="left-gif">
+                    <span>Baskı Alanındaki Gelişmeler</span>
+                    <section>
+                        <p>Grafik tasarımın gelişmesinde en büyük etkenlerden biri sanayi devrimidir. Kapitalist
+                            üretimin sürekliliği pazar
+                            ortamında rekabetin oluşmasına neden olmuş, ayrıca Fransız devriminin eşitliği eğitimin
+                            yayılmasına ve okur yazarlığın artması kitap üretimine olan talebin artmasına neden
+                            olmuştur. Bu durum yayıncılık, reklam ve tabelanın hızla
+                            gelişmesini sağlamıştır. </p>
+
+                        <p>Tipografik baskı makinesinin icadından sonra ortaya çıkan litografi baskı tekniğinin
+                            sağladığı çeşitli imkanlar, tipografik baskı yöntemiyle çalışan basımevlerini olumsuz yönde
+                            etkilemiştir.</p>
+                    </section>
+                    <article>
+                        <img src="./images/printing/litografi-makinesi.jpg" class="tipo-1 reveal reveal--bottom">
+                    </article>
+
+                </div>
+            </div>
+
+
+            <div class="printing-2">
+
+                <p>Taş baskı tekniği (litografi) 1796’da Münih’te Alois Senefelder tarafından keşfedilmiştir. Kireç
+                    taşlarının kalıp olarak kullanıldığı yöntem hem yazıyı hem de
+                    resimleri düz bir zemin üzerine basılmasına imkan tanımıştır (Keskin, 2017, s.10). Litografi
+                    günümüzde kullanılan ofset baskı
+                    tekniğinin atası olarak kabul edilebilir. Renkli taş baskının icadıyla birlikte Alman matbaacılar bu
+                    tekniğin gelişimine katkıda bulunmuştur. Amerika’nın Boston şehrinde bu baskı tekniği grafik bir
+                    üslup haline gelerek tüm basımevleri kullanmaya başladı. Afiş ve etiketler bu baskı tekniğin önemli
+                    uygulama alanları olmuştur (Becer, 2015, s.98). Bu baskı yöntemiyle tipografik baskı
+                    teknolojisi sınırlarını korurken, tasarımcılar şekil, konum ve renk açısından daha özgür tasarımlar
+                    yapmalarını sağlamıştır. Aşağıda Jules Cheret tarafından taş baskı yöntemiyle yapılan bir afiş
+                    tasarımı bulunmaktadır.</p>
+
+                <img src="./images/printing/44-sekil-jules-cheret.jpg">
+            </div>
+
+
+            <div class="printing-3">
+                <div class="col-12 row printing-3-area" style="height: 100%;">
+
+                    <div class="col-6 printing-3-area-left">
+                        <img src="./images/printing/45-sekil.png">
+                        <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e855a33663cded854_IMG_1572.GIF"
+                            alt="" class="printing-left-gift">
+                        <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4f86a03dc36fac4a_IMG_1574.GIF"
+                            loading="lazy" alt="" class="printing-right-gif">
+                        <p>Bunu izleyen dönemde, baskı
+                            teknolojisinde hızın artırılması temel hedef hâline gelmiştir. Bu bağlamda, Alman matbaacı
+                            Friedrich Koenig, 1810 yılında buharla çalışan ilk baskı
+                            makinesini icat etmiştir. Koenig’in geliştirdiği çift silindirli buharlı sistemde, baskı
+                            sayfası alt silindirin üzerinde dönerken, üst silindir aracılığıyla mürekkep uygulanmakta;
+                            baskı işlemi ise sayfa sabit tutularak gerçekleştirilmekteydi. Bu yenilik, baskı hızını
+                            önemli ölçüde arttırmış ve baskı maliyetleri çeşitli boyutlara bağlı olarak kayda değer bir
+                            şekilde düşmüştür (Meggs & Purvis, 2016, s.158). </p>
+                    </div>
+
+                    <div class="col-6 printing-3-area-right">
+
+                        <p>Sanayi Devrimi ile ivme kazanan mekanik gelişmeler, baskı teknolojisinde devrim
+                            niteliğinde dönüşümlere zemin hazırlamıştır. El tipi baskı makinelerine entegre edilen metal
+                            aksamlar, hem üretkenliği artırmış hem de baskı alanının genişlemesine olanak tanımıştır. Bu
+                            süreçte önemli bir dönüm
+                            noktası, Lord Charles Stanhope tarafından 1800 yılında geliştirilen dökme demir baskı presi
+                            olmuştur. Geleneksel ahşap preslere kıyasla daha yüksek verimlilik sunan bu model, William
+                            Bulmer’ın matbaasında kullanılarak yarı mekanik baskı sistemlerine geçişin önünü açmıştır.
+                        </p>
+
+                        <img src="./images/printing/46-sekil.jpg">
+                        <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                            loading="lazy" alt="" class="printing-bottom-gif">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="typography-machine">
+                <div class="col-12 typography-machine-area">
+                    <div class="bg-effect"></div>
+                    <abbr>18.YY - 19.YY</abbr>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                        loading="lazy" alt="" class="right-gif">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9ef2157b7ffb72d4d1_02.GIF"
+                        loading="lazy" alt="" class="left-gif">
+                    <span>Tipografinin Makineleşmesi</span>
+                    <section>
+                        <p>1886 yılında, Alman kökenli bir mucit olan Ottmar Mergenthaler, New York Tribune gazetesinde,
+                            klavye aracılığıyla çalışan ilk dizgi makinesi olan Linotype’ı tanıttı (Becer, 2015, s.99).
+                        </p>
+
+                        <p>Tipografik baskı sürecinde, özellikle gazete ve kitap gibi yüksek hacimli yayınların üretimi,
+                            oldukça yüksek maliyetler
+                            doğurmaktaydı. Çünkü her bir karakterin ayrı bir metal kalıp olarak dökülmesi zaman alıcı
+                            bir üretim süreciydi.
+                            Linotype makinesinin icadı, gazete, dergi ve kitap gibi tipografi ağırlıklı basılı
+                            materyallerin üretimini hızlandırmış ve ekonomik bir şekilde çoğaltılmasını sağlamıştır.</p>
+                    </section>
+                    <article>
+                        <img src="./images/printing/47-sekil.jpg" class="tipo-1 reveal reveal--bottom">
+                    </article>
+
+                </div>
+            </div>
+
+
+            <div class="typography-machine-2">
+                <p>Linotype makinesi, harf, rakam ve çeşitli tipografik işaretlerin negatif kalıplarını içeren bir
+                    sistemdi. Daktiloyu andıran klavyesi, bu kalıpları taşıyan dikey borulara komut veriyordu. Operatör
+                    bir tuşa
+                    bastığında, karakterin negatif kalıbı bir
+                    yuvadan aşağıya kayarak, diğer kalıplarla hizalanarak aynı yükseklikte bir satır oluşturuyordu.
+                    Makinenin haznesinde
+                    eritilen kurşun, oluşturulan negatif satır kalıplarına dökülerek, her biri kabartma (pozitif)
+                    biçimde olan satırları kurşun şeritler hâlinde ortaya çıkarıyordu (Becer, 2015, s.99).</p>
+                <section>
+                    <img src="./images/printing/47-sekil-1.png" alt="">
+            </div>
+
+
+            <div class="photography-invention">
+                <div class="col-12 photography-invention-area">
+                    <div class="bg-effect"></div>
+                    <abbr>19.YY</abbr>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                        loading="lazy" alt="" class="right-gif">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9ef2157b7ffb72d4d1_02.GIF"
+                        loading="lazy" alt="" class="left-gif">
+                    <span>Tipografinin Makineleşmesi</span>
+                    <section>
+                        <p>Fotoğrafın bulunuşunda önemli katkılar sunan araçlardan biri Camera Obscura olmuştur.
+                            Latince kökenli bu terim, “Camera” (oda) ve “Obscura” (karanlık) sözcüklerinin birleşiminden
+                            oluşur.
+                            Camera Obscura’nın temel çalışma sistemi, karanlık bir odanın duvarına açılan küçük bir
+                            delik aracılığıyla dış ortamdan gelen ışığın içeri yönlendirilmesi ve dışarıdaki görüntünün
+                            içerdeki duvara ters bir şekilde yansımasıdır. Bu sistem
+                            ilerleyen dönemlerde fotoğrafla birlikte birçok işlev üstlenmiştir (Gök, 2016, s.48).
+                        </p>
+                    </section>
+                    <article>
+                        <img src="./images/printing/48.png" class="tipo-1 reveal reveal--bottom">
+                    </article>
+
+                </div>
+            </div>
+
+            <div class="photography-invention-2">
+
+                <div class="top-area">
+                    <section>
+                        <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4f86a03dc36fac4a_IMG_1574.GIF"
+                            loading="lazy" alt="" class="mark-left ">
+                        <img src="./images/printing/48-sekil.jpg" class="images-4 reveal reveal--bottom"
+                            style="opacity: 1; visibility: inherit; clip-path: none;">
+                        <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672c82bd1beea2674b25d242_IMG_1575.GIF"
+                            loading="lazy" alt="" class="vs-1873">
+                        <img src="./images/printing/49-sekil.jpg" class="images-4 reveal reveal--bottom"
+                            style="opacity: 1; visibility: inherit; clip-path: none;">
+                        <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e855a33663cded854_IMG_1572.GIF"
+                            loading="lazy" alt="" class="mark-right">
+                    </section>
+                </div>
+                <div class="bottom-area">
+                    <article>
+                        <p>
+                            Camera Obscura sistemini kullanan ilk kişi Fransız <span>Joseph Niepce</span>’dir.
+                            Fotografik
+                            emülsyonu (duyarkart) bulan ilk kişi olarak, ürettiği bu ışığa duyarlı yüzeyi
+                            Camera Obscura’nın içine yerleştirerek 1826’da <span>ilk fotoğrafı</span> çekmiştir (Becer,
+                            2015, s.97).
+                            Yukarıda sol tarafta görünen fotoğraf, Joseph Niepce’in evinin bahçesini yansıtan bir
+                            ışık-gölge kaydıdır.
+
+                        </p>
+                    </article>
+
+                    <p>
+                        Niepce’in buluşu olan ıslak emülsyon çok çabuk bozuluyordu. Bu buluşu geliştirerek daha net
+                        görüntüler yaratmayı başaran <span>Louis Jacques Daguerre</span> 1839’da yukarıda sağ tarafta
+                        buılunan <span> Paris
+                            Bulvarı’nı görüntülemiştir.</span> Bu erken dönem dagereotipte, poz süresinin uzunluğu
+                        nedeniyle
+                        arabalar, faytonlar ve yayalar hareket halinde olduğu için kaydedilememiştir. Ancak sol alt
+                        köşede, ayakkabılarını boyatmak için durmuş bir adam ve ayakkabı boyacısı sabit kaldıkları için
+                        tarihte
+                        fotoğraflanan ilk insanlar olmuşlardır (Meggs & Purvis, 2016, s.163).
+
+
+                    </p>
+
+
+                    <article>
+                        <p>
+                            <span> Fotoğraf makinesinin icadı</span> yanlızca tipografi ve illüstrasyona bağlı kalmadan
+                            tasarımlarda
+                            gerçekliğin birebir temsiline imkan tanıyarak tasarımda anlatımı güçlendirmiştir.
+                            <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e8bb407b3e089e05b_05.GIF"
+                                loading="lazy" alt="" class="mark m1826-3">
+                        </p>
+
+
+                    </article>
+
+                </div>
+
+            </div>
+
+
+            <div class="art-and-craft">
+                <div class="col-12 art-and-craft-area">
+                    <div class="bg-effect"></div>
+                    <abbr>19.YY</abbr>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                        loading="lazy" alt="" class="right-gif">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9ef2157b7ffb72d4d1_02.GIF"
+                        loading="lazy" alt="" class="left-gif">
+                    <span>Arts and Crafts Hareketi </span>
+                    <section>
+                        <p>1861'de İngiliz William Morris, sanayileşen bir anlamda ucuzlaşan tasarımlara karşı Arts &
+                            Crafts akımı ile bu tasarım anlayışına tepki göstermiş ve bu akıma öncü olmuştur (Weill,
+                            2012, s. 15).
+                        </p>
+                    </section>
+                    <article>
+                        <img src="./images/printing/50Arts-Crafts-Hareketi.png" class="tipo-1 reveal reveal--bottom">
+                    </article>
+
+                </div>
+            </div>
+
+
+            <div class="art-and-craft-2 ">
+
+                <section>
+                    <h2>"TAKLİTÇİ SERİ ÜRETİM"</h2>
+                    <p>
+                        Sanayi devrimiyle birlikte yaşanan teknolojik gelişmeler ve yenilikler her ne kadar iş hayatını
+                        ve gündelik hayatı kolaylaştırır gibi görünse de <strong>birbirini tekrar eden taklitçi seri
+                            üretim
+                            sanat alanında yeniliğe gidilmesi gerektiği düşüncesini ortaya çıkarmıştır.</strong>
+                    </p>
+                </section>
+
+                <section>
+                    <h2 style="text-align: end;">"MEKANİK TASARIM"</h2>
+                    <p>
+                        Matbaanın icadından sonra,<strong> yazı karakterlerinde gözlemlenen standartlaşma ve
+                            birbirine oldukça benzeyen tasarımlar</strong> dikkat çekmeye başlamıştır. Mekanikleşen bu
+                        tasarım
+                        yaklaşımı, estetik görünümden yoksundur. Çünkü hiçbir makine ya da üretim yöntemi insan zihninin
+                        özgün yaratım kapasitesini yansıtamaz. Aslında bu tepkiler, sanayileşmenin getirdiği mekanik
+                        yaşamın insanın iç dünyasına ulaşamayacağını
+                        vurgulama ve bu tepkiyi somutlaştırma çabası olarak görülebilir. Avrupa’da sanayi devrimiyle
+                        birlikte hız kazanan yeni teknolojileri kabullenememe toplumun bir sorunu olarak görülebilir.
+                        Çünkü o güne kadar üretim süreçlerine hakim olan el emeği ve zihinsel üretim alışkanlıkları,
+                        yerini daha standart, seri ve makine temelli üretim
+                        anlayışına bırakmak zorunda kalmıştır. Bu yeni üretim anlayışının her ne kadar
+                        esneklik ve verimlilik gibi olanaklar sunsa da , geleneksel üretim anlayışına kıyasla toplumda
+                        daha ruhsuz ve yabancı bulunmuştur <small> (Dursun, 2013, s.46).</small>
+                    </p>
+                </section>
+
+            </div>
+
+
+            <div class="art-and-craft-3 ">
+
+                <div class="art-and-craft-3-area">
+
+                    <section>
+                        <p>1861'de İngiliz William Morris, sanayileşen bir anlamda ucuzlaşan tasarımlara karşı
+                            <strong>Arts &
+                                Crafts</strong> akımı ile bu tasarım anlayışına tepki göstermiş ve bu akıma öncü
+                            olmuştur. Bu dönemde
+                            grafik ürünlerin şekillenmesinde büyük etkisi olan birçok kişi, genellikle mimarlar
+                            arasından çıkmıştır ve bu mimarlardan birisi de William Morris’dir. Endüstri devrimi
+                            etkisindeki İngiltere’de, İngilizlerin
+                            “Victoria Dönemi” olarak adlandırılan, gerici zaman diliminde
+                            taklitleşen ve zanaatçı sanat anlayışına karşı çıkan eleştirmen ve toplumbilimci John Ruskin
+                            de, Arts & Crafts hareketiyle öne çıkan William Morris'i desteklemektedir. Ruskin’in
+                            düşünsel manada karşı çıkışına William Morris somut olarak hayat vermiş ve makine, toplu
+                            üretim, sanayi gibi estetikten yoksun üretime
+                            tamamen sırt çevirmiştir <small>(Weill, 2012, s. 15).</small>
+                        </p>
+                    </section>
+
+                    <p><strong>“Sanat ve El Sanatları”</strong> anlamına gelen <strong>Arts and Crafts akımı</strong>,
+                        19. yüzyılın sonlarına doğru Sanayi
+                        Devrimi’nin beraberinde getirdiği <strong>toplumsal ve sanatsal karmaşaya karşı bir duruş olarak
+                            ortaya
+                            çıkmıştır</strong>. Bu akımın öncülerinden olan William Morris, el işçiliğine dayalı üretim
+                        yöntemlerinin, estetik ve işlevsellik açısından yeniden değer kazanması gerektiğini savunmuş ve
+                        tasarımın, sanatsal ifade ile zanaatkârlığın bütünleştiği bir zemine oturtulmasını önermiştir
+                        <small>(Bektaş, 1992, s.14).</small>
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="art-and-craft-4 ">
+
+                <img src="./images/printing/50-sekil.jpg">
+                <p>Arts and Crafts akımının felsefesini
+                    oluşturan Ruskin, sanayileşmenin sanatı toplumdan uzaklaştırdığını ve estetikten yoksun bir
+                    mühendislik faaliyetine dönüştürdüğünü savunmuştur. Bu duruma karşı çözüm olarak, Orta Çağ Gotik
+                    mimarisindeki zarif tasarım anlayışının canlandırılmasını, <strong>doğaya ve bireyselliğe dönüşü
+                        önermiştir.</strong>
+                    William Morris ise Ruskin’in fikirlerinden etkilenerek el yazması kitaplar üretmiş, Roma ve Gotik
+                    tarzlardan ilham alan çizgilerle tasarımlar geliştirmiştir (Şahin, 2019, s.63). </p>
+
+            </div>
+
+
+            <div class="art-and-craft-5 ">
+                <img src="./images/printing/51-sekil.png" class="art-and-craft-5-img">
+                <img src="./images/printing/52-sekil.png">
+
+
+                <section>
+                    <p>Grafik tasarım ve baskı işlerine yönelen Morris’in kitaplara ve Orta Çağ el yazması ile erken
+                        dönem
+                        basma eserlere büyük ilgi duymaktaydı. Roman ve Gotik üsluplardan esinlenerek hazırlanan
+                        “Golden”
+                        yazı karakteri Morris tarafından tasarlanmıştır. </p>
+                </section>
+
+
+                <p>Bu süreçte Morris, kiraladığı bir kır evinde eski bir el baskı makinesiyle matbaa kurmuştur. Bu
+                    girişim “Kelmscott Press” olarak adlandırılmıştır. Kelmscott Press, erken dönem basılı
+                    eserlerde tipografik ve estetik nitelikleri yeniden canlandırmayı temel amacı olarak
+                    benimsemiştir. Kitaplarda kullandığı el işçiliğiyle titizlikle yapılan baskılar, elle üretilmiş özel
+                    kâğıtlar, ahşap oyma baskı klişeleri süslemeli baş harfler ve zarif bezemelerle birlikte modern
+                    matbaacılık içinde sanatla bütünleşmiş özgün bir yayıncılık yaklaşımını temsil etmiştir
+                    <small>(Meggs &
+                        Purvis, 2016, s.192). </small>
+                </p>
+            </div>
+
+
+            <div class="art-and-craft-6 ">
+                <p>Morris tarafından kurulan Kelmscott Press, tipografi ve baskı sanatı alanında önemli yeniliklere
+                    öncülük etmiştir. Bu basımevinin çalışmalarından ilham alan Amerikalı yazı karakteri tasarımcısı
+                    Frederick Goudy ise, İtalyan ve Fransız Rönesans dönemlerinin tipografik
+                    anlayışını temel alarak "Goudy" adını verdiği yazı karakteri ailesini geliştirmiştir <small>(Becer,
+                        2015, s.100).</small> </p>
+
+                <img src="./images/printing/53-sekil.png">
+
+
+            </div>
+
+
+            <div class="art-nouveu">
+                <div class="col-12 art-nouveu-area">
+                    <div class="bg-effect"></div>
+                    <abbr>19.YY - 20.YY</abbr>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                        loading="lazy" alt="" class="right-gif">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9ef2157b7ffb72d4d1_02.GIF"
+                        loading="lazy" alt="" class="left-gif">
+                    <span>Art Nouveu Akımı </span>
+                    <section>
+                        <p>Art Nouveu akımı, 1890’dan 1910 yıllına kadar mimaride, ürün tasarımlarında, resim sanatında
+                            ve grafik tasarım gibi birçok alanda varlık gösteren, çok yönlü dekoratif bir üsluptur
+                            (Farthing, 2014, s.346).
+                        </p>
+                    </section>
+                    <article>
+                        <img src="./images/printing/art noveu.png" class="tipo-1 reveal reveal--bottom">
+                    </article>
+
+                </div>
+            </div>
+
+
+            <div class="art-nouveu-2 ">
+
+                <section>
+                    <h2>“DEKORATİF ÜSLUP”</h2>
+                    <p>
+                        Arts and Crafts sonrasında da Art Nouveau akımı ile İngiltere, Fransa, Avustralya,
+                        Almanya, Belçika ve Amerika Birleşik Devletlerinde illüstrasyonun en değerleri örnekleri ortaya
+                        çıkmıştır. İllüstrasyon, Aubrey Beardsley, Jules Chéret,
+                        Toulouse - Lautrec, Eugène Grasset, Alphonse Mucha gibi değerli sanatçılarla birlikte tarihteki
+                        yerini almıştır. Bu değerli tasarımların oluşmasında endüstri devrimi ile tasarımların
+                        sıradanlaşması ve basitleşmesi sebep olmuştur. Afiş tasarımlarının Avrupa’da ve daha sonraki
+                        dönemlerde Amerika’da etkisi oldukça görülecek, sanatçıların yeni teknolojilere karşı tutumları,
+                        bireysel dünyaya çekilmeleri onların iç dünyasını özgürce ifade etmelerini sağlayacaktır. Art
+                        Nouveu akımı ile tarih boyunca illüstrasyonun afiş tasarımlarında yoğun bir şekilde kullanıldığı
+                        dönem başlamış olur. Hatta bu dönemde afiş tasarımlarının ana ögesinin illüstrasyon olduğu
+                        söylenebilir (Dursun, 2013, s. 47)</strong>
+                    </p>
+                </section>
+
+                <section>
+                    <h2 style="text-align: end;">“İLLUSTRASYONLAR”</h2>
+                    <p>
+                        İllüstrasyon, bir metni, bir konuyu ya da düşünceyi görsel olarak resimlemek olarak
+                        tanımlanabilir. El sanatları döneminde bu teknik genelde basılı kitaplarda süsleme
+                        kavramı olarak ele alınmıştır. Fakat bu dönemden 21.yy’a kadar geçen sürede süsleme unsuru
+                        olarak kalmayıp bununla birlikte bir tasarım unsuru olarak bir
+                        bütünlük ve disiplin içerisinde kullanılmaya devam etmiştir (Şayli, 2023, s.59).
+
+                    </p>
+                </section>
+
+            </div>
+
+
+            <div class="art-nouveu-3">
+
+                <div class="col-12 row art-nouveu-3-area">
+                    <div class="col-6 art-nouveu-3-area-left">
+                        <p>Art Nouveu döneminde özellikle kitap ve afiş tasarımlarında oldukça başarılı örnekler
+                            verilmiştir. Jules Chéret, Toulouse – Lautrec ve Alphonse Mucha afiş tasarımlarında da
+                            görüleceği gibi “zarif dekoratif süslemelerin ön plana çıktığı, kıvrımların ve bitkisel
+                            desenlerin sıklıkla kullanıldığı bir sanat akımı” <small>(https://tr.wikipedia.org, t.y.)
+                            </small>ımını
+                            yansıtmaktadır.</p>
+                        <img src="./images/printing/55 şekil1.jpg">
+                        <img src="./images/printing/54 şekil1.jpg" class="art-nouveu-3-img-1">
+                        <img src="./images/printing/54 şekil.jpg" class="art-nouveu-3-img-2">
+                    </div>
+                    <div class="col-6 art-nouveu-3-area-right">
+                        <img src="./images/printing/55 şekil.jpg">
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="art-nouveu-4">
+
+                <div class="col-12 row art-nouveu-4-area">
+
+                    <div class="col-4 art-nouveu-4-area-left">
+                        <img src="./images/printing/57şekil.jpg">
+
+                        <p>Art Nouveau’nun Almanya’daki adı
+                            “Jugendstil”dir. Bu akımın önde gelen
+                            temsilcilerinden Peter Behrens, 19. yüzyılın dekoratif tarzı ile 20. yüzyılda ön plana çıkan
+                            işlevsel ve geometrik biçimleri
+                            birleştirerek, Jugendstil’i sanayi toplumu koşullarına uyarlamaya çalışmıştır.
+                            Behrens, özellikle AEG şirketi için gerçekleştirdiği kapsamlı kurumsal kimlik çalışmalarıyla
+                            bilinir. Ona göre estetik ve işlevsellik birbirini tamamlayan unsurlar olmalı ve gerçek
+                            güzellik işlevsellikten doğmalıdır. 19. yüzyıla bir tepki olarak gelişen bu görüş, “Neue
+                            Sachlichkeit” (Yeni Nesnelcilik) olarak adlandırılmıştır (Becer, 2015, s.101).</p>
+                    </div>
+                    <div class="col-4 art-nouveu-4-area-middle">
+                        <img src="./images/printing/56 şekil.png">
+
+                        <p>Dönemin Art Nouveau stilinde tasarlanan ve günümüzde hala kullanılmakta olan
+                            amblemlerden biri, “American General
+                            Electric” firmasına aittir. Bu amblem, klasik bir tarza sahip olmasına rağmen netliği,
+                            kolayca okunabilmesi ve tasarımdaki uyumu sayesinde, zamana meydan okuyan örneklerden biri
+                            olmuştur (Bektaş, 1992, s.12).</p>
+                    </div>
+
+                    <div class="col-4 art-nouveu-4-area-right">
+                        <img src="./images/printing/58 şekil.jpg">
+                        <p>Behrens’in tipografi çalışmaları, dönemin yenilikçi anlayışını yansıtan bilinçli adımlar
+                            olarak görülmüştür. 1900’de kendi
+                            tasarladığı sans-serif yazıtipini bir kitapta kullanarak bu alanda bir ilki
+                            gerçekleştirmiştir. Bir yıl sonra ise kare
+                            temelli modüler sans-serif harflerle
+                            geometrik tasarım olanaklarını araştırmaya devam etmiştir (Meggs & Purvis, 2016, s.241)</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="quiz-game-3">
+
+        <div class="click-play" id="startScreen-3">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/mars_sunburst.png">
+            <h2>Grafik Tasarım Tarihi Quiz</h2>
+            <h3> GAME QUİZ</h3>
+            <button class="start-btn" id="startBtn-3">OYNAMAK İÇİN TIKLAYIN</button>
+        </div>
+
+
+        <div class="quiz-container-3" id="quizContainer-3">
+            <div class="shapes">
+                <div style="background-color:#77a2cd" class="shapes-circle"></div>
+                <div style="background-color:#c8be99" class="shapes-circle is--2"></div>
+                <div style="background-color:#77a2cd" class="shapes-circle is--3"></div>
+            </div>
+
+            <article>
+                <img src="https://cdn.prod.website-files.com/618344780acfccac60d1f2df/618442febf072bfcf11ee3fa_points-icon.svg"
+                    loading="lazy" alt="Trophy Icon" class="points-icon">
+                <span id="scoreDisplay-3">0</span>
+                <abbr>puan</abbr>
+            </article>
+
+            <div class="col-6 quiz-main-left-3">
+                <h3 id="questionText-3"></h3>
+                <article id="options-3"></article>
+
+            </div>
+            <div class="col-6 quiz-main-right-3">
+                <img id="quizImage-3"
+                    src="https://cdn.prod.website-files.com/61848a25f822e1d08a208e51/61848a83e45d1a37d47afa35_art1.jpg"
+                    class="frame-art-img">
+                <img src="https://cdn.prod.website-files.com/618344780acfccac60d1f2df/6184856f5dcb30a309adff56_picture-frame.png"
+                    class="frame-img">
+                <button id="nextBtn-3" class="next-btn">Next</button>
+            </div>
+            <div class="ada" id="ada-3">
+                <img src="https://cdn.prod.website-files.com/618344780acfccac60d1f2df/618487de9301e40b017a5c85_texture.jpg"
+                    class="glass-texture">
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <div class="sectionPin-4">
+        <div class="pin-wrap-4">
+
+            <div class="topic-four">
+                <div class="topic-period">
+                    <div class="sub-text">Dönem 4</div>
+                    <h2 class="main-text">
+                        MODERN SANAT VE GRAFİK TASARIM
+                    </h2>
+                    <div class="sub-text">18.YY - 20.YY</div>
+                </div>
+            </div>
+
+
+            <div class="learning-words-4">
+
+                <section>
+                    <h2>“MODERN SANAT”</h2>
+                    <p>
+                        <strong>Sanayi devriminin etkisiyle</strong> 19. yüzyılın sonlarında makineleşen iş hayatı
+                        toplumda yeni bir
+                        ekonomik sistemin gelişmesini sağlamıştır. Genel olarak bakıldığında 20. yüzyılı şekillendiren
+                        başlıca etmen ise bu yeni ekonomik sistemin varlığıdır. Bu dönemde yaşanan neredeyse çoğu
+                        teknolojik gelişmeler, savaşlar ve düşünce akımlarının bu yeni ekonomik sistemin etkisi altında
+                        gerçekleştiği söylenebilir.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 style="text-align: end;">“DÜŞÜNCE AKIMLARI”</h2>
+                    <p>
+                        20. yüzyılda ortaya çıkan düşünce akımları toplumla ayrılmaz bir bütün olan sanat alanında da
+                        varlık göstermiştir.
+                        Bu dönemde ortaya çıkan <strong>Kübizm, Fütürizm, Dada, Sürrealizm, De Stij, Süprematizm,
+                            Konstrüktivizm</strong>
+                        gibi modern sanat akımları ile evrensel sanat ve kültürel yaşam ciddi anlamda etkilenmiştir.
+                        Grafik tasarımda yine bu akımların etkisi altında kalmıştır.
+                    </p>
+                </section>
+
+                <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbf4f0dde901a07fd22a0_IMG_1635.GIF"
+                    loading="lazy" style="width: 99%; height: 96%; opacity: 1;" alt="" class="learnini-gif">
+
+            </div>
+
+
+            <div class="kubizm">
+                <div class="col-12 kubizm-area">
+                    <div class="bg-effect"></div>
+                    <abbr>1907 - 1914</abbr>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                        loading="lazy" alt="" class="right-gif">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9ef2157b7ffb72d4d1_02.GIF"
+                        loading="lazy" alt="" class="left-gif">
+                    <span>Kübizm</span>
+                    <section>
+                        <p><strong>Doğadan bağımsız bir tasarım anlayışı olan Kübizm</strong>, resim sanatında dört
+                            yüzyıl boyunca egemen
+                            olan Rönesans
+                            geleneğini yıkmıştır. Pablo Picasso’nun 1907’de yapmış olduğu <strong>“Avignonlu
+                                Kızlar”</strong> tablosu
+                            ise, bu akımın akımının öncüsü olarak değerlendirilir <small>(Bektaş, 1992, s.28)</small>>.
+                        </p>
+
+                    </section>
+                    <article>
+                        <img src="./images/modern-art/59_sekil.jpg" class="tipo-1 reveal reveal--bottom">
+                    </article>
+
+                </div>
+            </div>
+
+            <div class="kubizm-2">
+
+                <img src="./images/modern-art/60_sekil.png">
+                <p>
+                    Sonraki birkaç yıl içerisinde, Picasso ve Georges Braque, kübizmi, nesnel
+                    gerçeklikten uzaklaşarak sonsuz düşsel formların araştırıldığı bir sanat
+                    hareketi olarak geliştirmişlerdir.<strong> “Analitik Kübizm” </strong> adlandırılan bu dönem,
+                    konunun çeşitli
+                    düzlemlere ayrılarak analiz edildiği ve nesnenin aynı anda birden fazla bakış açısından ele alındığı
+                    çalışmalarla
+                    tanımlanır <small>(Meggs & Purvis, 2016, s.269)</small>.
+
+                </p>
+            </div>
+
+            <div class="kubizm-3">
+
+                <p>
+                    1912 yılından itibaren Picasso ve Braque, eserlerinde ilk kez kâğıt kolaj unsurlarını
+                    kullanmaya başlamışlardır. Kolaj, konuya bağlı kalmaksızın serbest düzenlemeler yapılmasına olanak
+                    sağlamış ve resmin iki boyutlu bir yüzey olduğu gerçeğini ortaya koymuştur. Kolajı oluşturan
+                    malzemelerin dokusu, resimde yer alması istenen nesneyi temsilen kullanılmıştır. Bir önceki analitik
+                    yaklaşımdan farklı olarak, kolajın birleştirici ve sentezleyici yönü ön plana çıkarılarak Sentetik
+                    Kübizm akımı geliştirilmiştir (Tansuğ, 1995, s.345).
+                </p>
+
+                <p>
+                    1912-1914 yılları arasında kübizmin
+                    anlayışının başlıca temsilcilerinden biri olan Fernand Léger’nin renk kullanımıyla Picasso ve
+                    Braque’ın kolaj tekniğinin birleşmesi, kübizmde önemli bir dönüşümün önünü açtı. Kübizmin "sentetik"
+                    olarak adlandırılan bu ikinci aşamasında, yapı ve tasarım ön plana çıktı; renkler daha belirgin,
+                    şekiller ise daha parçalı ve dekoratif hale geldi. Bu dönemde sanatçılar, gazete kağıdı ve kumaş
+                    gibi farklı malzemeleri tuvale yapıştırarak yeni ve yoğun anlatım
+                    olanakları yarattılar. Özellikle Braque’ın "Masa Üstünde Natürmort: Gillette" adlı yapıtı kolajın
+                    sanattaki dönüştürücü etkisini ve sentetik kübizmin karakterini açıkça ortaya koydu (Farthing, 2014,
+                    s.390).</small>.
+
+                </p>
+
+                <div class="left-effect"></div>
+                <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                    loading="lazy" alt="" class="kubizm-3-right-gif">
+            </div>
+
+            <div class="kubizm-4"></div>
+
+            <div class="kubizm-5">
+                <img src="./images/modern-art/62_sekil.jpg">
+                <p>Sentetik Kübizm döneminde eserler veren Juan Gris geometrik biçimlerin ve tasarım anlayışının
+                    ilerlemesine önemli katkılarda bulunmuştur <small>(Arı, 2006, s.69) </small>.
+
+                </p>
+            </div>
+
+            <div class="kubizm-6">
+                <div class="top-effect"></div>
+
+                <p><strong>Fernand Leger’in çalışmalarında</strong> ise, insan figürünün ve nesnelerin sadeleştirilmiş,
+                    simgesel formlara
+                    indirgenmesi, 1920’lerde modern <strong>Fransız afiş sanatını ve grafik tasarımı derinden
+                        etkilemiştir.</strong>
+                    Léger’in kentten ve makinelerden esinlenen canlı ve keskin formları, savaş
+                    sonrası modern tasarım anlayışının gelişimine katkı sağlamıştır.<strong> Kübizm, sanat ve grafik
+                        tasarımda
+                        geometrik soyutlamaya dayalı yeni bir bakış açısının öncüsü olmuştur</strong> <small> (Meggs &
+                        Purvis, 2016, s.271)</small>
+                </p>
+
+                <img src="./images/modern-art/63_sekil.png">
+
+            </div>
+
+
+            <div class="fütürizm">
+                <div class="col-12 fütürizm-area">
+                    <div class="bg-effect"></div>
+                    <abbr>1909 - 1924</abbr>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                        loading="lazy" alt="" class="right-gif">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9ef2157b7ffb72d4d1_02.GIF"
+                        loading="lazy" alt="" class="left-gif">
+                    <span>Fütürizm</span>
+                    <section>
+                        <p><strong>Fütürizm</strong>, objelerin kendisinden ziyade,<strong> bireyin içsel deneyim ve
+                                duygu dünyasını merkeze alan
+                                bir sanat anlayışıdır. Bu yaklaşımda, ruh hâli doğrudan sanat eserine
+                                yansıtılmaktadır.</strong>
+                            Fütüristlere göre, müzeler, kütüphaneler ve her türden akademik kurum ortadan kaldırılmalı,
+                            geçmişin otoritesinden kurtulunmalıdır <small>(Turani, 2011, 606)</small>.
+                        </p>
+
+                    </section>
+                    <article>
+                        <img src="./images/modern-art/futurizm.png" class="tipo-1 reveal reveal--bottom">
+                    </article>
+
+                </div>
+            </div>
+
+            <div class="fütürizm-2">
+                <section>
+                    <h2>TEKNOLOJİK İLERLEME”</h2>
+                    <p>
+                        Birinci Dünya Savaşı’na kadar geçen süreçte, ulaşım ve iletişim alanındaki teknolojik
+                        ilerlemeler mesafe kavramını ve bu kavramın toplumsal algılanışını köklü biçimde dönüştürmüştür.
+                        Bu hızlı değişim, toplumsal yaşama etkilerini sanat yoluyla yansıtma arayışı içinde olan ve
+                        birbiriyle bağlantılı çeşitli sanat akımlarının doğmasına zemin hazırlamıştır. Bu yeni bilinç
+                        düzeyinin en önemli kaynağı ise, İtalyan şair Filippo
+                        Tommaso Marinetti’nin 1909 yılında edebiyat alanında yayımladığı Fütürist Manifesto ile başlayan
+                        fütürizm olmuştur. Fütürizm akımı, geleneksel değerlerin reddini ve
+                        teknolojik yeniliklerin ön plana çıkarılmasını savunmuş; kısa sürede mimariden edebiyata,
+                        bestecilikten tasarıma kadar pek çok alanda sanatçılar arasında karşılık bulmuştur
+                        <small>(Farthing,
+                            2014, s.396).</small>
+                    </p>
+                </section>
+
+                <section>
+                    <h2 style="text-align: end;">“MARINETTI BİLDİRGESİ”</h2>
+                    <p>
+                        Marinetti’nin yayımladığı bildirge, savaş, makine çağı, hız ve modern yaşama duyulan coşkuyu
+                        dile getirmiştir. Toplumu sarsan bu metin, şu sözlerle dikkat
+                        çekmiştir:“Biz müzeleri, kütüphaneleri yok edeceğiz ve ahlakçılığa, feminizme ve tüm faydacı
+                        korkaklığa karşı savaş açacağız.” <small>(Meggs & Purvis, 2016, s.271)</small>.
+
+                    </p>
+                </section>
+            </div>
+
+
+            <div class="fütürizm-3">
+                <div class="col-12 row">
+                    <div class="col-8 fütürizm-3-area-left">
+                        <p><strong>Fütüristler, teknolojiyle beraber gelişen makinelerin hızı ve hareketinden ilham
+                                alarak
+                                sanatı yeniden şekillendirme arzularını görsel sanatlar ve şiire
+                                yansıtmışlardır.</strong> Toplumsal
+                            ve kültürel dönüşümleri ifade etmek amacıyla, şiirsel anlatım ve tipografide yenilikçi
+                            yaklaşımlar
+                            benimsemişlerdir.<strong> Geleneksel anlayıştan uzaklaşan modernist sanatçılar, özellikle
+                                geometrik
+                                soyutlama ve deneysel tipografi alanında fütürist düşüncenin en çarpıcı örneklerini
+                                ortaya
+                                koymuşlardır </strong><small>(Mazlum, 2017, s.32).</small>
+                        </p>
+                        <div class="row col-12 fütürizm-3-area-left-bottom">
+                            <div class="col-6 fütürizm-3-area-left-bottom-left">
+                                <p>Filippo Marinetti’nin 1914 tarihli <strong>Zang Tumb Tumb</strong> adlı ilk kitabının
+                                    kapağı aynı
+                                    zamanda bir ses şiiri niteliği taşıyan başlığıyla dikkat çeker. Marinetti'nin 1912
+                                    Balkan Savaşı sırasında muhabir olarak edindiği deneyimlerinden yola çıkan bu eser,
+                                    <strong> topçu ateşinin seslerini tipografik olarak yansıtır</strong>.
+                                </p>
+                                <img src="./images/modern-art/64_sekil.jpg">
+                            </div>
+                            <div class="col-6 fütürizm-3-area-left-bottom-right" style="text-align: center;">
+                                <img src="./images/modern-art/65_sekil.png">
+                                <p>Marinetti’nin <strong>“Les mots en liberté
+                                        futuristes”</strong> eserinde yer alan katlanır sayfa
+                                    niteliğindeki "Montagne + Vallate + Strade x Joffre" (Dağlar + Vadiler + Sokaklar x
+                                    Joffre) -I. Dünya Savaşı'ndaki Fransız başkomutan Mareşal Joseph Joffre- başlıklı
+                                    şiir, sanatçının savaş cephesini (sol alt), Fransa'yı (sol üst) ve Fernand Léger'i
+                                    ziyaretini (sağ üst) görsel bir anlatımla
+                                    betimler. Fütürist şairler, farklı punto, ağırlık ve yazı stillerinin kullanımının,
+                                    resim ve şiiri birleştirmeyi mümkün kıldığına
+                                    inanmaktaydı. <strong>Harf biçimlerinin doğasında bulunan estetik, yaratıcı şekilde
+                                        işlenerek basılı sayfayı görsel bir sanat eserine dönüştürmüştür.</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 fütürizm-3-area-right" style="text-align: center;">
+                        <p>Marinetti’nin bir başka eseri <strong>“Les mots en liberté futuristes”</strong> içindeki bir
+                            sayfa ise
+                            cephedeki sevgilisinden gelen mektubu okuyan bir kızın üzerinde patlayan savaşın kaotik
+                            gürültüsünü ve karmasasını
+                            betimler. Marinetti'nin siperlerdeki
+                            deneyimlerinden esinlenen bu şiir, <strong>şiddetin ve kafa karışıklığının tipografik bir
+                                patlamasını yansıtmaktadır</strong> <small> (Meggs & Purvis, 2016, s.273)</small>.</p>
+
+                        <img src="./images/modern-art/66_sekil.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="fütürizm-4">
+
+                <p>
+                    Fütürist düşünceye göre, yazı veya
+                    tipografi, somut ve anlam yüklü görsel bir biçime dönüşebilirdi. Bu bağlamda fütürist şairler,
+                    Gutenberg’in matbaa düzeninden beri süregelen grafik tasarım ilkelerini
+                    reddederek, sözcük ve harfleri kesip yapıştırmak suretiyle doğrusal olmayan, dinamik kompozisyonlar
+                    oluşturmuşlardır. Bu deneysel düzenlemeler, fotografik baskı teknikleri aracılığıyla çoğaltılarak
+                    edebi ve görsel ifade biçimlerinde radikal bir dönüşüm gerçekleştirmiştir (Meggs & Purvis, 2016,
+                    s.275).
+                </p>
+
+                <p>
+                    Başka bir Fransız şair olan Guillaume
+                    Apollinaire’ye göre “kataloglar, “afişler, her türden reklam metni, inanın bana, çağımızın şiirini
+                    barındırıyor” ifadesiyle grafik tasarım alanına 1918 yılında
+                    yayımladığı Calligrammes adlı kitabında yer alan şiirlerle katkıda bulunmuştur.
+                    Calligrammes kitabında yer alan “II pleut” (yağmur yağıyor) şiirindeki harf formları, sayfanın
+                    aşağısına doğru yağmur
+                    damlaları gibi figüratif bir düzenleme ile yerleştirilerek, görsel biçim ile şiirsel içeriğin
+                    organik bütünlüğü sağlanmıştır. Apollinaire, tipografiyi yağmurun fiziksel düşüş hareketini taklit
+                    edecek şekilde
+                    kurgulayarak, okuma deneyimine
+                    mekânsal bir boyut katmıştır. Başka bir sayfasındaki tasarımda ise tipografi, bir kuşu, bir su
+                    fıskiyesini ve bir gözü biçimsel olarak temsil etmektedir. (Meggs & Purvis, 2016, s.275).
+                </p>
+
+            </div>
+
+
+            <div class="fütürizm-5">
+                <div class="left-effect "></div>
+                <img src="./images/modern-art/67_sekil.png" class="fütürizm-5-img-1">
+                <img src="./images/modern-art/68_sekil.png" class="fütürizm-5-img-2">
+
+            </div>
+
+            <div class="fütürizm-6">
+                <div class="top-effect"></div>
+
+                <p>Fütürist felsefeyi grafik ve reklam tasarımına uygulayan sanatçılar arasında yer alan
+                    <strong>Fortunato
+                        Depero,
+                        tipografi ve reklam tasarımı alanlarında dinamik bir eser bütünlüğü yaratmıştır</strong>
+                    (aşağıda
+                    solda bulunan
+                    tiyatro afişi). Ayrıca Avrupa modernizminin kaynaklarını yansıtan çeşitli üsluplarda üretimde
+                    bulunan
+                    Depero <strong> kendi tipografik deneylerini, reklam çalışmalarını, duvar halısı
+                        tasarımlarını</strong>
+                    ve diğer işlerini
+                    bir araya getirdiği “Depero Futurista” adlı eserini (aşağıda sağda bulunan kitap kapağı tasarımı)
+                    yayımlamıştır.
+                </p>
+
+                <img src="./images/modern-art/69_sekil.png" class="fütürizm-6-img-1">
+                <img src="./images/modern-art/70_sekil.png" class="fütürizm-6-img-2">
+            </div>
+
+            <div class="dadaizm">
+                <div class="col-12 dadaizm-area">
+                    <div class="bg-effect"></div>
+                    <abbr>1916 - 1924</abbr>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                        loading="lazy" alt="" class="right-gif">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9ef2157b7ffb72d4d1_02.GIF"
+                        loading="lazy" alt="" class="left-gif">
+                    <span>Dadaizm</span>
+                    <section>
+                        <p><strong>Birinci Dünya Savaşı’na ve savaşın arkasındaki kapitalist düzene karşı bir isyan
+                                olarak
+                                ortaya çıkan Dadaizm</strong>, kısa sürede anarşist, alaycı ve hiçlikçi bir sanat
+                            hareketine
+                            dönüşmüştür. Şok edici sergiler, absürt performanslar ve
+                            anlamsız bildirilerle toplumun geleneksel değerlerini provoke etmeyi amaçlamıştır.<strong>
+                                Özgür
+                                düşünceye önem veren ve sanatın yerleşik estetik kalıplarını yıkarak</strong> daha derin
+                            bir
+                            gerçekliğe ulaşabileceklerine inanan gen ç, öfkeli sanatçılardan oluşuyordu (N. Şahin, 2019,
+                            s.105).
+                        </p>
+                    </section>
+                    <article>
+                        <img src="./images/modern-art/71_sekil.jpg" class="tipo-1 reveal reveal--bottom">
+                    </article>
+
+                </div>
+            </div>
+
+            <div class="dadaizm-2">
+
+                <section>
+                    <h2>“SAVAŞ KARŞITI”</h2>
+                    <p>
+                        Dada, 1916 yılında İsviçre'nin Zürih kentinde, şair Hugo Ball tarafından kurulan
+                        Cabaret Voltaire adlı mekânda, kendiliğinden şekillenen bir sanat hareketi olarak ortaya
+                        çıkmıştır. Ball’ın amacı, savaş karşıtı genç sanatçıları bir araya getirerek,
+                        onların özgürce düşüncelerini ifade edebilecekleri bir ortam yaratmaktı. Şubat ayında açılan bu
+                        gece kulübü ya da sanat salonu, kısa sürede büyüyerek şiir dinletileri,
+                        sergiler, performanslar ve çeşitli sanatsal etkinliklerin düzenlendiği canlı bir kültürel
+                        merkeze dönüşmüştür (Antmen, 2008, s.121).
+                    </p>
+                </section>
+
+                <section>
+                    <h2 style="text-align: end;">“SANAT KARŞITI”</h2>
+                    <p>
+                        Dada hareketi, kolaj tekniği ve kendini ifade etme yöntemleri bakımından kübizm ve fütürizm gibi
+                        önceki sanat akımlarından etkilenmiş olsa da, onu özgün kılan temel unsur, sanatın Birinci Dünya
+                        Savaşı sürecinde oynadığı roldür. Expresyonistler savaşın ruhani bir dönüşüm sağlayacağına
+                        inanırken, fütüristler modern savaşın
+                        mekanik doğasına hayranlıkla yaklaşmışlardır. Buna karşılık Dadaistler, sanatın
+                        insanlığa ihanet ettiğini savunmuş ve bu nedenle sanat karşıtı bir tavır
+                        benimsemişlerdir (Farthing, 2014, s.410).
+
+                    </p>
+                </section>
+            </div>
+
+            <div class="dadaizm-3">
+                <img src="./images/modern-art/71_sekil.jpg" class="tipo-1 reveal reveal--bottom">
+                <p>Geleneksel sanatı ve savaşı protesto eden Dada hareketinin öncüsü, 1917
+                    yılında yayımlanmaya başlayan Dada adlı derginin editörlüğünü üstlenen şair Tristan Tzara’dır. Dada
+                    akımının plastik
+                    sanatlardaki en önemli sanatçısı ise Marcel Duchamp’dır. Dada sanatçıları, toplum tarafından
+                    genellikle değersiz,
+                    rahatsız edici veya yıkıcı olarak görülen
+                    unsurları sanatın bir parçası hâline
+                    getirerek şok etkisi yaratmayı ve mevcut
+                    normlara karşı çıkmayı amaçlamış ve sınırsız bir özgürlüğü savunmuşlardır (Becer, 2015, s.102). Bu
+                    sanat yapıtlarından biri olan Marcel Duchamp’ın “Fountain” isimli "R. Mutt" imzalı bir porselen
+                    pisuar örnek verilebilir.
+                </p>
+            </div>
+
+            <div class="dadaizm-4">
+                <div class="col-12 row">
+                    <div class="col-6"></div>
+                    <div class="col-6 dadaizm-4-area-right">
+                        <img src="./images/modern-art/73_sekil.png">
+                        <section>
+                            <abbr>1/1</abbr>
+                            <p>
+                                Dada sanatçıları, fotomontaj tekniğini geliştirdiklerini iddia etmiş ve bu
+                                yöntemi, rastlantısal görsellerle çarpıcı ve çağrışım yüklü kompozisyonlar oluşturmak
+                                için kullanmışlardır. 1918’den itibaren Raoul Hausmann (solda) eleştirel, Hannah Höch
+                                (sağda) ise toplumsal cinsiyet odaklı çalışmalarıyla bu tekniği hem politik ifade aracı
+                                hem de grafik tasarım yöntemi olarak dönüştürmüşlerdir (Meggs & Purvis, 2016, s.279).
+                            </p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dadaizm-5">
+                <div class="top-effect"></div>
+
+                <p><strong>Kurt Schwitters</strong>, Dada hareketinden etkilenerek ancak siyasal yönelimlerden uzak
+                    duran Merz adını
+                    verdiği bireysel sanat yaklaşımıyla, 1919’dan itibaren <strong>gazete kupürleri, gündelik nesneler
+                        ve atık
+                        materyaller kullanarak kolaj temelli yapıtlar üretmiştir.</strong> Schwitters’ın bu üretimleri,
+                    Dada’nın
+                    rastlantısallık, anlamsızlık ve sürpriz gibi temel öğelerini düzenli ve özgün bir tasarım dili ile
+                    harmanlayarak <strong>grafik tasarıma özgün bir katkı sunmuştur</strong>. Ayrıca
+                    Schwitters, anlam ile anlamsızlık arasındaki gerilimi temel alan şiirler yazmış ve bu
+                    <strong>şiirlerin
+                        görsel düzenlemelerini de kendisi tasarlamıştır</strong> <small> (Meggs & Purvis, 2016,
+                        s.279)</small>.
+                </p>
+
+                <section>
+                    <img src="./images/modern-art/74_sekil.jpg">
+                    <img src="./images/modern-art/75_sekil.png">
+                </section>
+            </div>
+
+            <div class="dadaizm-6">
+
+                <img src="./images/modern-art/76_sekil.png">
+                <p>Schwitters’ın sanatsal yaklaşımı daha çok biçimsel ve estetik denemelere dayanırken, Berlin merkezli
+                    Dada sanatçıları <strong>John Heartfield </strong>(Helmut Herzfelde),<strong> Wieland
+                        Herzfelde</strong> ve <strong>George Grosz</strong> ise sanatlarını açıkça politik bir çizgide
+                    konumlandırmışlardır. Bu isimler, <strong>eserlerini yalnızca sanatsal ifade amacıyla değil, toplumu
+                        dönüştürme ve politik
+                        farkındalık yaratma aracı olarak görmüşlerdir. Grafik tasarım ve görsel malzemeleri, propaganda
+                        niteliği taşıyan içeriklerle birleştirerek izleyiciyi
+                        düşünmeye ve eyleme geçmeye teşvik etmeyi hedeflemişlerdir </strong><small>(Meggs & Purvis,
+                        2016, s.279)</small>.</p>
+            </div>
+
+            <div class="dadaizm-7">
+                <div class="left-effect "></div>
+                <div class="col-12 row">
+                    <div class="col-6 dadaizm-7-area-left">
+                        <img src="./images/modern-art/77_sekil.png" style="width: 80%;">
+                        <img src="./images/modern-art/78_sekil.png" style="width: 80%;">
+                    </div>
+                    <div class="col-6 dadaizm-7-area-right">
+                        <p><strong>Dada hareketi</strong>, Birinci Dünya Savaşı'nın başlamasıyla birlikte ortaya çıkan
+                            ideolojik ve
+                            estetik baskılara karşı bir tepki olarak gelişmiş, geleneksel sanat anlayışını
+                            reddetmiş ve <strong> yerleşik tüm sanat normlarını yıkarak tipografiyi özgür ve deneysel
+                                bir ifade
+                                aracı olarak kullanmaya yönelmiştir</strong> Dada sanatçıları, üretimlerini savaşın yol
+                            açtığı
+                            yıkıma, geleneksel değerlere ve
+                            tüketim kültürüne karşı bir duruş
+                            sergilemek amacıyla gerçekleştirmiştir
+                            <small>(Öztuna, 2008, s.84-98)</small>.
+                        </p>
+                        <img src="./images/modern-art/79_sekil.jpg" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="sürrealizim">
+                <div class="col-12 sürrealizim-area">
+                    <div class="bg-effect"></div>
+                    <abbr>1924 - 1950</abbr>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                        loading="lazy" alt="" class="right-gif">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9ef2157b7ffb72d4d1_02.GIF"
+                        loading="lazy" alt="" class="left-gif">
+                    <span>Sürrealizim</span>
+                    <section>
+                        <p><strong>Gerçeküstücülük anlamına gelen Sürrealizm</strong>, 1924’de Paris’te ortaya
+                            çıkmıştır. Dadacı
+                            yaklaşımı temel alan en önemli sanat akımıdır. Gerçek olarak kabul edilenin arkasındaki daha
+                            derin ve gizemli bir hakikatin izini süren <strong>Sürrealistlerin yapılarında bilinçaltı,
+                                rüyalar
+                                ve sezgisel algılar temel belirleyici unsurlar olmuştur</strong> <small>(Becer, 2015,
+                                s.102)</small>.
+                        </p>
+                    </section>
+                    <article>
+                        <img src="./images/modern-art/80_sekil.png" class="tipo-1 reveal reveal--bottom">
+                    </article>
+
+                </div>
+            </div>
+
+            <div class="sürrealizim-2">
+
+                <section>
+                    <h2>“SIRADIŞI KOMPOZİSYONLAR”</h2>
+                    <p>
+                        Sürrealist sanatçılar, birbiriyle bağlantısız gibi görünen biçim ve nesneleri bir araya
+                        getirerek <strong>sıradışı kompozisyonlar oluşturmuşlardır</strong>. Bu ögeleri bazen perspektif
+                        derinliği içinde
+                        konumlandırmış, bazen de düz yüzeyde toplamışlardır. Nesneleri alışılmışın dışında yorumlayarak
+                        onları düşsel ve bilinçaltına ait atmosferlerde yeniden sunmuşlardır. <strong>Estetik kuralları
+                            geri
+                            planda bırakan bu yaklaşımda, çarpıcılığı artırmak için zıt renkler sıkça tercih
+                            edilmiştir</strong>.
+                        Ayrıca ilkel toplumların sanatından da esinlenen bu yaklaşımın öncüleri arasında <strong>André
+                            Breton,
+                            Salvador Dalí, Max Ernst, Joan Miró, René Magritte ve Hans Arp</strong> gibi önemli isimler
+                        yer alır
+                        <small>(Arıcan, 2012, s.67)</small>.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 style="text-align: end;">“DÜŞ, SEZGİ, HAYAL GÜCÜ”</h2>
+                    <p>
+                        <strong> Sürrealizm, grafik tasarımda görsel anlatım olanaklarını geliştirmiş ve yenilikçi ifade
+                            biçimlerinin ortaya çıkmasını sağlamıştır. Düş, sezgi ve hayal gücü gibi soyut düşünceler,
+                            görsel öğelerle somutlaştırılarak anlatıma yeni bir boyut
+                            kazandırmıştır</strong>. Somut nesneleri beklenmedik bağlamlarda kullanarak çarpıcı ve
+                        akılda kalıcı
+                        imgeler üretmiştir. Ayrıca <strong>bir konuyu birçok açıdan ele alarak grafik tasarımın görsel
+                            diline
+                            zenginlik kazandırmış, açıklayıcı metinlere ihtiyaç
+                            duymadan mesajı doğrudan izleyiciye aktarmayı sağlamıştır</strong> <small>(Bektaş, 1992,
+                            s.53)</small>.
+
+                    </p>
+                </section>
+            </div>
+
+            <div class="sürrealizim-3">
+                <p>Sürrealizm akımıyla öne çıkan sürrealist ressam <strong>Salvador Dali</strong>, resimlerinde sıkça
+                    kendi anılarına ve
+                    rüyalarına dayanan imgeler kullanmıştır. Eserlerinde eriyen ve akışkan formlara bürünmüş saatler,
+                    vücudunda çekmeceler bulunan insan figürleri ve havada süzülen nesneler dikkat çeker ve derinlik
+                    izlenimi veren perspektif görüntüler vardır <small> (Arıcan, 2012, s.68)</small>.</p>
+
+                <img src="./images/modern-art/80_sekil.png">
+
+                <p>Dali, eserlerinde düşsel ve gerçeküstü
+                    unsurları harmanlayarak, <strong>grafik tasarım alanında çarpıcı etkiler yaratmıştır. Bu
+                        etkilerden birincisi, perspektif
+                        kullanımıyla derinlik hissi yaratan
+                        sahneleri iki boyutlu yüzeylerde ustalıkla işleyerek görsel etkiyi arttırmıştır. İkincisi ise,
+                        gerçeklik algısını afiş, kitap ve dergi kapakları gibi tasarım yüzeylerine
+                        taşıyarak tasarımlara özgün ve dikkat çekici bir nitelik kazandırmıştır</strong>
+                    <small>(Bektaş, 1992, s.51)</small>.
+                </p>
+            </div>
+
+            <div class="sürrealizim-4">
+
+
+                <p>Sürrealizmin önde gelen sanatçılarından <strong> Rene Magritte</strong>, akıl ve akıl dışı arasındaki
+                    sınırları ortadan
+                    kaldıran eserleriyle tanınır. <strong>Eserlerinde gerçeklik ve yanılsama arasında kurduğu özgün
+                        ilişki,
+                        grafik tasarımda yaratıcı ifade biçimlerine ilham vermiştir</strong> <small>(Arıcan, 2012,
+                        s.68)</small>. .</p>
+            </div>
+
+            <div class="sürrealizim-5">
+                <p><strong>Max Ernst, grafik iletişimde benimsenen birçok özgün tekniğin gelişimine katkı
+                        sağlamıştır.</strong> 19.
+                    yüzyıl romanları ve
+                    kataloglarındaki ağaç baskılarından
+                    etkilenen Ernst, bu görselleri kolaj
+                    yöntemiyle yeniden yorumlayarak
+                    alışılmadık kompozisyonlar üretmiştir. Bu sürrealist kolajlar, illüstrasyon sanatını güçlü bir
+                    biçimde etkilemiştir. Ayrıca <strong> Ernst, frotaj tekniğiyle yüzey desenlerinden yola çıkarak
+                        düşsel
+                        imgeler oluşturmuş; dekalkomani ile çeşitli görselleri sıra dışı biçimlerde eserlerine entegre
+                        ederek başta illüstrasyon ve baskı olmak üzere pek çok görsel sanat alanında kalıcı
+                        etkiler bırakmıştır</strong> <small>(Meggs & Purvis, 2016, s.283)</small>. </p>
+
+
+                <p><strong>Frotaj tekniği</strong>, dokulu bir yüzeyin üzerine kağıda benzer ince bir malzeme
+                    yerleştirilerek mumboya vb. bir araçla
+                    üzerine sürtülerek alttaki dokunun üstteki yüzeye aktarılması yöntemidir
+                    <small>(https://tr.wikipedia.org/wiki/Frotaj, t.y.)</small>. <strong>Dekalkomani</strong>
+                    (Decalcomania) ise, boya ince bir kâğıda
+                    sıçratılıp henüz kurumadan başka bir kâğıda
+                    rastgele aktarılır; önceden planlama yapılmaksızın spontane biçimde oluşan
+                    imgelerle çalışılır.</small>.
+                </p>
+            </div>
+
+            <div class="sürrealizim-6">
+                <div class="left-effect "></div>
+                <img src="./images/modern-art/82_sekil.png">
+                <img src="./images/modern-art/83_sekil.png">
+            </div>
+
+            <div class="sürrealizim-7">
+                <div class="top-effect"></div>
+
+                <p>1920’li yıllarda profesyonel olarak fotoğrafçılıkla ilgilenen <strong>Man Ray, Dadaizm ve sürrealizm
+                        akımlarını fotoğraf sanatına entegre etmiş</strong>; hem karanlık oda teknikleriyle hem de
+                    alışılmadık stüdyo
+                    düzenlemeleriyle özgün çalışmalar ortaya koymuştur. <strong>Man Ray, fotoğraf tarihinde bir ilki
+                        gerçekleştirerek, yoğun tonlu alanlarda koyu hatlar oluşturan ve biçimlerin çevresini
+                        vurgulayan <span>solarizasyon tekniğini</span> yaratıcı bir ifade biçimi olarak kullanan ilk
+                        fotoğrafçıdır.</strong> Bu
+                    yöntem, henüz tam olarak oluşmamış bir fotoğraf görüntüsüne yeniden ışık verilmesiyle elde edilir
+                    (Meggs & Purvis, 2016, s.288).
+                </p>
+
+                <section>
+                    <img src="./images/modern-art/84_sekil.png">
+                </section>
+            </div>
+
+            <div class="sürrealizim-8">
+                <img src="./images/modern-art/85_sekil.png">
+
+                <p>Man Ray, kamera kullanmadan
+                    oluşturduğu ve doğrudan fotoğraf kâğıdı
+                    üzerine nesneleri yerleştirerek elde ettiği baskılara <strong>"rayograph"</strong> adını vermiştir
+                    <small>(Meggs & Purvis,
+                        2016, s.288)</small>.
+                </p>
+            </div>
+
+            <div class="sürrealizim-9">
+
+                <p>Ayrıca Man Ray, distorsiyon (görüntüde bozulma), <strong>dokulu yüzeyler üzerinden baskı alma ve
+                        çoklu
+                        pozlama gibi deneysel
+                        yöntemler kullanarak</strong>, düşsel imgeler ve zaman-mekân algısına dair yeni anlatım
+                    biçimleri
+                    geliştirmiştir. Tüm bu <strong> sürrealist
+                        anlayışı, yalnızca fotoğraf sanatı için değil, aynı zamanda grafik tasarım alanında
+                        harmanlayarak kullanmıştır</strong> <small>(Meggs & Purvis, 2016, s.288)</small>.</p>
+
+                <img src="./images/modern-art/86_sekil.png">
+
+            </div>
+
+
+
+
+            <div class="süprematizm-konstrüktivizm ">
+                <div class="col-12 süprematizm-konstrüktivizm-area">
+                    <div class="bg-effect"></div>
+                    <abbr>1915 - 1934</abbr>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                        loading="lazy" alt="" class="right-gif">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9ef2157b7ffb72d4d1_02.GIF"
+                        loading="lazy" alt="" class="left-gif">
+                    <span>Süprematizm ve Konstrüktivizm </span>
+                    <section>
+                        <p>Kazimir Malevich’in 1915’te “0.10 Son Fütürist Sergisi”nde sunduğu <strong>“Siyah
+                                Kare”</strong> adlı yapıtı
+                            ve duyurduğu
+                            <strong> Süprematizm akımı</strong>, sanat tarihinde önemli bir dönüm noktası olmuştur.
+                            Rusya’daki siyasal,
+                            toplumsal ve ekonomik dönüşümlerle eş zamanlı gelişen avangart sanat ortamının bir ürünü
+                            olan <strong>Süprematizm, saf soyut sanatı hedeflemiş; nesne temsiline dayanmayan, sezgiye
+                                dayalı
+                                bir yaratım süreciyle şekillenmiştir.</strong> <small>(Bulut & Kaya, 2019,
+                                s.153)</small>.
+                        </p>
+                    </section>
+                    <article>
+                        <img src="./images/modern-art/87_sekil.jpg" class="tipo-1 reveal reveal--bottom">
+                    </article>
+
+                </div>
+            </div>
+
+            <div class="süprematizm-konstrüktivizm-2">
+
+                <p>Malevich’in 1913’teki opera sahne
+                    tasarımlarında temellerini attığı bu akımın simgesi olan Siyah Kare, yalnızca
+                    geometrik bir biçim değil, aynı zamanda uzay, hiçlik ve sonsuzluk gibi soyut
+                    kavramların sanatsal temsili olmuştur. Sergilenme biçimiyle sanatta gelenekselliğin karşısında duran
+                    yeni bir ikondur.<strong> “Siyah Kare”, nesnesiz resmin öncüsü ve Süprematizm’in ilk manifestosu
+                        olarak
+                        sanat tarihinde yerini almıştır</strong> <small>(Bulut & Kaya, 2019, s.153).</small> </p>
+
+                <p>Malevich’in <strong> süprematizm etkisindeki bir eseri</strong> de Pervyi tsikl lektsii (İlk Dersler
+                    Dizisi) adlı
+                    yapıtın kapağında kullanılmıştır. </p>
+
+                <img src="./images/modern-art/88_sekil.png">
+
+            </div>
+
+            <div class="süprematizm-konstrüktivizm-3">
+
+                <section>
+                    <h2>"KONSTRÜKTİVİZM"</h2>
+                    <p>
+                        Rus Devrimi’nin hedeflerini daha somut ve işlevsel biçimde destekleyebilecek, daha az ruhani
+                        fakat <strong>toplumsal faydayı önceleyen bir sanat anlayışına duyulan ihtiyaç
+                            doğrultusunda,</strong>
+                        Süprematizm’in yalın ve dinamik estetik anlayışı temel alınarak, bu yaklaşım grafik sanatı,
+                        tiyatro, endüstriyel tasarım ve mimari bağlamında daha geniş alanlara uyarlayarak
+                        <strong>konstrüktivizm
+                            akımı gelişmiştir</strong> <small>(Farthing, 2014, s.400)</small>.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 style="text-align: end;">"İŞLEVSELLİK"</h2>
+                    <p>
+                        Yeni bir dünya düzeninin kurulmasının zorunlu olduğuna inanan sanatçılar,<strong> sanatı
+                            geleneksel anlamda estetik bir ifade aracı olarak görmekten vazgeçmiş; onun artık doğrudan
+                            işlevselliğe hizmet etmesi gerektiğini savunmaya başlamışlardır</strong>. Bu
+                        anlayış, sanatın felsefesinin ve kavramsal çerçevesinin yeniden yapılandırılmasını
+                        gerekli kılmıştır. Bu dönüşümün merkezinde ise, “sanatsal dışavurum yerine zihinsel tasarım
+                        süreçlerini ifade eden konstrüksiyon” kavramı yer almaktadır (Antmen, 2008, s.103). Bu kavram,
+                        Birinci ve İkinci Dünya Savaşları arasındaki süreçte en yaygın
+                        biçimde kullanılan sanatsal bir terim ve yöntemlerden biri olarak karşımıza
+                        çıkmaktadır. Sanatta soyutlama arzusunun aksine, bu anlayış; sanatı, toplumsal yaşamın ortak
+                        ihtiyaçlarına yanıt verebilecek, işlevsel bir araç olarak
+                        konumlandırmıştır <small>(Mazlum, 2017, s.58)</small>.
+                    </p>
+                </section>
+            </div>
+
+            <div class="süprematizm-konstrüktivizm-4">
+
+                <p>
+                    1921 yılında Vladimir Tatlin ve Alexander Rodchenko önderliğinde bir araya gelen yirmi beş sanatçı,
+                    <strong>“sanat sanat içindir”
+                        anlayışını reddederek, sanatı toplumsal bir araç olarak konumlandıran</strong> yeni bir
+                    anlayış benimsemişlerdir. Kendilerini yeni kurulan komünist toplumun ihtiyaçlarına yanıt verecek
+                    biçimde; endüstriyel tasarım, görsel iletişim ve uygulamalı sanatlar
+                    alanlarında üretim yapmaya adamışlardır. Bu konstrüktivistler, sanatçının artık resim gibi “işlevsiz
+                    nesneler” üretmeyi bırakıp afiş gibi toplumsal fayda sağlayan pratik araçlara yönelmesi gerektiğini
+                    savunmuşlardır <small>(Meggs & Purvis, 2016, s.319).</small>
+                    Bu sanatçılar arasında <strong>grafik tasarım
+                        alanının başlıca temsilcileri Alexander Rodchenko ve El Lissitzky’dir</strong> <small>(Becer,
+                        2015, s.103)</small>.
+                </p>
+
+
+            </div>
+
+            <div class="süprematizm-konstrüktivizm-5">
+
+                <img src="./images/modern-art/89_sekil.png">
+                <p>
+                    <strong> El Lissitzky</strong>, 1917 Ekim Devrimi’ni insanlık için bir dönüm noktası olarak görmüş;
+                    <strong> sanatın, teknolojinin ve toplumsal mühendisliğin birleşimiyle yeni bir
+                        toplumun inşa edileceğine inanmıştır.</strong> Kendini bir “inşa edici” olarak tanımlayan
+                    sanatçı, bireysel
+                    estetikten uzaklaşıp toplumsal <strong>faydaya odaklanmış, grafik tasarımı yalnızca estetik bir alan
+                        olarak
+                        değil, yapısal bir inşa süreci olarak ele alarak alana köklü yenilikler getirmiştir</strong>.
+                    Kitap ve dergi
+                    tasarımlarında dinamik
+                    diyagonal eksenlere (sayfaya eğik çizgiler boyunca yerleştirilmesiyle elde edilen bir düzenleme
+                    yöntemi) dayanan asimetrik kompozisyonlar kullanmış,<strong> modüler ızgara sistemleriyle
+                        matematiksel düzen
+                        anlayışını grafik tasarıma taşımıştır</strong> <small>(Meggs & Purvis, 2016, s.320-322).</small>
+                </p>
+
+
+            </div>
+
+
+            <div class="süprematizm-konstrüktivizm-6">
+                <div class="left-effect "></div>
+                <img src="./images/modern-art/89_sekil1.png">
+                <img src="./images/modern-art/90_sekil.png">
+
+
+            </div>
+
+            <div class="süprematizm-konstrüktivizm-7">
+                <p>
+                    El Lissitzky, <strong>matbaa dizgi sisteminin
+                        sınırlamalarına karşı çıkarak teknik çizim araçları ve elle yapıştırma yöntemleriyle deneysel
+                        tipografik uygulamalar geliştirmiştir. Fotomontaj tekniğini karmaşık mesajları iletmek amacıyla
+                        grafik tasarımla bütünleştirmiş, bu
+                        alandaki kullanımını güçlendirmiştir.</strong>
+                    Almanya ve Hollanda’daki sanat çevreleriyle kurduğu ilişkiler sayesinde konstrüktivist düşünceyi
+                    Batı Avrupa’ya taşımış, dergiler ve yayınlar aracılığıyla etkisini
+                    yaygınlaştırmıştır <small> (Meggs & Purvis, 2016, s.320-322)</small>.
+                </p>
+
+
+            </div>
+
+            <div class="süprematizm-konstrüktivizm-8">
+                <div class="col-12 row">
+
+                    <div class="col-6 süprematizm-konstrüktivizm-8-area-left">
+                        <img src="./images/modern-art/91_sekil.png">
+                        <img src="./images/modern-art/92_sekil.png">
+                    </div>
+
+                    <div class="col-6 süprematizm-konstrüktivizm-8-area-right">
+
+                        <section>
+                            <p>El Lissitzky ayrıca <strong>grafik tasarımı
+                                    toplumsal mesajların aktarımında etkin bir araç olarak kullanmış, kadın ve erkek
+                                    figürlerine
+                                    eşit yer verdiği afiş tasarımıyla sembolik bir iletişim dili geliştirmiştir. Tüm bu
+                                    yeniliklerle</strong>
+                                Lissitzky, grafik tasarımın sanat, mimarlık, fotoğraf ve teknolojiyle birleşerek modern
+                                anlamda
+                                yeniden tanımlanmasına öncülük etmiştir <small>(Meggs & Purvis, 2016,
+                                    s.320-322)</small>.</p>
+                        </section>
+                    </div>
+
+                </div>
+                <img src="./images/modern-art/93_sekil.png">
+
+
+            </div>
+
+            <div class="süprematizm-konstrüktivizm-9">
+                <img src="./images/modern-art/94_sekil.png">
+                <div class="col-6">
+                    <p>Alexander Rodchenko, sanatın toplumsal sorumluluk taşıdığına inanarak geleneksel resim pratiğini
+                        bırakmış, tipografi, montaj ve fotoğraf gibi alanlara yönelmiştir. 1921 sonrası dönemde,
+                        özellikle şair Mayakovski ile iş birliği içinde, yalın ve etkili görsel iletişim tasarımları
+                        üretmiştir. Güçlü
+                        geometrik düzenler, düz renk blokları ve kalın sans serif el yazısı şeklinde ürettiği harfller,
+                        Sovyetler Birliği'nde sans serif yazı karakterlerine öncülük etmiştir.
+                        Mayakovski’nin editörlüğünü yaptığı “Novyi Lef” (Sanatların Sol Cephesi) adlı derginin
+                        tasarımlarını yapan Rodchenko,
+                        tasarımlarında üst üste baskılar, hassas hizalama ve fotomontaj teknikleriyle
+                        birlikte keskin geometrik şekiller ve kalın tipografi unsurlarını bir arada
+                        kullanmıştır (Şekil 94) (Meggs & Purvis, 2016, s.325).</p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="./deneme.js"></script>
+    <script src="./quiz.js"></script>
+    <script src="./quiz-2.js"></script>
+    <script src="./quiz-3.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <!-- <script src="https://assets.codepen.io/16327/SplitText3.min.js" ></script> -->
+
+
+
+    <script>
+        const circle = document.querySelector('.cursor');
+        const svg = document.querySelector('.cursor-svg');
+        const icon = document.querySelector('.cursor-icon');
+        const links = document.querySelectorAll('a');
+        const leftLayer = document.querySelector('.left-layer');
+
+        gsap.set(circle, {
+            xPercent: -50,
+            yPercent: -50
+        });
+
+        window.addEventListener("mousemove", e => {
+            gsap.to(circle, {
+                duration: 0.00001,
+                x: e.clientX,
+                y: e.clientY
+            });
+        });
+
+        function linkAnimIn() {
+            gsap.to(circle, { duration: 0.3, scale: 2 });
+        }
+
+        function linkAnimOut() {
+            gsap.to(circle, { duration: 0.3, scale: 1 });
+        }
+
+        links.forEach(link => {
+            link.addEventListener('mouseover', linkAnimIn);
+            link.addEventListener('mouseout', linkAnimOut);
+        });
+
+        // 🔁 .left-layer üzerine gelince cursor ikon göster
+        leftLayer.addEventListener('mouseenter', () => {
+            svg.style.display = 'none';
+            icon.style.display = 'flex';
+            gsap.to(circle, { duration: 0.3, scale: 1.5 });
+        });
+
+        leftLayer.addEventListener('mouseleave', () => {
+            icon.style.display = 'none';
+            svg.style.display = 'flex';
+            gsap.to(circle, { duration: 0.3, scale: 1 });
+        });
+    </script>
+
+
+    <!-- <script>
+        gsap.to(".left", {
+            scrollTrigger: {
+                trigger: ".bg-text-area",
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 10
+            },
+            x: 600,
+            ease: "power1.out",
+            opacity: 1,
+        });
+
+        gsap.to(".right", {
+            scrollTrigger: {
+                trigger: ".bg-text-area",
+                start: "top bottom",   // eleman ekrana girmeye başlayınca
+                end: "bottom top",     // eleman ekrandan çıkana kadar
+                scrub:10,
+            },
+            x: -600, // NEGATİF → sağdan sola kayar
+            ease: "power1.out",
+            opacity: 1,
+        });
+    </script> -->
+
+    <script>
+
+        // gsap.from(".main-text", {
+        //     scrollTrigger: {
+        //         trigger: ".pin-wrap",
+        //         start: "top bottom",   // eleman ekrana girmeye başlayınca
+        //         end: "bottom top",     // eleman ekrandan çıkana kadar
+        //         scrub: 1,
+        //     },
+        //     opacity: 0,
+        //     x: "1em",
+        //     duration: 0.6,
+        //     ease: "power2.out",
+        //     stagger: { amount: 0.2 },
+        // });
+
+
+
+    </script>
+
+
+
+    <script>
+        const cards = document.querySelectorAll(".ancient-egypt-5 .left-layer > article");
+
+        cards.forEach(card => {
+            card.addEventListener("click", () => {
+                if (card.classList.contains("active")) {
+                    // aktif olana tıklanırsa diğerine geçir
+                    const other = [...cards].find(c => c !== card);
+                    card.classList.remove("active");
+                    other.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+
+
+    <script>
+        const playBtn3 = document.getElementById('playBtn');
+        const iframe3 = document.getElementById('my-video');
+        const container3 = document.getElementById('videoContainer');
+
+        playBtn3.addEventListener('click', () => {
+            playBtn3.style.display = 'none';
+            container3.querySelector('.video-poster').style.display = 'none';
+            iframe3.style.display = 'block';
+            iframe3.src = "https://www.youtube.com/embed/obypbd0bAXA?autoplay=1";
+
+        });
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $('.period').each(function () {
+                var $heroPeriod = $(this);
+                var $heroWrap = $heroPeriod.find('.period-img-wrap');
+                var $heroImgs = $heroWrap.find('.hero-img');
+                var interval;
+
+                $heroPeriod.hover(function () {
+                    var currentIndex = 0;
+
+                    // Immediately trigger the first image change
+                    $heroImgs.removeClass('up');
+                    $heroImgs.eq(currentIndex).addClass('up');
+                    currentIndex++;
+
+                    interval = setInterval(function () {
+                        if (currentIndex > 0) {
+                            $heroImgs.eq((currentIndex - 1) % $heroImgs.length).removeClass('up');
+                        } else {
+                            $heroImgs.last().removeClass('up');
+                            // Ensure the last image is cleared in the first cycle
+                        }
+                        $heroImgs.eq(currentIndex % $heroImgs.length).addClass('up');
+                        currentIndex++;
+                    }, 350);
+                    // Interval timing set to 350ms for a slightly slower transition
+                }, function () {
+                    clearInterval(interval);
+                    $heroImgs.removeClass('up');
+                    $heroImgs.first().addClass('up');
+                });
+            });
+        });
+
+    </script>
+
+    <script>
+
+        gsap.registerPlugin(ScrollToPlugin);
+
+
+    </script>
+
+
+    <script>
+
+
+        gsap.registerPlugin(ScrollToPlugin);
+
+        // Menu Toggle Function
+        function toggleMenu() {
+            const sideMenu = document.getElementById('sideMenu');
+            sideMenu.classList.toggle('active');
+
+            // Body scroll lock
+            document.body.classList.toggle('menu-open');
+        }
+
+        // Menu item click handlers
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                const period = this.getAttribute('data-period');
+
+                // Close menu
+                toggleMenu();
+
+                // Navigate to detail page (placeholder for now)
+                console.log('Navigating to period:', period);
+
+                // TODO: Add navigation logic here
+                // window.location.href = `detail.html?period=${period}`;
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

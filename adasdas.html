@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenis Yatay Scroll</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./global.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body style="background-color: #f1eada;">
+
+    <div class="menu">
+        <h5>BTK</h5>
+        <div>
+            <span>TIMELINE</span>
+            <i class="fa-solid fa-bars-staggered"></i>
+        </div>
+    </div>
+
+    <section class="grid-container full section one">
+        <div class="grid-container">
+            <div class="hero-top-wrap">
+                <div class="hero-top-center">
+                    <h1 class="hero-heading" style="visibility: visible;">
+                        <span class="word visible">GRAFİK</span>
+                        <span class="word visible">TASARIM</span>
+                        <span class="word visible">TARİHİ</span>
+                    </h1>
+                    <div class="hero-top-text">
+                       Bu web sitesindeki içerikler, Grafik Tasarım Tarihi dersine yönelik olarak, tarih öncesi dönemden başlayıp modern sanatın grafik tasarıma olan yansımalarına kadar uzanan süreçle sınırlı tutulmuştur.
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="section_to-pin" class="grid-container full section section_to-pin four">
+        <div id="section_pin" class="section_pin">
+            <div class="content_wrapper">
+                <h1>Lorem Horizontal.</h1>
+            </div>
+            <div id="image_wrapper_1" class="image_wrapper image_wrapper_1">
+                <img class="image"
+                    src="https://images.unsplash.com/photo-1516647768-31ff0cef8821?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=870&amp;q=80"
+                    alt="Lil' Image" />
+            </div>
+            <div id="image_wrapper_2" class="image_wrapper image_wrapper_2">
+                <img class="image"
+                    src="https://images.unsplash.com/photo-1516648064-ee10acfa64db?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=863&amp;q=80"
+                    alt="Lil' Image" />
+            </div>
+            <div id="image_wrapper_3" class="image_wrapper image_wrapper_3">
+                <img class="image"
+                    src="https://images.unsplash.com/photo-1516647072-a39e59e34b97?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=870&amp;q=80"
+                    alt="Lil' Image" />
+            </div>
+        </div>
+    </section>
+
+    <section class="grid-container full section five">
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+                <div class="cell">
+                    <h1>Lorem Ipsum.</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid-container full section six">
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+                <div class="cell">
+                    <h1>Lorem Ipsum.</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid-container full section seven">
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+                <div class="cell">
+                    <h1>Lorem Ipsum.</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        (function ($) {
+            $(document).ready(function () {
+                initialiseApp();
+
+                function initialiseApp() {
+                    initialiseGSAPScrollTriggerPinningHorizontal();
+                    initialiseLenisScroll();
+                }
+
+                function initialiseGSAPScrollTriggerPinningHorizontal() {
+                    let sectionPin = document.querySelector("#section_pin");
+
+                    let containerAnimation = gsap.to(sectionPin, {
+                        scrollTrigger: {
+                            trigger: "#section_to-pin",
+                            start: "top top",
+                            end: () => "+=" + sectionPin.offsetWidth,
+                            pin: true,
+                            scrub: true
+                        },
+                        x: () =>
+                            -(sectionPin.scrollWidth - document.documentElement.clientWidth) +
+                            "px",
+                        ease: "none"
+                    });
+
+                    var imageWrappers = sectionPin.querySelectorAll(".image_wrapper");
+
+                    imageWrappers.forEach((imageWrapper) => {
+                        var imageWrapperID = imageWrapper.id;
+
+                        gsap.to(imageWrapper, {
+                            scrollTrigger: {
+                                trigger: imageWrapper,
+                                start: "left center",
+                                end: "right center",
+                                containerAnimation: containerAnimation,
+                                toggleClass: {
+                                    targets: "." + imageWrapperID,
+                                    className: "active"
+                                }
+                            }
+                        });
+                    });
+                }
+
+                function initialiseLenisScroll() {
+                    const lenis = new Lenis({
+                        smoothWheel: true,
+                        duration: 1.2
+                    });
+
+                    lenis.on("scroll", ScrollTrigger.update);
+
+                    gsap.ticker.add((time) => {
+                        lenis.raf(time * 1000);
+                    });
+
+                    gsap.ticker.lagSmoothing(0);
+                }
+            });
+        })(jQuery);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1805 @@
+ .row>*,
+ .form-row>* {
+     flex-shrink: 0;
+     padding-right: calc(1.5rem * .5);
+     padding-left: calc(1.5rem * .5);
+ }
+
+ .sectionPin-4 {
+     position: relative;
+     width: 100vw;
+     height: 100vh;
+     overflow: hidden;
+     background: #eee9d7;
+ }
+
+ .pin-wrap-4 {
+     display: flex;
+     height: 100vh;
+     width: calc(2 * 100vw)
+ }
+
+
+ /* #region */
+ .topic-four {
+     z-index: 4;
+     flex-flow: column;
+     flex: none;
+     justify-content: space-between;
+     align-items: center;
+     width: 100vw;
+     height: 100%;
+     padding-top: 8.889vh;
+     padding-bottom: 8.889vh;
+     display: flex;
+     background-color: #694d2f;
+
+ }
+
+ .topic-period {
+     display: flex;
+     flex-flow: column;
+     justify-content: space-between;
+     height: 100%;
+     position: relative;
+ }
+
+ .topic-period .sub-text {
+     text-align: center;
+     text-transform: uppercase;
+     font-size: 4.444vh;
+     font-weight: 900;
+     line-height: 90%;
+     font-family: serif;
+     color: #EEE9D7;
+ }
+
+ .topic-period .main-text {
+     text-align: center;
+     max-width: 106vh;
+     margin-top: 0;
+     font-size: 10vh;
+     font-weight: 900;
+     line-height: 1;
+     font-family: serif;
+     color: #EEE9D7;
+     translate: all 0.3s ease-in-out;
+     will-change: transform, opacity, filter;
+ }
+
+ /* #endregion */
+
+ /* #region */
+ .learning-words-4 {
+     z-index: 4;
+     flex: none;
+     width: 961px;
+     height: 100%;
+     display: flex;
+     background-color: #F7F2E4;
+     padding: 10.889vh;
+     padding-top: 9.889vh;
+     display: flex;
+     flex-flow: column;
+     position: relative;
+ }
+
+ .learning-words-4>section:first-child {
+     margin-bottom: 120px;
+ }
+
+ .learning-words-4>img {
+     position: absolute;
+     inset: auto auto 0% 0%;
+     width: 0;
+     height: 30% !important;
+     filter: brightness(0) saturate(100%) invert(57%) sepia(18%) saturate(1351%) hue-rotate(344deg) brightness(95%) contrast(90%);
+ }
+
+
+ .learning-words-4>section>h2 {
+     font-size: 70px;
+     font-weight: 400;
+     margin-bottom: 20px;
+     line-height: 1;
+     color: #936C31;
+     font-family: "Impact";
+ }
+
+ .learning-words-4>section>p {
+     font-size: 18px;
+     color: #936C31;
+     font-family: 'Roboto';
+ }
+
+ /* #endregion */
+
+ /* #region */
+
+
+
+
+ .kubizm {
+     z-index: 4;
+     flex: none;
+     justify-content: space-between;
+     width: 1440px;
+     height: 100%;
+     padding-top: 7.889vh;
+     padding-bottom: 7.889vh;
+     display: flex;
+     background-color: #EEE9D7;
+ }
+
+ .kubizm-area {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     position: relative;
+ }
+
+ .kubizm-area .bg-effect {
+     position: absolute;
+     width: 101%;
+     height: 335px;
+     background-color: #936C31;
+     inset: auto auto -19% 0%;
+     z-index: -1;
+     transform: skew(0deg, 356deg);
+ }
+
+ .kubizm-area>abbr {
+     color: #000;
+     font-size: 22px;
+     font-family: "TT-SARS-A-LIGHT", sans-serif, sans-serif;
+     margin-bottom: 15px;
+     font-weight: 900;
+ }
+
+ .kubizm-area .right-gif {
+     position: absolute;
+     width: 7.222vh;
+     height: auto;
+     inset: -0.5% 16.5% auto auto;
+ }
+
+ .kubizm-area .left-gif {
+     position: absolute;
+     width: 7.889vh;
+     height: auto;
+     inset: 41% auto auto 18%;
+ }
+
+ .kubizm-area>span {
+     color: #EEE9D7;
+     font-family: serif;
+     font-size: 42px;
+     margin-bottom: 30px;
+     position: relative;
+     background-color: #936C31;
+     min-width: 600px;
+     padding: 8px 66px;
+     text-align: center;
+ }
+
+ .kubizm-area>span::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: -1px;
+     border-width: 33px 0px 33px 33px;
+     border-color: transparent transparent transparent #eee9d7;
+     border-style: solid;
+ }
+
+ .kubizm-area>span::after {
+     content: "";
+     position: absolute;
+     top: 0;
+     right: -1px;
+     border-width: 33px 33px 33px 0px;
+     border-color: transparent #eee9d7 transparent transparent;
+     border-style: solid;
+ }
+
+ .kubizm-area>section {
+     margin-top: 35px;
+     text-align: center;
+     padding: 0 230px;
+ }
+
+ .kubizm-area>section>p {
+     font-size: 17px;
+     font-family: 'Roboto', sans-serif;
+     margin-bottom: 20px;
+ }
+
+
+ .kubizm-area>article {
+     text-align: center;
+     margin-top: 49px;
+ }
+
+ .kubizm-area>article>img {
+     width: 370px;
+ }
+
+
+ /* #endregion */
+
+ /* #region */
+
+ .kubizm-2 {
+     z-index: 4;
+     flex: none;
+     justify-content: space-between;
+     width: 490px;
+     height: 100%;
+     padding: 5.889vh;
+     padding-bottom: 5.889vh;
+     flex-flow: column;
+     display: flex;
+     background-color: #EDE8D6;
+ }
+
+ .kubizm-2>p {
+     font-size: 17px;
+     font-family: 'Roboto', sans-serif;
+ }
+
+
+
+
+
+ .kubizm-3 {
+     z-index: 4;
+     flex: none;
+     justify-content: space-between;
+     width: 490px;
+     height: 100%;
+     padding: 8.889vh;
+     padding-bottom: 5.889vh;
+     flex-flow: column;
+     display: flex;
+     background-color: #936C31;
+     position: relative;
+ }
+
+
+ .kubizm-3>p {
+     font-size: 17px;
+     color: #EDE8D6;
+     font-family: 'Roboto', sans-serif;
+ }
+
+ .kubizm-3>img {
+     width: 18%;
+     inset: 71% -13.5% auto auto;
+     position: absolute;
+     transform: rotate3d(2, 3, 0, 205deg);
+     filter: brightness(0) saturate(100%) invert(88%) sepia(10%) saturate(200%) hue-rotate(10deg) brightness(95%) contrast(95%);
+ }
+
+ .kubizm-3 .left-effect {
+     position: absolute;
+     width: 233px;
+     height: 100%;
+     background-color: #936C31;
+     inset: 0% -16% auto auto;
+     z-index: -1;
+     transform: skew(9deg, 0deg);
+ }
+
+
+
+
+
+ .kubizm-4 {
+     flex: none;
+     justify-content: space-between;
+     width: 1430px;
+     height: 100%;
+     padding: 8.889vh;
+     padding-bottom: 5.889vh;
+     flex-flow: column;
+     display: flex;
+     background-color: #936C31;
+     background-image: url("./images//modern-art/61_sekil.png");
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+ }
+
+
+
+ .kubizm-5 {
+     flex: none;
+     width: 490px;
+     height: 100%;
+     padding: 8.889vh;
+     justify-content: end;
+     padding-bottom: 5.889vh;
+     flex-flow: column;
+     display: flex;
+     background-color: #EDE8D6;
+     position: relative;
+ }
+
+ .kubizm-5>img {
+     position: absolute;
+     width: 80%;
+     height: auto;
+     inset: 8% 50% auto auto;
+     border-radius: 20px;
+     box-shadow: 0px 0px 0px 9px #ede8d6;
+ }
+
+ .kubizm-5>p {
+     font-size: 17px;
+     font-family: 'Roboto', sans-serif;
+     margin-bottom: 150px;
+ }
+
+
+ /* #endregion */
+
+ /* #region */
+
+ .kubizm-6 {
+     flex: none;
+     width: 960px;
+     height: 100%;
+     padding: 8.889vh;
+     padding-bottom: 5.889vh;
+     flex-flow: column;
+     display: flex;
+     background-color: #EDE8D6;
+     position: relative;
+ }
+
+ .kubizm-6 .top-effect {
+     position: absolute;
+     width: 87%;
+     height: 22px;
+     background-color: #936C31;
+     inset: 0% 7% auto auto;
+ }
+
+
+ .kubizm-6>img {
+     width: 100%;
+ }
+
+ .kubizm-6>p {
+     font-size: 17px;
+     font-family: 'Roboto', sans-serif;
+     margin-bottom: 100px;
+     margin-top: 50px;
+ }
+
+
+ /* #endregion */
+
+ /* #region */
+ .fütürizm {
+     z-index: 4;
+     flex: none;
+     justify-content: space-between;
+     width: 1440px;
+     height: 100%;
+     padding-top: 7.889vh;
+     padding-bottom: 7.889vh;
+     display: flex;
+     background-color: #EEE9D7;
+ }
+
+ .fütürizm-area {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     position: relative;
+ }
+
+ .fütürizm-area .bg-effect {
+     position: absolute;
+     width: 101%;
+     height: 335px;
+     background-color: #A82023;
+     inset: auto auto -19% 0%;
+     z-index: -1;
+     transform: skew(0deg, 356deg);
+ }
+
+ .fütürizm-area>abbr {
+     color: #000;
+     font-size: 22px;
+     font-family: "TT-SARS-A-LIGHT", sans-serif, sans-serif;
+     margin-bottom: 15px;
+     font-weight: 900;
+ }
+
+ .fütürizm-area .right-gif {
+     position: absolute;
+     width: 7.222vh;
+     height: auto;
+     inset: -0.5% 16.5% auto auto;
+ }
+
+ .fütürizm-area .left-gif {
+     position: absolute;
+     width: 7.889vh;
+     height: auto;
+     inset: 41% auto auto 18%;
+ }
+
+ .fütürizm-area>span {
+     color: #EEE9D7;
+     font-family: serif;
+     font-size: 42px;
+     margin-bottom: 30px;
+     position: relative;
+     background-color: #A82023;
+     min-width: 600px;
+     padding: 8px 66px;
+     text-align: center;
+ }
+
+ .fütürizm-area>span::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: -1px;
+     border-width: 33px 0px 33px 33px;
+     border-color: transparent transparent transparent #eee9d7;
+     border-style: solid;
+ }
+
+ .fütürizm-area>span::after {
+     content: "";
+     position: absolute;
+     top: 0;
+     right: -1px;
+     border-width: 33px 33px 33px 0px;
+     border-color: transparent #eee9d7 transparent transparent;
+     border-style: solid;
+ }
+
+ .fütürizm-area>section {
+     margin-top: 35px;
+     text-align: center;
+     padding: 0 230px;
+ }
+
+ .fütürizm-area>section>p {
+     font-size: 17px;
+     font-family: 'Roboto', sans-serif;
+     margin-bottom: 20px;
+ }
+
+
+ .fütürizm-area>article {
+     text-align: center;
+     margin-top: 49px;
+ }
+
+ .fütürizm-area>article>img {
+     width: 370px;
+ }
+
+ /* #endregion */
+
+ /* #region */
+ .fütürizm-2 {
+     z-index: 4;
+     flex: none;
+     width: 961px;
+     height: 100%;
+     display: flex;
+     background-color: #A82023;
+     padding: 12.889vh;
+     padding-top: 12.889vh;
+     display: flex;
+     flex-flow: column;
+     position: relative;
+ }
+
+ .fütürizm-2>section:first-child {
+     margin-bottom: 120px;
+ }
+
+ .fütürizm-2>img {
+     position: absolute;
+     inset: auto auto 0% 0%;
+     width: 0;
+     height: 30% !important;
+     filter: brightness(0) saturate(100%) invert(57%) sepia(18%) saturate(1351%) hue-rotate(344deg) brightness(95%) contrast(90%);
+ }
+
+
+ .fütürizm-2>section>h2 {
+     font-size: 70px;
+     font-weight: 400;
+     margin-bottom: 20px;
+     line-height: 1;
+     color: #EDE8D6;
+     font-family: "Impact";
+ }
+
+ .fütürizm-2>section>p {
+     font-size: 18px;
+     color: #EDE8D6;
+     font-family: 'Roboto';
+ }
+
+ /* #endregion */
+
+ /* #region */
+
+ .fütürizm-3 {
+     z-index: 4;
+     flex: none;
+     justify-content: space-between;
+     width: 1400px;
+     height: 100%;
+     padding: 7.889vh;
+     background-color: #EEE9D7;
+ }
+
+ .fütürizm-3-area-left>p {
+     font-size: 17px;
+     font-family: 'Roboto', sans-serif;
+     margin-bottom: 60px;
+
+ }
+
+
+ .fütürizm-3-area-left-bottom-left>p {
+     font-size: 16px;
+     font-family: 'Roboto', sans-serif;
+     margin-bottom: 60px;
+     max-width: 80%;
+
+ }
+
+ .fütürizm-3-area-left-bottom-left>img {
+     width: 300px;
+     border: 5px solid #a82023;
+ }
+
+ .fütürizm-3-area-left-bottom-right>p {
+     font-size: 16px;
+     font-family: 'Roboto', sans-serif;
+     margin-top: 20px !important;
+     max-width: 80%;
+     margin: 0 auto;
+     text-align: left;
+ }
+
+ .fütürizm-3-area-left-bottom-right>img {
+     width: 260px;
+     border: 5px solid #a82023;
+ }
+
+
+ .fütürizm-3-area-right>p {
+     font-size: 16px;
+     font-family: 'Roboto', sans-serif;
+     margin-bottom: 60px !important;
+     margin-top: 60px !important;
+     max-width: 80%;
+     margin: 0 auto;
+     text-align: left;
+ }
+
+ .fütürizm-3-area-right>img {
+     max-width: 80%;
+     border: 5px solid #a82023;
+ }
+
+ /* #endregion */
+
+ /* #region */
+ .fütürizm-4 {
+     z-index: 6;
+     flex: none;
+     justify-content: space-evenly;
+     width: 425px;
+     height: 100%;
+     padding: 4.889vh;
+     flex-flow: column;
+     display: flex;
+     background-color: #A82023;
+
+ }
+
+
+ .fütürizm-4>p {
+     font-size: 17px;
+     font-family: 'Roboto', sans-serif;
+     color: #EDE8D6;
+ }
+
+
+
+
+
+
+
+
+
+ .fütürizm-5 {
+     z-index: 4;
+     flex: none;
+     justify-content: space-between;
+     width: 410px;
+     height: 100%;
+     padding: 5.889vh;
+     padding-bottom: 5.889vh;
+     flex-flow: column;
+     display: flex;
+     background-color: #EDE8D6;
+     align-items: center;
+     position: relative;
+
+ }
+
+
+ .fütürizm-5 .fütürizm-5-img-1 {
+     width: 290px;
+     border: 5px solid #a82023;
+
+ }
+
+ .fütürizm-5 .fütürizm-5-img-2 {
+     border: 5px solid #a82023;
+     width: 180px;
+ }
+
+ .fütürizm-5 .left-effect {
+     position: absolute;
+     width: 245px;
+     height: 100%;
+     background-color: #A82023;
+     inset: auto auto 0% -22%;
+     z-index: -2;
+     transform: skew(9deg, 0deg);
+ }
+
+ /* #endregion */
+
+ /* #region */
+
+ .fütürizm-6 {
+     flex: none;
+     width: 960px;
+     height: 100%;
+     padding: 8.889vh;
+     padding-bottom: 5.889vh;
+     flex-flow: column;
+     display: flex;
+     background-color: #EDE8D6;
+     position: relative;
+ }
+
+ .fütürizm-6 .top-effect {
+     position: absolute;
+     width: 87%;
+     height: 22px;
+     background-color: #A82023;
+     inset: 0% 7% auto auto;
+ }
+
+ .fütürizm-6 img {
+     position: absolute;
+ }
+
+ .fütürizm-6 .fütürizm-6-img-1 {
+     width: 37%;
+     inset: auto auto 8% 15%;
+ }
+
+ .fütürizm-6 .fütürizm-6-img-2 {
+     width: 40%;
+     inset: auto auto 17% 40%;
+ }
+
+ .fütürizm-6>p {
+     font-size: 17px;
+     font-family: 'Roboto', sans-serif;
+     margin-bottom: 100px;
+     margin-top: 50px;
+ }
+
+ /* #endregion */
+
+ /* #region */
+ .dadaizm {
+     z-index: 4;
+     flex: none;
+     justify-content: space-between;
+     width: 1440px;
+     height: 100%;
+     padding-top: 7.889vh;
+     padding-bottom: 7.889vh;
+     display: flex;
+     background-color: #EEE9D7;
+ }
+
+ .dadaizm-area {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     position: relative;
+ }
+
+ .dadaizm-area .bg-effect {
+     position: absolute;
+     width: 101%;
+     height: 335px;
+     background-color: #7B8984;
+     inset: auto auto -19% 0%;
+     z-index: -1;
+     transform: skew(0deg, 356deg);
+ }
+
+ .dadaizm-area>abbr {
+     color: #000;
+     font-size: 22px;
+     font-family: "TT-SARS-A-LIGHT", sans-serif, sans-serif;
+     margin-bottom: 15px;
+     font-weight: 900;
+ }
+
+ .dadaizm-area .right-gif {
+     position: absolute;
+     width: 7.222vh;
+     height: auto;
+     inset: -0.5% 16.5% auto auto;
+ }
+
+ .dadaizm-area .left-gif {
+     position: absolute;
+     width: 7.889vh;
+     height: auto;
+     inset: 41% auto auto 18%;
+ }
+
+ .dadaizm-area>span {
+     color: #EEE9D7;
+     font-family: serif;
+     font-size: 42px;
+     margin-bottom: 30px;
+     position: relative;
+     background-color: #7B8984;
+     min-width: 600px;
+     padding: 8px 66px;
+     text-align: center;
+ }
+
+ .dadaizm-area>span::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: -1px;
+     border-width: 33px 0px 33px 33px;
+     border-color: transparent transparent transparent #eee9d7;
+     border-style: solid;
+ }
+
+ .dadaizm-area>span::after {
+     content: "";
+     position: absolute;
+     top: 0;
+     right: -1px;
+     border-width: 33px 33px 33px 0px;
+     border-color: transparent #eee9d7 transparent transparent;
+     border-style: solid;
+ }
+
+ .dadaizm-area>section {
+     margin-top: 35px;
+     text-align: center;
+     padding: 0 230px;
+ }
+
+ .dadaizm-area>section>p {
+     font-size: 17px;
+     font-family: 'Roboto', sans-serif;
+     margin-bottom: 20px;
+ }
+
+
+ .dadaizm-area>article {
+     text-align: center;
+     margin-top: 49px;
+ }
+
+ .dadaizm-area>article>img {
+     width: 370px;
+ }
+
+
+ /* #endregion */
+
+ /* #region */
+
+ .dadaizm-2 {
+     z-index: 4;
+     flex: none;
+     width: 961px;
+     height: 100%;
+     display: flex;
+     background-color: #7B8984;
+     padding: 12.889vh;
+     padding-top: 12.889vh;
+     display: flex;
+     flex-flow: column;
+     position: relative;
+ }
+
+ .dadaizm-2>section:first-child {
+     margin-bottom: 120px;
+ }
+
+ .dadaizm-2>img {
+     position: absolute;
+     inset: auto auto 0% 0%;
+     width: 0;
+     height: 30% !important;
+     filter: brightness(0) saturate(100%) invert(57%) sepia(18%) saturate(1351%) hue-rotate(344deg) brightness(95%) contrast(90%);
+ }
+
+
+ .dadaizm-2>section>h2 {
+     font-size: 70px;
+     font-weight: 400;
+     margin-bottom: 20px;
+     line-height: 1;
+     color: #EDE8D6;
+     font-family: "Impact";
+ }
+
+ .dadaizm-2>section>p {
+     font-size: 18px;
+     color: #EDE8D6;
+     font-family: 'Roboto';
+ }
+
+ /* #endregion */
+
+ /* #region */
+
+ .dadaizm-3 {
+     z-index: 6;
+     flex: none;
+     justify-content: space-evenly;
+     width: 425px;
+     height: 100%;
+     padding: 4.889vh;
+     flex-flow: column;
+     display: flex;
+     background-color: #EDE8D6;
+
+ }
+
+
+ .dadaizm-3>p {
+     font-size: 17px;
+     font-family: 'Roboto', sans-serif;
+     color: #030303;
+ }
+
+ /* #endregion */
+
+ /* #region */
+
+ .dadaizm-4 {
+     z-index: 4;
+     flex: none;
+     width: 961px;
+     height: 100%;
+     background-color: #ede8d6;
+     padding: 3.889vh;
+     padding-top: 15.889vh;
+     display: flex;
+     flex-flow: column;
+     position: relative;
+     background-repeat: no-repeat;
+     background-size: 80% 100%;
+     background-image: url("./images/modern-art/72_sekil.png");
+ }
+
+ .dadaizm-4-area-right {
+     text-align: end;
+ }
+
+ .dadaizm-4-area-right>img {
+     width: 70%;
+     border: 8px solid #ede8d6;
+ }
+
+ .dadaizm-4-area-right>section {
+     padding: 30px;
+     background-color: #EFE8D8;
+     text-align: left;
+     margin-top: 50px;
+     box-shadow: 0px 0px 18px -5px #a37aa5;
+ }
+
+ .dadaizm-4-area-right>section>abbr {
+     font-size: 15px;
+     font-family: 'Roboto', sans-serif;
+     margin-bottom: 10px;
+     display: block;
+ }
+
+ .dadaizm-4-area-right>section>p {
+     font-size: 15px;
+     font-family: 'Roboto', sans-serif;
+     margin-bottom: 40px;
+ }
+
+ /* #endregion */
+
+ /* #region */
+
+ .dadaizm-5 {
+     flex: none;
+     width: 960px;
+     height: 100%;
+     padding: 8.889vh;
+     padding-bottom: 5.889vh;
+     flex-flow: column;
+     display: flex;
+     background-color: #EDE8D6;
+     position: relative;
+ }
+
+ .dadaizm-5 .top-effect {
+     position: absolute;
+     width: 87%;
+     height: 22px;
+     background-color: #7B8984;
+     inset: 0% 7% auto auto;
+ }
+
+
+ .dadaizm-5>p {
+     font-size: 17px;
+     font-family: 'Roboto', sans-serif;
+     margin-bottom: 100px;
+     margin-top: 50px;
+ }
+
+ .dadaizm-5>section {
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .dadaizm-5>section>img {
+     width: 40%;
+ }
+
+ /* #endregion */
+
+ /* #region */
+
+ .dadaizm-6 {
+     flex: none;
+     width: 460px;
+     height: 100%;
+     padding: 5.889vh;
+     padding-bottom: 5.889vh;
+     flex-flow: column;
+     display: flex;
+     z-index: 59;
+     background-color: #7B8984;
+     position: relative;
+ }
+
+ .dadaizm-6>img {
+     width: 80%;
+     display: block;
+     margin: 0 auto;
+ }
+
+ .dadaizm-6>p {
+     font-size: 17px;
+     font-family: 'Roboto', sans-serif;
+     margin-top: 100px;
+     color: #EDE8D6;
+ }
+
+
+ /* #endregion */
+
+ /* #region */
+
+ .dadaizm-7 {
+     flex: none;
+     width: 960px;
+     height: 100%;
+     padding: 7.889vh;
+     padding-bottom: 5.889vh;
+     z-index: 3;
+     flex-flow: column;
+     display: flex;
+     background-color: #EDE8D6;
+     position: relative;
+ }
+
+ .dadaizm-7 .left-effect {
+     position: absolute;
+     width: 245px;
+     height: 100%;
+     background-color: #7B8984;
+     inset: auto auto 0% -9%;
+     z-index: -2;
+     transform: skew(9deg, 0deg);
+ }
+
+
+ .dadaizm-7-area-left {
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     padding: 20px;
+     position: relative;
+ }
+
+ .dadaizm-7-area-left>img {
+     width: 70%;
+     border: 5px solid #7B8984;
+     position: absolute;
+ }
+
+ .dadaizm-7-area-left>img:first-child {
+     inset: 5% 40% auto auto;
+
+ }
+
+ .dadaizm-7-area-left>img:last-child {
+     inset: 46% 20% auto auto;
+ }
+
+ .dadaizm-7-area-right>p {
+     font-size: 17px;
+     font-family: 'Roboto', sans-serif;
+     color: #030303;
+     margin-bottom: 60px;
+ }
+
+ /* #endregion */
+
+
+ /* #region */
+ .sürrealizim {
+     z-index: 4;
+     flex: none;
+     justify-content: space-between;
+     width: 1440px;
+     height: 100%;
+     padding-top: 7.889vh;
+     padding-bottom: 7.889vh;
+     display: flex;
+     background-color: #EEE9D7;
+ }
+
+ .sürrealizim-area {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     position: relative;
+ }
+
+ .sürrealizim-area .bg-effect {
+     position: absolute;
+     width: 101%;
+     height: 335px;
+     background-color: #5E82B0;
+     inset: auto auto -19% 0%;
+     z-index: -1;
+     transform: skew(0deg, 356deg);
+ }
+
+ .sürrealizim-area>abbr {
+     color: #000;
+     font-size: 22px;
+     font-family: "TT-SARS-A-LIGHT", sans-serif, sans-serif;
+     margin-bottom: 15px;
+     font-weight: 900;
+ }
+
+ .sürrealizim-area .right-gif {
+     position: absolute;
+     width: 7.222vh;
+     height: auto;
+     inset: -0.5% 16.5% auto auto;
+ }
+
+ .sürrealizim-area .left-gif {
+     position: absolute;
+     width: 7.889vh;
+     height: auto;
+     inset: 41% auto auto 18%;
+ }
+
+ .sürrealizim-area>span {
+     color: #EEE9D7;
+     font-family: serif;
+     font-size: 42px;
+     margin-bottom: 30px;
+     position: relative;
+     background-color: #5E82B0;
+     min-width: 600px;
+     padding: 8px 66px;
+     text-align: center;
+ }
+
+ .sürrealizim-area>span::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: -1px;
+     border-width: 33px 0px 33px 33px;
+     border-color: transparent transparent transparent #eee9d7;
+     border-style: solid;
+ }
+
+ .sürrealizim-area>span::after {
+     content: "";
+     position: absolute;
+     top: 0;
+     right: -1px;
+     border-width: 33px 33px 33px 0px;
+     border-color: transparent #eee9d7 transparent transparent;
+     border-style: solid;
+ }
+
+ .sürrealizim-area>section {
+     margin-top: 35px;
+     text-align: center;
+     padding: 0 230px;
+ }
+
+ .sürrealizim-area>section>p {
+     font-size: 17px;
+     font-family: 'Roboto', sans-serif;
+     margin-bottom: 20px;
+ }
+
+
+ .sürrealizim-area>article {
+     text-align: center;
+     margin-top: 49px;
+ }
+
+ .sürrealizim-area>article>img {
+     width: 570px;
+ }
+
+ /* #endregion */
+
+ /* #region */
+ .sürrealizim-2 {
+     z-index: 4;
+     flex: none;
+     width: 961px;
+     height: 100%;
+     background-color: #5E82B0;
+     padding: 7.889vh;
+     padding-top: 16.889vh;
+     display: flex;
+     flex-flow: column;
+     position: relative;
+ }
+
+ .sürrealizim-2>section:first-child {
+     margin-bottom: 120px;
+ }
+
+ .sürrealizim-2>img {
+     position: absolute;
+     inset: auto auto 0% 0%;
+     width: 0;
+     height: 30% !important;
+     filter: brightness(0) saturate(100%) invert(57%) sepia(18%) saturate(1351%) hue-rotate(344deg) brightness(95%) contrast(90%);
+ }
+
+
+ .sürrealizim-2>section>h2 {
+     font-size: 70px;
+     font-weight: 400;
+     margin-bottom: 20px;
+     line-height: 1;
+     color: #EDE8D6;
+     font-family: "Impact";
+ }
+
+ .sürrealizim-2>section>p {
+     font-size: 18px;
+     color: #d6e8ff;
+     font-family: 'Roboto';
+ }
+
+ .sürrealizim-2>section>p>strong {
+     color: #EDE8D6;
+ }
+
+ /* #endregion */
+
+ /* #region */
+ .sürrealizim-3 {
+     z-index: 4;
+     flex: none;
+     width: 480px;
+     height: 100%;
+     background-color: #EDE8D6;
+     padding: 7.889vh;
+     padding-top: 8.889vh;
+     display: flex;
+     flex-flow: column;
+ }
+
+ .sürrealizim-3>img {
+     width: 100%;
+     margin: 50px 0px;
+ }
+
+ .sürrealizim-3>p {
+     font-size: 17px;
+     color: #030303;
+     font-family: 'Roboto';
+ }
+
+
+
+ .sürrealizim-4 {
+     z-index: 4;
+     flex: none;
+     width: 470px;
+     height: 100%;
+     justify-content: end;
+     background-color: #EDE8D6;
+     padding: 7.889vh;
+     padding-top: 8.889vh;
+     background: center;
+     display: flex;
+     flex-flow: column;
+     background-image: url('./images//modern-art/81_sekil.jpg');
+ }
+
+
+ .sürrealizim-4>p {
+     font-size: 17px;
+     color: #EDE8D6;
+     font-family: 'Roboto';
+ }
+
+
+ .sürrealizim-5 {
+     z-index: 5;
+     flex: none;
+     width: 470px;
+     height: 100%;
+     justify-content: start;
+     background-color: #5E82B0;
+     padding: 7.889vh;
+     padding-top: 9.889vh;
+     display: flex;
+     flex-flow: column;
+ }
+
+
+ .sürrealizim-5>p {
+     font-size: 17px;
+     color: #EDE8D6;
+     font-family: 'Roboto';
+     margin-bottom: 60px;
+ }
+
+
+ .sürrealizim-6 {
+     z-index: 4;
+     flex: none;
+     width: 470px;
+     height: 100%;
+     justify-content: start;
+     background-color: #EDE8D6;
+     padding: 7.889vh;
+     padding-top: 9.889vh;
+     display: flex;
+     flex-flow: column;
+     position: relative;
+     padding-left: 0;
+ }
+
+ .sürrealizim-6>img {
+     margin-bottom: 20px;
+     border: 5px solid #5E82B0;
+ }
+
+ .sürrealizim-6 .left-effect {
+     position: absolute;
+     width: 245px;
+     height: 100%;
+     background-color: #5E82B0;
+     inset: auto auto 0% -17%;
+     z-index: -4;
+     transform: skew(9deg, 0deg);
+ }
+
+ /* #endregion */
+
+ /* #region */
+
+ .sürrealizim-7 {
+     flex: none;
+     width: 960px;
+     height: 100%;
+     padding: 8.889vh;
+     padding-bottom: 5.889vh;
+     flex-flow: column;
+     display: flex;
+     background-color: #EDE8D6;
+     position: relative;
+ }
+
+ .sürrealizim-7 .top-effect {
+     position: absolute;
+     width: 87%;
+     height: 22px;
+     background-color: #5E82B0;
+     inset: 0% 7% auto auto;
+ }
+
+
+ .sürrealizim-7>p {
+     font-size: 17px;
+     font-family: 'Roboto', sans-serif;
+     margin-bottom: 75px;
+     margin-top: 50px;
+ }
+
+ .sürrealizim-7>p span {
+     color: #5E82B0;
+ }
+
+ .sürrealizim-7>section {
+     display: flex;
+     justify-content: center;
+ }
+
+ .sürrealizim-7>section>img {
+     width: 80%;
+ }
+
+ /* #endregion */
+
+
+
+ /* #region */
+ .sürrealizim-8 {
+     z-index: 4;
+     flex: none;
+     width: 480px;
+     height: 100%;
+     background-color: #EDE8D6;
+     padding: 7.889vh;
+     padding-top: 3.889vh;
+     display: flex;
+     flex-flow: column;
+ }
+
+ .sürrealizim-8>img {
+     width: 100%;
+     margin: 50px 0px;
+ }
+
+ .sürrealizim-8>p {
+     font-size: 17px;
+     color: #030303;
+     font-family: 'Roboto';
+ }
+
+
+
+ .sürrealizim-9 {
+     z-index: 4;
+     flex: none;
+     width: 480px;
+     height: 100%;
+     background-color: #EDE8D6;
+     padding: 7.889vh;
+     padding-top: 8.889vh;
+     display: flex;
+     flex-flow: column;
+ }
+
+ .sürrealizim-9>img {
+     width: 100%;
+     margin: 50px 0px;
+ }
+
+ .sürrealizim-9>p {
+     font-size: 17px;
+     color: #030303;
+     font-family: 'Roboto';
+ }
+
+ /* #endregion */
+
+ /* #region */
+ .süprematizm-konstrüktivizm {
+     z-index: 4;
+     flex: none;
+     justify-content: space-between;
+     width: 1440px;
+     height: 100%;
+     padding-top: 7.889vh;
+     padding-bottom: 7.889vh;
+     display: flex;
+     background-color: #EEE9D7;
+ }
+
+ .süprematizm-konstrüktivizm-area {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     position: relative;
+ }
+
+ .süprematizm-konstrüktivizm-area .bg-effect {
+     position: absolute;
+     width: 101%;
+     height: 335px;
+     background-color: #22243A;
+     inset: auto auto -19% 0%;
+     z-index: -1;
+     transform: skew(0deg, 356deg);
+ }
+
+ .süprematizm-konstrüktivizm-area>abbr {
+     color: #000;
+     font-size: 22px;
+     font-family: "TT-SARS-A-LIGHT", sans-serif, sans-serif;
+     margin-bottom: 15px;
+     font-weight: 900;
+ }
+
+ .süprematizm-konstrüktivizm-area .right-gif {
+     position: absolute;
+     width: 7.222vh;
+     height: auto;
+     inset: -0.5% 16.5% auto auto;
+ }
+
+ .süprematizm-konstrüktivizm-area .left-gif {
+     position: absolute;
+     width: 7.889vh;
+     height: auto;
+     inset: 41% auto auto 18%;
+ }
+
+ .süprematizm-konstrüktivizm-area>span {
+     color: #EEE9D7;
+     font-family: serif;
+     font-size: 42px;
+     margin-bottom: 30px;
+     position: relative;
+     background-color: #22243A;
+     min-width: 600px;
+     padding: 8px 66px;
+     text-align: center;
+ }
+
+ .süprematizm-konstrüktivizm-area>span::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: -1px;
+     border-width: 33px 0px 33px 33px;
+     border-color: transparent transparent transparent #eee9d7;
+     border-style: solid;
+ }
+
+ .süprematizm-konstrüktivizm-area>span::after {
+     content: "";
+     position: absolute;
+     top: 0;
+     right: -1px;
+     border-width: 33px 33px 33px 0px;
+     border-color: transparent #eee9d7 transparent transparent;
+     border-style: solid;
+ }
+
+ .süprematizm-konstrüktivizm-area>section {
+     margin-top: 35px;
+     text-align: center;
+     padding: 0 230px;
+ }
+
+ .süprematizm-konstrüktivizm-area>section>p {
+     font-size: 17px;
+     font-family: 'Roboto', sans-serif;
+     margin-bottom: 20px;
+ }
+
+
+ .süprematizm-konstrüktivizm-area>article {
+     text-align: center;
+     margin-top: 49px;
+ }
+
+ .süprematizm-konstrüktivizm-area>article>img {
+     width: 420px;
+ }
+
+ /* #endregion */
+
+ /* #region */
+ .süprematizm-konstrüktivizm-2 {
+     z-index: 4;
+     flex: none;
+     width: 480px;
+     height: 100%;
+     background-color: #EDE8D6;
+     padding: 7.889vh;
+     padding-top: 7.889vh;
+     display: flex;
+     flex-flow: column;
+ }
+
+
+ .süprematizm-konstrüktivizm-2>p {
+     font-size: 17px;
+     color: #030303;
+     font-family: 'Roboto';
+     margin-bottom: 20px;
+ }
+
+ .süprematizm-konstrüktivizm-2>img {
+     width: 80%;
+     margin-top: 50px !important;
+     display: block;
+     margin: 0 auto;
+ }
+
+ /* #endregion */
+
+
+
+
+
+ /* #region */
+ .süprematizm-konstrüktivizm-3 {
+     z-index: 4;
+     flex: none;
+     width: 961px;
+     height: 100%;
+     background-color: #22243A;
+     padding: 7.889vh;
+     padding-top: 16.889vh;
+     display: flex;
+     flex-flow: column;
+     position: relative;
+ }
+
+ .süprematizm-konstrüktivizm-3>section:first-child {
+     margin-bottom: 120px;
+ }
+
+ .süprematizm-konstrüktivizm-3>img {
+     position: absolute;
+     inset: auto auto 0% 0%;
+     width: 0;
+     height: 30% !important;
+     filter: brightness(0) saturate(100%) invert(57%) sepia(18%) saturate(1351%) hue-rotate(344deg) brightness(95%) contrast(90%);
+ }
+
+
+ .süprematizm-konstrüktivizm-3>section>h2 {
+     font-size: 70px;
+     font-weight: 400;
+     margin-bottom: 20px;
+     line-height: 1;
+     color: #EDE8D6;
+     font-family: "Impact";
+ }
+
+ .süprematizm-konstrüktivizm-3>section>p {
+     font-size: 18px;
+     color: #d6d6e3;
+     font-family: 'Roboto';
+ }
+
+ .süprematizm-konstrüktivizm-3>section>p>strong {
+     color: #EDE8D6;
+ }
+
+ /* #endregion */
+
+
+
+ /* #region */
+ .süprematizm-konstrüktivizm-4 {
+     z-index: 4;
+     flex: none;
+     width: 440px;
+     height: 100%;
+     background-color: #EDE8D6;
+     padding: 6.889vh;
+     padding-top: 10.889vh;
+     display: flex;
+     flex-flow: column;
+ }
+
+
+ .süprematizm-konstrüktivizm-4>p {
+     font-size: 17px;
+     color: #030303;
+     font-family: 'Roboto';
+     margin-bottom: 20px;
+ }
+
+ /* #endregion */
+
+
+
+
+ /* #region */
+ .süprematizm-konstrüktivizm-5 {
+     z-index: 5;
+     flex: none;
+     width: 440px;
+     height: 100%;
+     background-color: #22243A;
+     padding: 6.889vh;
+     padding-top: 10.889vh;
+     display: flex;
+     flex-flow: column;
+ }
+
+
+ .süprematizm-konstrüktivizm-5>p {
+     font-size: 17px;
+     color: #EDE8D6;
+     font-family: 'Roboto';
+     margin-top: 80px;
+ }
+
+
+ /* #endregion */
+
+
+
+ /* #region */
+ .süprematizm-konstrüktivizm-6 {
+     z-index: 4;
+     flex: none;
+     width: 440px;
+     height: 100%;
+     background-color: #EDE8D6;
+     padding: 6.889vh;
+     padding-top: 10.889vh;
+     display: flex;
+     flex-flow: column;
+     position: relative;
+ }
+
+
+ .süprematizm-konstrüktivizm-6>img {
+     width: 100%;
+     border: 4px solid #22243A;
+     margin-bottom: 40px;
+ }
+
+ .süprematizm-konstrüktivizm-6 .left-effect {
+     position: absolute;
+     width: 233px;
+     height: 100%;
+     background-color: #22243A;
+     inset: 0% 65% auto auto;
+     z-index: -2;
+     transform: skew(9deg, 0deg);
+ }
+
+
+
+ /* #endregion */
+
+
+
+ /* #region */
+ .süprematizm-konstrüktivizm-7 {
+     z-index: 5;
+     flex: none;
+     width: 440px;
+     height: 100%;
+     background-color: #EDE8D6;
+     padding: 6.889vh;
+     padding-top: 10.889vh;
+     display: flex;
+     flex-flow: column;
+     justify-content: center;
+ }
+
+
+ .süprematizm-konstrüktivizm-7>p {
+     font-size: 17px;
+     font-family: 'Roboto';
+ }
+
+
+ /* #endregion */
+
+
+
+ /* #region */
+ .süprematizm-konstrüktivizm-8 {
+     z-index: 1;
+     flex: none;
+     width: 920px;
+     height: 100%;
+     background-color: #EDE8D6;
+     padding: 6.889vh;
+     padding-top: 10.889vh;
+     display: flex;
+     flex-flow: column;
+     justify-content: center;
+     position: relative;
+ }
+
+
+ .süprematizm-konstrüktivizm-8 .süprematizm-konstrüktivizm-8-area-left>img {
+     width: 68%;
+     border: 4px solid #EDE8D6;
+     margin-bottom: 21px;
+
+ }
+
+
+ .süprematizm-konstrüktivizm-8 .süprematizm-konstrüktivizm-8-area-right {
+     display: flex;
+     flex-flow: column;
+     justify-content: end;
+ }
+
+
+
+ .süprematizm-konstrüktivizm-8 .süprematizm-konstrüktivizm-8-area-right>section {
+     padding: 20px;
+     background-color: #232532c7;
+ }
+
+ .süprematizm-konstrüktivizm-8 .süprematizm-konstrüktivizm-8-area-right>section>p {
+     font-size: 17px;
+     font-family: 'Roboto';
+     color: #EDE8D6;
+
+ }
+
+ .süprematizm-konstrüktivizm-8>img {
+     position: absolute;
+     width: 80%;
+     height: 100%;
+     top: 0;
+     right: 0px;
+     z-index: -2;
+ }
+
+ /* #endregion */
+
+
+  .süprematizm-konstrüktivizm-9 {
+     z-index: 1;
+     flex: none;
+     width: 920px;
+     height: 100%;
+     background-color: #EDE8D6;
+     padding: 6.889vh;
+     padding-top: 10.889vh;
+     display: flex;
+     flex-flow: column;
+     justify-content: center;
+     position: relative;
+ }
