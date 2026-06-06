@@ -112,7 +112,7 @@ function welcomeAnimate() {
             trigger: ".welcome-area",
             start: "top 50%",             // sol kenar, viewport’un %80 noktasına geldiğinde başla
             end: "top 5%",               // opsiyonel: istersen animasyon alanını daralt
-            toggleActions: "play none none reverse",
+            toggleActions: "play none play reverse",
             scrub: false,
             markers: false
         }
@@ -127,38 +127,49 @@ function welcomeAnimate() {
 
 
 
-function periodOne() {
-    gsap.from(".main-text", {
-        opacity: 0,
-        x: 60,
-        duration: 0.9,
-        ease: "power3.out",
-        scrollTrigger: {
-            trigger: ".section-one",
-            start: "top 50%",             // sol kenar, viewport’un %80 noktasına geldiğinde başla
-            end: "top 5%",               // opsiyonel: istersen animasyon alanını daralt
-            toggleActions: "play none none reverse",
-            scrub: false,
-            markers: false
+function periodOne(hTween) {
+    gsap.fromTo(".main-text",
+        { opacity: 0, x: 60 },
+        {
+            opacity: 1,
+            x: 0,
+            duration: 0.9,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".section-one",
+                containerAnimation: hTween,
+                invalidateOnRefresh: true,
+                start: "left 80%",
+                end: "left 20%",
+                toggleActions: "play none play reverse",
+                scrub: false,
+                markers: false
+            }
         }
-    });
-    gsap.from(".sub-text", {
-        opacity: 0,
-        y: 60,
-        duration: 0.9,
-        ease: "power3.out",
-        scrollTrigger: {
-            trigger: ".section-one",
-            start: "top 50%",             // sol kenar, viewport’un %80 noktasına geldiğinde başla
-            end: "top 5%",               // opsiyonel: istersen animasyon alanını daralt
-            toggleActions: "play none none reverse",
-            scrub: false,
-            markers: false
+    );
+    gsap.fromTo(".sub-text",
+        { opacity: 0, y: 60 },
+        {
+            opacity: 1,
+            y: 0,
+            duration: 0.9,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".section-one",
+                containerAnimation: hTween,
+                invalidateOnRefresh: true,
+                start: "left 80%",
+                end: "left 20%",
+                toggleActions: "play none play reverse",
+                scrub: false,
+                markers: false
+            }
         }
-    });
+    );
 }
 
 function SubjectTextAnimate(hTween) {
+
     gsap.from(".prehistoric-period-left > span, .prehistoric-period-left > abbr, .prehistoric-period-left > section > p", {
         opacity: 0,
         y: 60,
@@ -168,8 +179,9 @@ function SubjectTextAnimate(hTween) {
             trigger: ".section-two",
             containerAnimation: hTween,        // 🔴 kritik bağ
             start: "left 70%",                 // .section-two sol kenarı viewport’un %70 noktasında
-            toggleActions: "play none none reverse",
-            scrub: false,                      // tek seferde oynasın
+            toggleActions: "play none play reverse",
+            invalidateOnRefresh: true,
+            scrub: false,
             markers: false
         }
     });
@@ -183,7 +195,7 @@ function SubjectTextAnimate(hTween) {
             trigger: ".section-two",
             start: "top 100%",             // sol kenar, viewport’un %80 noktasına geldiğinde başla
             end: "top 5%",               // opsiyonel: istersen animasyon alanını daralt
-            toggleActions: "play none none reverse",
+            toggleActions: "play none play reverse",
             scrub: false,
             markers: false
         }
@@ -230,8 +242,9 @@ function mezopotamyaAnimate(hTween) {
             trigger: ".mesopotamian-civilization",
             containerAnimation: hTween,        // 🔴 kritik bağ
             start: "left 70%",                 // .section-two sol kenarı viewport’un %70 noktasında
-            toggleActions: "play none none reverse",
-            scrub: false,                      // tek seferde oynasın
+            toggleActions: "play none play reverse",
+            invalidateOnRefresh: true,
+            scrub: false,
             markers: false
         }
     });
@@ -249,8 +262,9 @@ function alphabetsAnimate(hTween) {
             trigger: ".alphabets",
             containerAnimation: hTween,        // 🔴 kritik bağ
             start: "left 70%",                 // .section-two sol kenarı viewport’un %70 noktasında
-            toggleActions: "play none none reverse",
-            scrub: false,                      // tek seferde oynasın
+            toggleActions: "play none play reverse",
+            invalidateOnRefresh: true,
+            scrub: false,
             markers: false
         }
     });
@@ -267,8 +281,9 @@ function ancientEgyptAnimate(hTween) {
             trigger: ".ancient-egypt",
             containerAnimation: hTween,        // 🔴 kritik bağ
             start: "left 70%",                 // .section-two sol kenarı viewport’un %70 noktasında
-            toggleActions: "play none none reverse",
-            scrub: false,                      // tek seferde oynasın
+            toggleActions: "play none play reverse",
+            invalidateOnRefresh: true,
+            scrub: false,
             markers: false
         }
     });
@@ -286,8 +301,9 @@ function chinesGraphicDesignAnimate(hTween) {
             trigger: ".chines-graphic-desing",
             containerAnimation: hTween,        // 🔴 kritik bağ
             start: "left 70%",                 // .section-two sol kenarı viewport’un %70 noktasında
-            toggleActions: "play none none reverse",
-            scrub: false,                      // tek seferde oynasın
+            toggleActions: "play none play reverse",
+            invalidateOnRefresh: true,
+            scrub: false,
             markers: false
         }
     });
@@ -342,8 +358,9 @@ function manuscriptsAnimate(hTween) {
             trigger: ".manuscripts",
             containerAnimation: hTween,        // 🔴 kritik bağ
             start: "left 70%",                 // .section-two sol kenarı viewport’un %70 noktasında
-            toggleActions: "play none none reverse",
-            scrub: false,                      // tek seferde oynasın
+            toggleActions: "play none play reverse",
+            invalidateOnRefresh: true,
+            scrub: false,
             markers: false
         }
     });
@@ -490,7 +507,7 @@ function fontDesing(hTween) {
     fly(".b-3", -175, 90);
 }
 
-function periodTwo() {
+function periodTwo(hTween) {
     gsap.fromTo(".topic-period > h2",
         { opacity: 0, y: 180 },
         {
@@ -500,9 +517,11 @@ function periodTwo() {
             ease: "power3.out",
             scrollTrigger: {
                 trigger: ".topic-two",
-                start: "top 70%",
-                end: "top 30%",
-                toggleActions: "play none none reverse",
+                containerAnimation: hTween,
+                invalidateOnRefresh: true,
+                start: "left 80%",
+                end: "left 20%",
+                toggleActions: "play none play reverse",
                 markers: false
             }
         }
@@ -518,9 +537,11 @@ function periodTwo() {
             stagger: 0.15,
             scrollTrigger: {
                 trigger: ".topic-two",
-                start: "top 70%",
-                end: "top 30%",
-                toggleActions: "play none none reverse",
+                containerAnimation: hTween,
+                invalidateOnRefresh: true,
+                start: "left 80%",
+                end: "left 20%",
+                toggleActions: "play none play reverse",
                 markers: false
             }
         }
@@ -549,10 +570,11 @@ function learningWords(hTween) {
             ease: "power3.out",
             scrollTrigger: {
                 containerAnimation: hTween,
+                invalidateOnRefresh: true,
                 trigger: ".learning-words",
                 start: start,
                 end: end,
-                toggleActions: "play none none reverse",
+                toggleActions: "play none play reverse",
                 scrub: false,
                 markers: false
             }
@@ -571,8 +593,9 @@ function letterpressAnimate(hTween) {
             trigger: ".letterpress",
             containerAnimation: hTween,        // 🔴 kritik bağ
             start: "left 70%",                 // .section-two sol kenarı viewport’un %70 noktasında
-            toggleActions: "play none none reverse",
-            scrub: false,                      // tek seferde oynasın
+            toggleActions: "play none play reverse",
+            invalidateOnRefresh: true,
+            scrub: false,
             markers: false
         }
     });
@@ -589,8 +612,9 @@ function germanyBookAnimate(hTween) {
             trigger: ".germany-image-book",
             containerAnimation: hTween,        // 🔴 kritik bağ
             start: "left 70%",                 // .section-two sol kenarı viewport’un %70 noktasında
-            toggleActions: "play none none reverse",
-            scrub: false,                      // tek seferde oynasın
+            toggleActions: "play none play reverse",
+            invalidateOnRefresh: true,
+            scrub: false,
             markers: false
         }
     });
@@ -607,8 +631,9 @@ function fontDesignAnimate(hTween) {
             trigger: ".font-design",
             containerAnimation: hTween,        // 🔴 kritik bağ
             start: "left 70%",                 // .section-two sol kenarı viewport’un %70 noktasında
-            toggleActions: "play none none reverse",
-            scrub: false,                      // tek seferde oynasın
+            toggleActions: "play none play reverse",
+            invalidateOnRefresh: true,
+            scrub: false,
             markers: false
         }
     });
@@ -663,7 +688,7 @@ window.addEventListener("load", () => {
     }
 
     // 5️⃣ Dikey (yataydan bağımsız) animasyonlar
-    periodTwo();
+    if (secondH) periodTwo(secondH);
 
     // 6️⃣ Timeline tıklamaları (her iki yatay alan için)
     document.querySelectorAll(".time-line a").forEach((btn) => {
@@ -711,7 +736,7 @@ window.addEventListener("load", () => {
     // 7️⃣ Sayfa yenilendiğinde scroll konumunu koru
     if (scrollPos) {
         window.scrollTo(0, parseFloat(scrollPos));
-        setTimeout(() => ScrollTrigger.refresh(), 200);
+        setTimeout(() => ScrollTrigger.refresh(true), 500);
     }
 
     ScrollTrigger.refresh();
