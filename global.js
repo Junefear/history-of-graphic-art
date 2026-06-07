@@ -6,11 +6,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 const scrollContainer = document.querySelector(".scroll-container");
 
-const loco = new LocomotiveScroll({
+window.loco = new LocomotiveScroll({
     el: scrollContainer,
     smooth: true
 });
 
+const loco = window.loco;
 loco.on("scroll", ScrollTrigger.update);
 
 ScrollTrigger.scrollerProxy(scrollContainer, {
@@ -70,4 +71,16 @@ window.addEventListener("load", () => {
     setTimeout(() => {
         ScrollTrigger.refresh();
     }, 100);
+
+    document.querySelectorAll(".menu-item").forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute("href");
+            const target = document.querySelector(targetId);
+            if (target) {
+                loco.scrollTo(target, { offset: 0 });
+            }
+            toggleMenu();
+        });
+    });
 });
