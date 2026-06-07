@@ -133,12 +133,12 @@ nextBtn_3.addEventListener('click', () => {
           <div class="result-screen">
             <span>Başarı Oranın </span>
             <h2>${percent}%</h2>
-            <a href="javascript:void" class="restart-btn">Yeni Konuya Geç</a>
+            <a href="javascript:void(0)" class="restart-btn-3">Yeni Konuya Geç</a>
           </div>`;
 
 
 
-        const restartBtn = document.querySelector('.restart-btn');
+        const restartBtn = document.querySelector('.restart-btn-3');
         restartBtn.addEventListener('click', () => {
             // Scroll aktif
             document.body.style.overflow = 'auto';
@@ -150,8 +150,8 @@ nextBtn_3.addEventListener('click', () => {
             if (quizGame) quizGame.style.display = 'none';
 
                setTimeout(() => {
-                ScrollTrigger.refresh();
-            }, 10);
+                ScrollTrigger.refresh(true);
+            }, 300);
 
             // ✅ LocalStorage’a kaydet
             localStorage.setItem("quiz-3-Hidden", "true");
@@ -167,20 +167,22 @@ window.addEventListener("load", () => {
     if (localStorage.getItem("quiz-3-Hidden") === "true" && quizGame) {
         quizGame.style.display = "none";
         document.body.style.overflow = "auto";
+        setTimeout(() => {
+            if (typeof ScrollTrigger !== "undefined") {
+                ScrollTrigger.refresh(true);
+            }
+        }, 100);
     }
 });
 
 
 function handleScrollLock3() {
-   
     const quizGame = document.querySelector('.quiz-game-3');
-    const scrollPosition = window.scrollY;
+    if (!quizGame || window.getComputedStyle(quizGame).display === 'none') return;
 
-    // Sadece quiz-game görünürse (display != none) scroll'u kilitle
-    if (quizGame && window.getComputedStyle(quizGame).display !== 'none') {
-        if (scrollPosition >= 60576) {
-            window.scrollTo(0, 60576);
-        }
+    const quizTop = Math.round(quizGame.getBoundingClientRect().top + window.scrollY);
+    if (window.scrollY > quizTop) {
+        window.scrollTo(0, quizTop);
     }
 }
 
