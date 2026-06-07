@@ -733,7 +733,30 @@ window.addEventListener("load", () => {
         });
     });
 
-    // 7️⃣ Sayfa yenilendiğinde scroll konumunu koru
+    // 7️⃣ Menu-nav tıklamaları → ilgili sectionPin'e scroll
+    const sectionStMap = {
+        "sectionPin":   "hscroll-0",
+        "sectionPin-2": "hscroll-1",
+        "sectionPin-3": "hscroll-2",
+        "sectionPin-4": "hscroll-3"
+    };
+
+    document.querySelectorAll(".menu-item").forEach((link) => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute("href").replace("#", "");
+            const stId = sectionStMap[targetId];
+            if (stId) {
+                const st = ScrollTrigger.getById(stId);
+                if (st) {
+                    window.scrollTo({ top: st.start, behavior: "smooth" });
+                }
+            }
+            if (typeof toggleMenu === "function") toggleMenu();
+        });
+    });
+
+    // 8️⃣ Sayfa yenilendiğinde scroll konumunu koru
     if (scrollPos) {
         window.scrollTo(0, parseFloat(scrollPos));
         setTimeout(() => ScrollTrigger.refresh(true), 500);
