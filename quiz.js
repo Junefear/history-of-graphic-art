@@ -133,7 +133,7 @@ nextBtn.addEventListener('click', () => {
           <div class="result-screen">
             <span>Başarı Oranın </span>
             <h2>${percent}%</h2>
-            <a href="javascript:void" class="restart-btn">Yeni Konuya Geç</a>
+            <a href="javascript:void(0)" class="restart-btn">Yeni Konuya Geç</a>
           </div>`;
 
 
@@ -149,9 +149,9 @@ nextBtn.addEventListener('click', () => {
             const quizGame = document.querySelector('.quiz-game');
             if (quizGame) quizGame.style.display = 'none';
 
-            setTimeout(() => {
-                ScrollTrigger.refresh();
-            }, 10);
+               setTimeout(() => {
+                ScrollTrigger.refresh(true);
+            }, 300);
 
             // ✅ LocalStorage’a kaydet
             localStorage.setItem("quizHidden", "true");
@@ -167,18 +167,21 @@ window.addEventListener("load", () => {
     if (localStorage.getItem("quizHidden") === "true" && quizGame) {
         quizGame.style.display = "none";
         document.body.style.overflow = "auto";
+        setTimeout(() => {
+            if (typeof ScrollTrigger !== "undefined") {
+                ScrollTrigger.refresh(true);
+            }
+        }, 100);
     }
 });
 
 function handleScrollLock() {
     const quizGame = document.querySelector('.quiz-game');
-    const scrollPosition = window.scrollY;
+    if (!quizGame || window.getComputedStyle(quizGame).display === 'none') return;
 
-    // Sadece quiz-game görünürse (display != none) scroll'u kilitle
-    if (quizGame && window.getComputedStyle(quizGame).display !== 'none') {
-        if (scrollPosition >= 27100) {
-            window.scrollTo(0, 27100);
-        }
+    const quizTop = Math.round(quizGame.getBoundingClientRect().top + window.scrollY);
+    if (window.scrollY > quizTop) {
+        window.scrollTo(0, quizTop);
     }
 }
 
