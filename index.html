@@ -39,7 +39,7 @@
                 <button class="close-btn" onclick="toggleMenu()">×</button>
             </div>
             <nav class="menu-nav">
-                <a href="#" class="menu-item" data-period="prehistoric">
+                <a href="#sectionPin" class="menu-item" data-period="prehistoric">
                     <div class="menu-item-content">
                         <div class="menu-item-icon">
                             <img src="./images/subject/1.png" alt="Tarih Öncesi" class="menu-icon">
@@ -50,7 +50,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="#" class="menu-item" data-period="renaissance">
+                <a href="#sectionPin-2" class="menu-item" data-period="renaissance">
                     <div class="menu-item-content">
                         <div class="menu-item-icon">
                             <img src="./images/subject/2.png" alt="Rönesans" class="menu-icon">
@@ -61,7 +61,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="#" class="menu-item" data-period="industrial">
+                <a href="#sectionPin-3" class="menu-item" data-period="industrial">
                     <div class="menu-item-content">
                         <div class="menu-item-icon">
                             <img src="./images/subject/3.png" alt="Sanayi Devrimi" class="menu-icon">
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="#" class="menu-item" data-period="modern">
+                <a href="#sectionPin-4" class="menu-item" data-period="modern">
                     <div class="menu-item-content">
                         <div class="menu-item-icon">
                             <img src="./images/subject/4.png" alt="Modern Sanat" class="menu-icon">
@@ -190,7 +190,7 @@
 
 
 
-    <div class="sectionPin">
+    <div class="sectionPin" id="sectionPin">
         <div class="time-line">
             <ul>
                 <li><a href="#prehistoric-period">M.Ö. 40.000 <span>-</span> M.Ö. 3.200</a></li>
@@ -981,7 +981,7 @@
 
     </div>
 
-    <div class="sectionPin-2">
+    <div class="sectionPin-2" id="sectionPin-2">
         <div class="time-line">
             <ul>
                 <li><a href="#letterpress">15.YY</a></li>
@@ -1329,7 +1329,7 @@
 
     </div>
 
-    <div class="sectionPin-3">
+    <div class="sectionPin-3" id="sectionPin-3">
 
         <div class="time-line">
             <ul>
@@ -1933,7 +1933,7 @@
 
     </div>
 
-    <div class="sectionPin-4">
+    <div class="sectionPin-4" id="sectionPin-4">
 
         <div class="time-line">
             <ul>
@@ -1942,6 +1942,8 @@
                 <li><a href="#dadaizm">1916<span>-</span>1924</a></li>
                 <li><a href="#sürrealizim">1924<span>-</span>1950</a></li>
                 <li><a href="#süprematizm-konstrüktivizm">1915<span>-</span>1934</a></li>
+                <li><a href="#de-stij">1917<span>-</span>1931</a></li>
+                <li><a href="#bauhaus">1919<span>-</span>1933</a></li>
             </ul>
         </div>
 
@@ -1956,7 +1958,6 @@
                     <div class="sub-text">18.YY - 20.YY</div>
                 </div>
             </div>
-
 
             <div class="learning-words-4">
 
@@ -1988,7 +1989,6 @@
                     loading="lazy" style="width: 99%; height: 96%; opacity: 1;" alt="" class="learnini-gif">
 
             </div>
-
 
             <div class="kubizm" id="kubizm">
                 <div class="col-12 kubizm-area">
@@ -2087,7 +2087,6 @@
                 <img src="./images/modern-art/63_sekil.png">
 
             </div>
-
 
             <div class="fütürizm" id="fütürizm">
                 <div class="col-12 fütürizm-area">
@@ -2417,7 +2416,6 @@
                 </div>
             </div>
 
-
             <div class="sürrealizim" id="sürrealizim">
                 <div class="col-12 sürrealizim-area">
                     <div class="bg-effect"></div>
@@ -2591,9 +2589,6 @@
 
             </div>
 
-
-
-
             <div class="süprematizm-konstrüktivizm " id="süprematizm-konstrüktivizm">
                 <div class="col-12 süprematizm-konstrüktivizm-area">
                     <div class="bg-effect"></div>
@@ -2715,7 +2710,6 @@
 
             </div>
 
-
             <div class="süprematizm-konstrüktivizm-6">
                 <div class="left-effect "></div>
                 <img src="./images/modern-art/89_sekil1.png">
@@ -2770,20 +2764,246 @@
 
             <div class="süprematizm-konstrüktivizm-9">
                 <img src="./images/modern-art/94_sekil.png">
-                <div class="col-6">
-                    <p>Alexander Rodchenko, sanatın toplumsal sorumluluk taşıdığına inanarak geleneksel resim pratiğini
-                        bırakmış, tipografi, montaj ve fotoğraf gibi alanlara yönelmiştir. 1921 sonrası dönemde,
+                <div class="col-5">
+                    <p><strong>Alexander Rodchenko,</strong> sanatın toplumsal sorumluluk taşıdığına inanarak <string>
+                            geleneksel resim pratiğini
+                            bırakmış, tipografi, montaj ve fotoğraf gibi alanlara yönelmiştir.</string> 1921 sonrası
+                        dönemde,
                         özellikle şair Mayakovski ile iş birliği içinde, yalın ve etkili görsel iletişim tasarımları
-                        üretmiştir. Güçlü
-                        geometrik düzenler, düz renk blokları ve kalın sans serif el yazısı şeklinde ürettiği harfller,
-                        Sovyetler Birliği'nde sans serif yazı karakterlerine öncülük etmiştir.
+                        üretmiştir. <strong> Güçlü
+                            geometrik düzenler, düz renk blokları ve kalın sans serif el yazısı şeklinde ürettiği
+                            harfller,</strong>
+                        Sovyetler Birliği'nde <strong></strong>sans serif yazı karakterlerine öncülük etmiştir.</strong>
                         Mayakovski’nin editörlüğünü yaptığı “Novyi Lef” (Sanatların Sol Cephesi) adlı derginin
                         tasarımlarını yapan Rodchenko,
-                        tasarımlarında üst üste baskılar, hassas hizalama ve fotomontaj teknikleriyle
+                        <strong></strong>tasarımlarında üst üste baskılar, hassas hizalama ve fotomontaj teknikleriyle
                         birlikte keskin geometrik şekiller ve kalın tipografi unsurlarını bir arada
-                        kullanmıştır (Şekil 94) (Meggs & Purvis, 2016, s.325).</p>
+                        kullanmıştır</strong> <small>(Şekil 94) (Meggs & Purvis, 2016, s.325).</small>
+                    </p>
                 </div>
             </div>
+
+            <div class="süprematizm-konstrüktivizm-10">
+                <div class="top-effect"></div>
+                <p>
+                    <strong>Rodchenko’nun fotomontaja olan ilgisi,</strong> 20. Yüzyılın ruhuna uygun <strong>yeni bir
+                        illüstrasyon tekniği
+                        yaratma arzusunun bilinçli bir sonucudur.</strong> Rus fotomontajının başlangıcı, aynı dönemde
+                    sinemada montajın geliştiği dönemle paralellik göstererek, her iki alanda da bilgi aktarımı için
+                    benzer kavramsal ve görsel yöntemlerin kullanılmasını sağlamıştır <small>(Meggs & Purvis, 2016,
+                        s.325).</small>
+                    Bu durum Rodchenko’nun 1923’de yılında başladığı <strong>grafik tasarım alanında yaptığı afiş ve
+                        reklam
+                        çalışmaları ile bu alanda öne çıkmasını sağlamıştır.</strong> Sanatçı, <strong>grafik
+                        tasarımlarında
+                        iletmek istediği mesajlar için fotomontaj tekniğini tercih etmiş; baskı düzenlemeleri ve
+                        fotografik imgeleri sayfa, kapak ve afiş kompozisyonlarında, kurgu aracı olarak
+                        kullanmıştır</strong>
+                    <small>(Özgüven, 2007, s.44).</small>
+                </p>
+                <section>
+                    <img src="./images/modern-art/95_sekil.jpg">
+                    <img src="./images/modern-art/96_sekil.png">
+                </section>
+            </div>
+
+
+            <div class="de-stij" id="de-stij">
+                <div class="col-12 de-stij-area">
+                    <div class="bg-effect"></div>
+                    <abbr>1917 - 1931</abbr>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                        loading="lazy" alt="" class="right-gif">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9ef2157b7ffb72d4d1_02.GIF"
+                        loading="lazy" alt="" class="left-gif">
+                    <span>De Stij </span>
+                    <section>
+                        <p>
+                            <strong>De Stijl hareketi,</strong> 1917’de Hollanda'da ortaya çıkmıştır. Hareketin kurucusu
+                            ve öncüsü Théo
+                            van Doesburg’dur. Bu akıma bağlı sanatçılar,<strong> soyut ve geometrik bir üslupla
+                                çalışmış,
+                                sanatta evrensel denge ve uyum yasalarını
+                                aramıştır.</strong> De stij sanatçılarına göre <stong> bu sanat anlayışı yalnızca
+                                estetik bir ifade değil,
+                                yeni bir toplumsal düzenin modeli olabileceğini savunmuşlardır</stong> <small>(Meggs &
+                                Purvis, 2016,
+                                s.331).</small>
+                        </p>
+                    </section>
+                    <article>
+                        <img src="./images/modern-art/101_sekil.png" class="tipo-1 reveal reveal--bottom">
+                    </article>
+
+                </div>
+            </div>
+
+            <div class="de-stij-2">
+                <p>
+                    <strong> De Stijl hareketinin temelinde, dik açılı biçimlerin kullanımı ve ana renklerle (kırmızı,
+                        mavi,
+                        sarı) yapılan sade
+                        düzenlemeler yer almaktadır.
+                        Tasarımlarında öznel ve duygusal
+                        anlatımlara karşı çıkarak, güzelliği mutlak yalınlıktan kaynaklandığına
+                        inanmışlardır.</strong> De Stijl sanatçıları,
+                    <strong> tamamen soyut bir görsel dil geliştirmeyi amaçlamışlardır.</strong> Bu düşünsel ve görsel
+                    üretimlerini,
+                    1917’de yayımlamaya başladıkları <strong>“De Stijl”</strong> dergisiyle geniş kitlelere
+                    ulaştırmışlardır. Vilmos
+                    Huszár’ın yapmış olduğu derginin logosundaki dikey ve yatay dikdörtgenlerle oluşturulan harfler
+                    (sağda), bu sade ve yapısal tasarım diline örnek teşkil etmektedir <small>(Arı, 2006, s.80).</small>
+                </p>
+
+                <p>
+                    <strong> Van Doesburg ve Vilmos Huszár, kavisli çizgilerden arındırılmış serifsiz yazı
+                        karakterleri</strong> (Şekil
+                    98) kullanmaya başlamışlardır. Harf formları genellikle dar dikdörtgen birimlerden oluşturulmuş;
+                    sayfa düzenleri ise hayali bir ızgara
+                    üzerinde asimetrik biçimde kurgulanmıştır (Şekil 99). Baskılarda, siyah kadar güçlü bir görsel etki
+                    yaratması nedeniyle kırmızı renk ikinci renk olarak tercih edilmiştir (Bektaş, 1992, s.68). Ayrıca
+                    1921 yılında, Doesburg dergi için <strong> yeni bir yatay mizanpaj formatı geliştirmiştir
+                    </strong><small>(Şekil 100) (Meggs
+                        & Purvis, 2016, s.332)</small>
+                </p>
+
+
+            </div>
+
+            <div class="de-stij-3">
+                <div class="de-stij-3-top">
+                    <img src="./images/modern-art/97_sekil.png">
+                </div>
+
+                <div class="de-stij-3-bottom">
+                    <img src="./images/modern-art/98_sekil.png" class="de-stij-3-bottom-img-1">
+                    <img src="./images/modern-art/100_sekil.png" class="de-stij-3-bottom-img-2">
+                    <img src="./images/modern-art/99_sekil.png" class="de-stij-3-bottom-img-3">
+                </div>
+            </div>
+
+            <div class="de-stij-4">
+                <p>
+                    <strong> De Stij hareketi görsel anlatımının grafik tasarım üzerindeki etkisi,</strong> Van Doesburg
+                    ile László
+                    Moholy-Nagy’nin 1925 yılında “Grundbegriffe der neuen gestaltenden” adlı kitap için hazırladığı
+                    <strong>kapak tasarımında</strong> (Şekil 101) açıkça görülmektedir. <strong>Afiş tasarımlarında
+                        ise,</strong> De Stij hareketinin
+                    yatay ve dikey çizgilere dayanan düzen
+                    anlayışını, geometrik sade formları ve ana renk kullanımı doğrudan görülmektedir. Hatta bu hareket
+                    henüz resmi olarak kurulmadan önce, <strong>Van der Leck, düz renkli
+                        geometrik şekiller kullanarak ve alanı organize eden basit siyah çubuklarla grafik tasarımlar
+                        üretmiştir</strong> (Şekil 102) <small>(Meggs & Purvis, 2016, s.332).</small>
+                </p>
+                <div>
+                    <img src="./images/modern-art/101_sekil.png" style="width:200px">
+
+                    <img src="./images/modern-art/102_sekil.png" style="width:550px">
+                </div>
+            </div>
+
+            <div class="de-stij-5">
+                <img src="./images/modern-art/103_sekil.png" style="width:280px">
+
+                <p>
+                    De Stijl’in grafik tasarım alanındaki öncüsü olan Théo van Doesburg, <strong>Dada hareketinin
+                        yaratıcı ve
+                        dönüştürücü potansiyelini erkenden kavramış ve bu doğrultuda Kurt Schwitters ile birlikte
+                        tipografik
+                        tasarım projelerinde iş birliği yapmıştır</strong> (Şekil 103) <small>(Meggs & Purvis, 2016,
+                        s.335).</small>
+                </p>
+
+                <p>
+
+                    De Stijj hareketindeki<strong>grafik tasarım
+                        alanında yapılan yatay, dikey ve diyagonal çizgilerden oluşan açık kompozisyonların kullanıldığı
+                        afiş, kitap kapağı ve
+                        illüstrasyonlar, kare ve dikdörtgen
+                        ızgaralarla oluşturulmuş yalın tipografik düzenlemeler, asimetrik dengeye sahip açık ızgara
+                        sistemli
+                        sayfa yerleşimleri, yatay formatlı mizanpaj gelişimi gibi
+                        yenilikler modern grafik anlayışı için temel oluşturmuştur.</strong>
+                    Théo van Doesburg, 1921-1922 yıllarında Bauhaus okulunda eğitimler vermiştir
+                    <small> (Farthing, 2014, s.414).</small>
+
+                </p>
+            </div>
+
+
+
+            <div class="bauhaus" id="bauhaus">
+                <div class="col-12 bauhaus-area">
+                    <div class="bg-effect"></div>
+                    <abbr>1919 - 1933</abbr>
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9e4b4768e7dbe38394_IMG_1581.GIF"
+                        loading="lazy" alt="" class="right-gif">
+                    <img src="https://cdn.prod.website-files.com/667a818a880f892c0cfca58c/672cbe9ef2157b7ffb72d4d1_02.GIF"
+                        loading="lazy" alt="" class="left-gif">
+                    <span>Bauhaus</span>
+                    <section>
+                        <p>
+                            <strong>Bauhaus,</strong> geleneksel sanat eğitiminin toplumun somut ihtiyaçlarına çözüm
+                            üretebilecek
+                            bireyler yetiştiremediğini savunarak,<strong> sanat ile zanaatı birleştirmeyi temel hedef
+                                edinmiştir.</strong> Bu hedef doğrultusunda <strong> Walter Gropius 'atölye-okul'
+                                mantığındaki Bauhaus okulunu
+                                kurmuştur </strong> <small>(Antmen, 2008, s.107).</small>
+                        </p>
+                    </section>
+                    <article>
+                        <img src="./images/modern-art/bauhaus.JPG" class="tipo-1 reveal reveal--bottom">
+                    </article>
+
+                </div>
+            </div>
+
+
+            <div class="bauhaus-2">
+                <p>
+                    Bauhous okulu hem <strong> sanatçıların hem de
+                        zanaatçıların aynı üretim sürecine katıldığı, uygulamalı ve güzel sanatlar arasındaki sınırları
+                        kaldırmayı amaçlayan bir model olmuştur.</strong> 20. yüzyılda modern mimari ve endüstriyel
+                    tasarımın öncüsü
+                    olan Bauhaus, <strong> “Sanat ve Teknoloji: Yeni Birlik” ilkesiyle sanatsal üretimi teknolojik
+                        gelişmelerle
+                        bütünleştiren yenilikçi bir yaklaşımı temsil etmiştir</strong> (Antmen, 2008, s.107). Bauhaus’un
+                    bu yenilikçi
+                    yaklaşımı, grafik ve endüstriyel tasarımdan mobilya tasarımına, sahne düzenlemelerinden modern
+                    mimariye kadar uzanan geniş bir yelpazede etkisini
+                    göstermiştir <small>(Meshur, 2011, s.60-65).</small>
+                </p>
+
+            </div>
+
+            <div class="bauhaus-3">
+                <p>
+                    Sanatçıya aynı zamanda üst düzey bir
+                    zanaatçı niteliği kazandırma amacında olan Bahaus yaklaşımının <strong> grafik tasarım alanındaki
+                        başlıca
+                        temsilcileri, Laszlo Moholy Nagy fotoğraf ve tipografiyi görsel bir iletişim diliyle kullanmış,
+                        Herbert Bayer ve Joost Schmidt ise grafik tasarıma sade ve işlevsel bir tipografik bir tasarım
+                        anlayışı getirmiştir </strong>(Becer, 2015, s.103).
+                </p>
+
+                <p>
+                    Aynı dönemlerde Lyonel Feininger’in
+                    atölyesinde taş baskı, ağaç baskı ve gravür gibi tekniklerle yürüttüğü atölye
+                    çalışmaları, Bauhaus’da tipografi ve grafik tasarıma olan ilgiyi arttırmıştır.<strong> Feininger
+                        tarafından
+                        ağaç baskı tekniğiyle basılan “Yeni Avrupa Grafikleri” portfolyosunun giriş sayfası, özgün ve
+                        deneysel bir tipografik üslup örneği olarak
+                        Bauhaus’un erken dönem dışavurumcu estetiğini yansıtır niteliktedir </strong><small>(Öztuna,
+                        2008a, s.45-51).</small>
+                </p>
+
+
+            </div>
+
+            <div class="bauhaus-4">
+                <img src="./images/modern-art/104_sekil.png" class="tipo-1 reveal reveal--bottom">
+            </div>
+
 
 
 
